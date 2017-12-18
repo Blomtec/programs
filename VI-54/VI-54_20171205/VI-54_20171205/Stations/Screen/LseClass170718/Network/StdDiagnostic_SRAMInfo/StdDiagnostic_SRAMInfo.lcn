@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="StdDiagnostic_SRAMInfo" Revision="1.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "SRAMInfo_DiagnosticStation"
+			GUID       = "{5E6D897A-3D3B-4449-9492-49FB5D8ED6FB}"
+			Class      = "DiagnosticStation"
+			Position   = "(1500,210)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ID_Destination" Value="Diagnostic_ID_SRAMInfo_PLC1"/>
+				<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_HMI"/>
+				<Server Name="sStationName" Value="Diagnostic_StatName_PLC1"/>
+				<Server Name="sStatus"/>
+				<Client Name="cHandler"/>
+				<Client Name="cPrio" Value="Diagnostic_Prio"/>
+				<Client Name="cUserFunction"/>
+				<Client Name="toDataManager"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "DiagnosticWork"
+							GUID           = "{1C489665-23B0-47C3-9F1C-268A49EF14A2}"
+							Class          = "DiagnosticWork"
+							BackgroundTime = "2 ms">
+							<Channels>
+								<Server Name="sStationName" Value="Diagnostic_StatName_PLC1"/>
+								<Server Name="sStatus"/>
+								<Client Name="cHandler"/>
+								<Client Name="cToCom"/>
+								<Client Name="cUserFunction"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{0275C8C1-BFF4-47FF-8D16-80C43D2057D8}" Class="DiagnosticStationBase">
+											<Channels>
+												<Server Name="sStationName" Value="Diagnostic_StatName_PLC1"/>
+												<Server Name="sStatus"/>
+												<Client Name="cHandler"/>
+												<Client Name="cSigCLib"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="StationName" GUID="{F3C1D21E-38D5-4F80-A37C-C8C87F6C417B}" Class="String">
+															<Channels>
+																<Server Name="Data" Value="Diagnostic_StatName_PLC1"/>
+																<Client Name="SingleRealloc" Value="1"/>
+															</Channels>
+															<!-- List of Networks in this component -->
+															<Networks>
+																<Network>
+																	<!-- List of Components in this network -->
+																	<Components>
+																		<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+																			<Channels>
+																				<Server Name="Data"/>
+																				<Client Name="DataBuffer"/>
+																				<Client Name="SingleRealloc" Value="1"/>
+																			</Channels>
+																			<!-- List of Networks in this component -->
+																			<Networks>
+																				<Network>
+																					<!-- List of Components in this network -->
+																					<Components>
+																						<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+																							<Channels>
+																								<Server Name="Data"/>
+																							</Channels>
+																						</Object>
+																					</Components>
+																					<Connections>
+																					</Connections>
+																				</Network>
+																			</Networks>
+																		</Object>
+																		<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+																			<Channels>
+																				<Server Name="m_udLength"/>
+																				<Client Name="ThreadSafe" Value="0"/>
+																			</Channels>
+																		</Object>
+																	</Components>
+																	<Connections>
+																	</Connections>
+																</Network>
+															</Networks>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="ReceiveDataCMD" GUID="{452847E3-7F74-4B32-B1B6-17625C7D0408}" Class="ReceiveDataCMD">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_HMI"/>
+								<Server Name="sRecvCnt"/>
+								<Client Name="cDiagnosticWork"/>
+								<Client Name="toDataManager"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{36376179-82D0-47CC-9728-DD12C88F530D}" Class="TCPComReceive">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_HMI"/>
+												<Server Name="sRecvCnt"/>
+												<Client Name="toDataManager"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SendDataCMD" GUID="{E7D07C1C-2264-41C0-A3A5-AF174DDE1B3C}" Class="SendDataCMD">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="ID_Destination" Value="Diagnostic_ID_SRAMInfo_PLC1"/>
+								<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_HMI"/>
+								<Server Name="sSendCnt"/>
+								<Server Name="sSendErr"/>
+								<Client Name="cPrio" Value="Diagnostic_Prio"/>
+								<Client Name="cStation"/>
+								<Client Name="toDataManager"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{378DFD46-7C48-4C37-BD78-E70C694EA1DD}" Class="TCPComSend">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="ID_Destination" Value="Diagnostic_ID_SRAMInfo_PLC1"/>
+												<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_HMI"/>
+												<Server Name="sSendCnt"/>
+												<Server Name="sSendErr"/>
+												<Client Name="cPrio" Value="Diagnostic_Prio"/>
+												<Client Name="cSendErr"/>
+												<Client Name="cSendOk"/>
+												<Client Name="toDataManager"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "SRAMInfo_DiagnosticStation_PLC_Intern"
+			GUID       = "{99812CDB-124E-4A84-8F25-55F6C591E6D3}"
+			Class      = "DiagnosticStation_PLC"
+			Position   = "(1500,1290)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ID_Destination" Value="Diagnostic_ID_SRAMInfo_HMI"/>
+				<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_PLC1"/>
+				<Client Name="cPrio" Value="Diagnostic_Prio"/>
+				<Client Name="cUserFunction"/>
+				<Client Name="toDataManager"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "DiagnosticWork_PLC"
+							GUID           = "{45D5BA62-870C-4341-8B70-23D56B40F7FD}"
+							Class          = "DiagnosticWork_PLC"
+							BackgroundTime = "2 ms">
+							<Channels>
+								<Server Name="sStatus"/>
+								<Client Name="cToCom"/>
+								<Client Name="cUserFunction"/>
+							</Channels>
+						</Object>
+						<Object Name="ReceiveDataCMD_PLC" GUID="{FD751422-E71E-4784-94E9-A8E18ABC1542}" Class="ReceiveDataCMD_PLC">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_PLC1"/>
+								<Server Name="sRecvCnt"/>
+								<Client Name="cDiagnosticWork_PLC"/>
+								<Client Name="toDataManager"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{083EA123-3A46-4BD2-8E09-408CBDC6E337}" Class="TCPComReceive">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_PLC1"/>
+												<Server Name="sRecvCnt"/>
+												<Client Name="toDataManager"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SendDataCMD_PLC" GUID="{26CF3FC7-2E0D-468E-AF62-B47BB6B4CFA7}" Class="SendDataCMD_PLC">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="ID_Destination" Value="Diagnostic_ID_SRAMInfo_HMI"/>
+								<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_PLC1"/>
+								<Server Name="sSendCnt"/>
+								<Server Name="sSendErr"/>
+								<Client Name="cPrio" Value="Diagnostic_Prio"/>
+								<Client Name="cStation"/>
+								<Client Name="toDataManager"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{D22D053D-E905-4B19-AE01-2DF9E3CB9D4F}" Class="TCPComSend">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="ID_Destination" Value="Diagnostic_ID_SRAMInfo_HMI"/>
+												<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_PLC1"/>
+												<Server Name="sSendCnt"/>
+												<Server Name="sSendErr"/>
+												<Client Name="cPrio" Value="Diagnostic_Prio"/>
+												<Client Name="cSendErr"/>
+												<Client Name="cSendOk"/>
+												<Client Name="toDataManager"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "SRAMInfo_DiagnosticStationIntern"
+			GUID       = "{F1EEE58D-1D5C-43AA-8646-E97A6961F97C}"
+			Class      = "DiagnosticStation"
+			Position   = "(1500,750)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ID_Destination" Value="Diagnostic_ID_SRAMInfo_PLC1"/>
+				<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_HMI"/>
+				<Server Name="sStationName" Value="Diagnostic_StatName_HMI"/>
+				<Server Name="sStatus"/>
+				<Client Name="cHandler"/>
+				<Client Name="cPrio" Value="Diagnostic_Prio"/>
+				<Client Name="cUserFunction"/>
+				<Client Name="toDataManager"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "DiagnosticWork"
+							GUID           = "{1C489665-23B0-47C3-9F1C-268A49EF14A2}"
+							Class          = "DiagnosticWork"
+							BackgroundTime = "2 ms">
+							<Channels>
+								<Server Name="sStationName" Value="Diagnostic_StatName_HMI"/>
+								<Server Name="sStatus"/>
+								<Client Name="cHandler"/>
+								<Client Name="cToCom"/>
+								<Client Name="cUserFunction"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{0275C8C1-BFF4-47FF-8D16-80C43D2057D8}" Class="DiagnosticStationBase">
+											<Channels>
+												<Server Name="sStationName" Value="Diagnostic_StatName_HMI"/>
+												<Server Name="sStatus"/>
+												<Client Name="cHandler"/>
+												<Client Name="cSigCLib"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="StationName" GUID="{F3C1D21E-38D5-4F80-A37C-C8C87F6C417B}" Class="String">
+															<Channels>
+																<Server Name="Data" Value="Diagnostic_StatName_HMI"/>
+																<Client Name="SingleRealloc" Value="1"/>
+															</Channels>
+															<!-- List of Networks in this component -->
+															<Networks>
+																<Network>
+																	<!-- List of Components in this network -->
+																	<Components>
+																		<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+																			<Channels>
+																				<Server Name="Data"/>
+																				<Client Name="DataBuffer"/>
+																				<Client Name="SingleRealloc" Value="1"/>
+																			</Channels>
+																			<!-- List of Networks in this component -->
+																			<Networks>
+																				<Network>
+																					<!-- List of Components in this network -->
+																					<Components>
+																						<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+																							<Channels>
+																								<Server Name="Data"/>
+																							</Channels>
+																						</Object>
+																					</Components>
+																					<Connections>
+																					</Connections>
+																				</Network>
+																			</Networks>
+																		</Object>
+																		<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+																			<Channels>
+																				<Server Name="m_udLength"/>
+																				<Client Name="ThreadSafe" Value="0"/>
+																			</Channels>
+																		</Object>
+																	</Components>
+																	<Connections>
+																	</Connections>
+																</Network>
+															</Networks>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="ReceiveDataCMD" GUID="{452847E3-7F74-4B32-B1B6-17625C7D0408}" Class="ReceiveDataCMD">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_HMI"/>
+								<Server Name="sRecvCnt"/>
+								<Client Name="cDiagnosticWork"/>
+								<Client Name="toDataManager"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{36376179-82D0-47CC-9728-DD12C88F530D}" Class="TCPComReceive">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_HMI"/>
+												<Server Name="sRecvCnt"/>
+												<Client Name="toDataManager"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SendDataCMD" GUID="{E7D07C1C-2264-41C0-A3A5-AF174DDE1B3C}" Class="SendDataCMD">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="ID_Destination" Value="Diagnostic_ID_SRAMInfo_PLC1"/>
+								<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_HMI"/>
+								<Server Name="sSendCnt"/>
+								<Server Name="sSendErr"/>
+								<Client Name="cPrio" Value="Diagnostic_Prio"/>
+								<Client Name="cStation"/>
+								<Client Name="toDataManager"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{378DFD46-7C48-4C37-BD78-E70C694EA1DD}" Class="TCPComSend">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="ID_Destination" Value="Diagnostic_ID_SRAMInfo_PLC1"/>
+												<Server Name="ID_Source" Value="Diagnostic_ID_SRAMInfo_HMI"/>
+												<Server Name="sSendCnt"/>
+												<Server Name="sSendErr"/>
+												<Client Name="cPrio" Value="Diagnostic_Prio"/>
+												<Client Name="cSendErr"/>
+												<Client Name="cSendOk"/>
+												<Client Name="toDataManager"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "SRAMInfo_Handler"
+			GUID           = "{A8B14BF4-426C-458A-9054-B32BC296EE63}"
+			Class          = "DiagnosticStationHandler"
+			Position       = "(450,210)"
+			Visualized     = "false"
+			BackgroundTime = "2 ms">
+			<Channels>
+				<Server Name="sFuctionname" Value="Diagnostic_FktName_SRAMInfo"/>
+				<Server Name="sStatus"/>
+				<Client Name="cDiagnostic"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4D673167-D65C-4D95-BB87-17F4CDE0666E}" Class="DiagnosticStationHandlerBase">
+							<Channels>
+								<Server Name="sFuctionname" Value="Diagnostic_FktName_SRAMInfo"/>
+								<Server Name="sStatus"/>
+								<Client Name="cDiagnostic"/>
+								<Client Name="cFileSys"/>
+								<Client Name="cSigCLib"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="FunctionName" GUID="{455F930D-3CC7-4654-A904-7F98F4BA6070}" Class="String">
+											<Channels>
+												<Server Name="Data" Value="Diagnostic_FktName_SRAMInfo"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+															<Channels>
+																<Server Name="Data"/>
+																<Client Name="DataBuffer"/>
+																<Client Name="SingleRealloc" Value="1"/>
+															</Channels>
+															<!-- List of Networks in this component -->
+															<Networks>
+																<Network>
+																	<!-- List of Components in this network -->
+																	<Components>
+																		<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+																			<Channels>
+																				<Server Name="Data"/>
+																			</Channels>
+																		</Object>
+																	</Components>
+																	<Connections>
+																	</Connections>
+																</Network>
+															</Networks>
+														</Object>
+														<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe" Value="0"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "SRAMInfo_Intern"
+			GUID       = "{11F0A64A-8CE5-4F0E-8E16-792EC8D68864}"
+			Class      = "SRAMInfo_User"
+			Position   = "(450,870)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="sStatus"/>
+				<Client Name="cFileSys"/>
+				<Client Name="cStdLib"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{F350280F-9131-4548-AEF7-E355BE9BF770}" Class="DiagnosticUserFunction">
+							<Channels>
+								<Server Name="sStatus"/>
+								<Client Name="cSigCLib"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "SRAMInfo_PLC"
+			GUID       = "{64308A40-6E1E-41A6-BF8D-52E3577C2580}"
+			Class      = "SRAMInfo_User"
+			Position   = "(450,480)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="sStatus"/>
+				<Client Name="cFileSys"/>
+				<Client Name="cStdLib"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{F350280F-9131-4548-AEF7-E355BE9BF770}" Class="DiagnosticUserFunction">
+							<Channels>
+								<Server Name="sStatus"/>
+								<Client Name="cSigCLib"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "SRAMInfo_UserPLC_Intern"
+			GUID       = "{876B70C4-F429-4754-BBED-D138BB0C6504}"
+			Class      = "SRAMInfo_UserPLC"
+			Position   = "(450,1350)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="sStatus"/>
+				<Client Name="cFileSys"/>
+				<Client Name="cSigCLib"/>
+				<Client Name="cStdLib"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{82C4E0EF-E37F-42C5-ACAC-E934FBCB64AF}" Class="DiagnosticUserFunction_PLC">
+							<Channels>
+								<Server Name="sStatus"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="SRAMInfo_DiagnosticStation.cUserFunction" Destination="SRAMInfo_PLC.sStatus" Vertices="(1500,420),(1410,420),(1410,570),(886,570),"/>
+		<Connection Source="SRAMInfo_DiagnosticStation.cHandler" Destination="SRAMInfo_Handler.sStatus" Vertices="(1500,300),(976,300),"/>
+		<Connection Source="SRAMInfo_Handler.cDiagnostic" Destination="Diagnostic.sStatus"/>
+		<Connection Source="SRAMInfo_DiagnosticStation.toDataManager" Destination="DataManagerToPLC1.ClassSvr"/>
+		<Connection Source="SRAMInfo_DiagnosticStationIntern.cHandler" Destination="SRAMInfo_Handler.sStatus" Vertices="(1500,840),(1050,840),(1050,300),(976,300),"/>
+		<Connection Source="SRAMInfo_DiagnosticStationIntern.cUserFunction" Destination="SRAMInfo_Intern.sStatus" Vertices="(1500,960),(886,960),"/>
+		<Connection Source="SRAMInfo_DiagnosticStationIntern.toDataManager" Destination="DataManagerInternToPLC.ClassSvr"/>
+		<Connection Source="SRAMInfo_DiagnosticStation_PLC_Intern.cUserFunction" Destination="SRAMInfo_UserPLC_Intern.sStatus" Vertices="(1500,1440),(882,1440),"/>
+		<Connection Source="SRAMInfo_DiagnosticStation_PLC_Intern.toDataManager" Destination="DataManagerInternToHMI.ClassSvr"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+	<RevDoku>
+		<Owner/>
+		<Dokumentation Revision="1.0" Date="2016-05-25" Company="Sigmatek" Description="start release"/>
+	</RevDoku>
+</Network>

@@ -1,0 +1,1865 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Drives2" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "_DriveAxis_X_Axle1"
+			GUID       = "{9830ECEF-17EB-44AE-9890-CF6253A2CDA6}"
+			Class      = "_DriveAxis"
+			Position   = "(2070,5490)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="ActCurrent"/>
+				<Server Name="ActPos"/>
+				<Server Name="ActSpeed"/>
+				<Server Name="ActXw"/>
+				<Server Name="AxEnable"/>
+				<Server Name="AxError"/>
+				<Server Name="AxErrorQuit"/>
+				<Server Name="AxisState"/>
+				<Server Name="AxTorqueControl"/>
+				<Server Name="CmdState"/>
+				<Server Name="ControlWord"/>
+				<Server Name="I_HC"/>
+				<Server Name="Online"/>
+				<Server Name="SDDCmdIntfc"/>
+				<Server Name="SerialNo"/>
+				<Server Name="SetCurrent"/>
+				<Server Name="SetPos"/>
+				<Server Name="SetSpeed"/>
+				<Server Name="StateWord"/>
+				<Server Name="ZPulsLatch"/>
+				<Client Name="AxisExtend"/>
+				<Client Name="AxisNo" Value="2"/>
+				<Client Name="DriveMng"/>
+				<Client Name="FileHandle"/>
+				<Client Name="OverwriteMotorPara" Value="0"/>
+				<Client Name="ParaSaveType" Value="1"/>
+				<Client Name="ParaTab"/>
+				<Client Name="Place" Value="0"/>
+				<Client Name="TableIndex"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8E760ACF-CD88-4C08-92DD-0B2C6D65180F}" Class="_DriveAxisBase">
+							<Channels>
+								<Server Name="ActCurrent"/>
+								<Server Name="ActPos"/>
+								<Server Name="ActSpeed"/>
+								<Server Name="ActXw"/>
+								<Server Name="AxEnable"/>
+								<Server Name="AxError"/>
+								<Server Name="AxErrorQuit"/>
+								<Server Name="AxisState"/>
+								<Server Name="AxTorqueControl"/>
+								<Server Name="CmdState"/>
+								<Server Name="ControlWord"/>
+								<Server Name="I_HC"/>
+								<Server Name="Online"/>
+								<Server Name="SDDCmdIntfc"/>
+								<Server Name="SerialNo"/>
+								<Server Name="SetCurrent"/>
+								<Server Name="SetPos"/>
+								<Server Name="SetSpeed"/>
+								<Server Name="StateWord"/>
+								<Server Name="ZPulsLatch"/>
+								<Client Name="AxisExtend"/>
+								<Client Name="AxisNo" Value="2"/>
+								<Client Name="coLinker"/>
+								<Client Name="coStdLib"/>
+								<Client Name="DriveAxisSet"/>
+								<Client Name="DriveMng"/>
+								<Client Name="Place" Value="0"/>
+							</Channels>
+						</Object>
+						<Object Name="MerkerEx2" GUID="{35A78AD4-A4D3-4ABE-9D72-8236201BF41E}" Class="MerkerEx">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="ThreadSafe" Value="0"/>
+							</Channels>
+						</Object>
+						<Object Name="RAMex2" GUID="{4087D4D9-818A-49D3-BEB7-FF34C466AD38}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDAxSet1" GUID="{26F51E37-D3D4-4780-B1D7-2FAFECD04824}" Class="_DriveAxisSet">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="coLinker"/>
+								<Client Name="coMerkerEx"/>
+								<Client Name="coRamEx"/>
+								<Client Name="FileHandle"/>
+								<Client Name="OverwriteMotorPara" Value="0"/>
+								<Client Name="ParaSaveType" Value="1"/>
+								<Client Name="ParaTab"/>
+								<Client Name="TableIndex"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+			<AdditionalData>
+				<Entry Name="DeviceType" Value="Axis"/>
+			</AdditionalData>
+		</Object>
+		<Object
+			Name       = "_DriveAxis_X_Axle2"
+			GUID       = "{ADCA0580-32A0-46F6-938D-55F130678C4A}"
+			Class      = "_DriveAxis"
+			Position   = "(2070,6840)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="ActCurrent"/>
+				<Server Name="ActPos"/>
+				<Server Name="ActSpeed"/>
+				<Server Name="ActXw"/>
+				<Server Name="AxEnable"/>
+				<Server Name="AxError"/>
+				<Server Name="AxErrorQuit"/>
+				<Server Name="AxisState"/>
+				<Server Name="AxTorqueControl"/>
+				<Server Name="CmdState"/>
+				<Server Name="ControlWord"/>
+				<Server Name="I_HC"/>
+				<Server Name="Online"/>
+				<Server Name="SDDCmdIntfc"/>
+				<Server Name="SerialNo"/>
+				<Server Name="SetCurrent"/>
+				<Server Name="SetPos"/>
+				<Server Name="SetSpeed"/>
+				<Server Name="StateWord"/>
+				<Server Name="ZPulsLatch"/>
+				<Client Name="AxisExtend"/>
+				<Client Name="AxisNo" Value="1"/>
+				<Client Name="DriveMng"/>
+				<Client Name="FileHandle"/>
+				<Client Name="OverwriteMotorPara" Value="0"/>
+				<Client Name="ParaSaveType" Value="1"/>
+				<Client Name="ParaTab"/>
+				<Client Name="Place" Value="1"/>
+				<Client Name="TableIndex"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8E760ACF-CD88-4C08-92DD-0B2C6D65180F}" Class="_DriveAxisBase">
+							<Channels>
+								<Server Name="ActCurrent"/>
+								<Server Name="ActPos"/>
+								<Server Name="ActSpeed"/>
+								<Server Name="ActXw"/>
+								<Server Name="AxEnable"/>
+								<Server Name="AxError"/>
+								<Server Name="AxErrorQuit"/>
+								<Server Name="AxisState"/>
+								<Server Name="AxTorqueControl"/>
+								<Server Name="CmdState"/>
+								<Server Name="ControlWord"/>
+								<Server Name="I_HC"/>
+								<Server Name="Online"/>
+								<Server Name="SDDCmdIntfc"/>
+								<Server Name="SerialNo"/>
+								<Server Name="SetCurrent"/>
+								<Server Name="SetPos"/>
+								<Server Name="SetSpeed"/>
+								<Server Name="StateWord"/>
+								<Server Name="ZPulsLatch"/>
+								<Client Name="AxisExtend"/>
+								<Client Name="AxisNo" Value="1"/>
+								<Client Name="coLinker"/>
+								<Client Name="coStdLib"/>
+								<Client Name="DriveAxisSet"/>
+								<Client Name="DriveMng"/>
+								<Client Name="Place" Value="1"/>
+							</Channels>
+						</Object>
+						<Object Name="MerkerEx2" GUID="{35A78AD4-A4D3-4ABE-9D72-8236201BF41E}" Class="MerkerEx">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="ThreadSafe" Value="0"/>
+							</Channels>
+						</Object>
+						<Object Name="RAMex2" GUID="{4087D4D9-818A-49D3-BEB7-FF34C466AD38}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDAxSet1" GUID="{26F51E37-D3D4-4780-B1D7-2FAFECD04824}" Class="_DriveAxisSet">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="coLinker"/>
+								<Client Name="coMerkerEx"/>
+								<Client Name="coRamEx"/>
+								<Client Name="FileHandle"/>
+								<Client Name="OverwriteMotorPara" Value="0"/>
+								<Client Name="ParaSaveType" Value="1"/>
+								<Client Name="ParaTab"/>
+								<Client Name="TableIndex"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+			<AdditionalData>
+				<Entry Name="DeviceType" Value="Axis"/>
+			</AdditionalData>
+		</Object>
+		<Object
+			Name       = "_DriveAxis_X_Axle3"
+			GUID       = "{28B5FFCA-A7A1-4685-88DD-ACAFC54A6F3A}"
+			Class      = "_DriveAxis"
+			Position   = "(2070,8190)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="ActCurrent"/>
+				<Server Name="ActPos"/>
+				<Server Name="ActSpeed"/>
+				<Server Name="ActXw"/>
+				<Server Name="AxEnable"/>
+				<Server Name="AxError"/>
+				<Server Name="AxErrorQuit"/>
+				<Server Name="AxisState"/>
+				<Server Name="AxTorqueControl"/>
+				<Server Name="CmdState"/>
+				<Server Name="ControlWord"/>
+				<Server Name="I_HC"/>
+				<Server Name="Online"/>
+				<Server Name="SDDCmdIntfc"/>
+				<Server Name="SerialNo"/>
+				<Server Name="SetCurrent"/>
+				<Server Name="SetPos"/>
+				<Server Name="SetSpeed"/>
+				<Server Name="StateWord"/>
+				<Server Name="ZPulsLatch"/>
+				<Client Name="AxisExtend"/>
+				<Client Name="AxisNo" Value="2"/>
+				<Client Name="DriveMng"/>
+				<Client Name="FileHandle"/>
+				<Client Name="OverwriteMotorPara" Value="0"/>
+				<Client Name="ParaSaveType" Value="1"/>
+				<Client Name="ParaTab"/>
+				<Client Name="Place" Value="0"/>
+				<Client Name="TableIndex"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8E760ACF-CD88-4C08-92DD-0B2C6D65180F}" Class="_DriveAxisBase">
+							<Channels>
+								<Server Name="ActCurrent"/>
+								<Server Name="ActPos"/>
+								<Server Name="ActSpeed"/>
+								<Server Name="ActXw"/>
+								<Server Name="AxEnable"/>
+								<Server Name="AxError"/>
+								<Server Name="AxErrorQuit"/>
+								<Server Name="AxisState"/>
+								<Server Name="AxTorqueControl"/>
+								<Server Name="CmdState"/>
+								<Server Name="ControlWord"/>
+								<Server Name="I_HC"/>
+								<Server Name="Online"/>
+								<Server Name="SDDCmdIntfc"/>
+								<Server Name="SerialNo"/>
+								<Server Name="SetCurrent"/>
+								<Server Name="SetPos"/>
+								<Server Name="SetSpeed"/>
+								<Server Name="StateWord"/>
+								<Server Name="ZPulsLatch"/>
+								<Client Name="AxisExtend"/>
+								<Client Name="AxisNo" Value="2"/>
+								<Client Name="coLinker"/>
+								<Client Name="coStdLib"/>
+								<Client Name="DriveAxisSet"/>
+								<Client Name="DriveMng"/>
+								<Client Name="Place" Value="0"/>
+							</Channels>
+						</Object>
+						<Object Name="MerkerEx2" GUID="{35A78AD4-A4D3-4ABE-9D72-8236201BF41E}" Class="MerkerEx">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="ThreadSafe" Value="0"/>
+							</Channels>
+						</Object>
+						<Object Name="RAMex2" GUID="{4087D4D9-818A-49D3-BEB7-FF34C466AD38}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDAxSet1" GUID="{26F51E37-D3D4-4780-B1D7-2FAFECD04824}" Class="_DriveAxisSet">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="coLinker"/>
+								<Client Name="coMerkerEx"/>
+								<Client Name="coRamEx"/>
+								<Client Name="FileHandle"/>
+								<Client Name="OverwriteMotorPara" Value="0"/>
+								<Client Name="ParaSaveType" Value="1"/>
+								<Client Name="ParaTab"/>
+								<Client Name="TableIndex"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+			<AdditionalData>
+				<Entry Name="DeviceType" Value="Axis"/>
+			</AdditionalData>
+		</Object>
+		<Object
+			Name       = "_DriveAxis_X_Axle4"
+			GUID       = "{A8B886D0-F688-487F-B1DF-9C7D5825D59C}"
+			Class      = "_DriveAxis"
+			Position   = "(2070,9540)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="ActCurrent"/>
+				<Server Name="ActPos"/>
+				<Server Name="ActSpeed"/>
+				<Server Name="ActXw"/>
+				<Server Name="AxEnable"/>
+				<Server Name="AxError"/>
+				<Server Name="AxErrorQuit"/>
+				<Server Name="AxisState"/>
+				<Server Name="AxTorqueControl"/>
+				<Server Name="CmdState"/>
+				<Server Name="ControlWord"/>
+				<Server Name="I_HC"/>
+				<Server Name="Online"/>
+				<Server Name="SDDCmdIntfc"/>
+				<Server Name="SerialNo"/>
+				<Server Name="SetCurrent"/>
+				<Server Name="SetPos"/>
+				<Server Name="SetSpeed"/>
+				<Server Name="StateWord"/>
+				<Server Name="ZPulsLatch"/>
+				<Client Name="AxisExtend"/>
+				<Client Name="AxisNo" Value="1"/>
+				<Client Name="DriveMng"/>
+				<Client Name="FileHandle"/>
+				<Client Name="OverwriteMotorPara" Value="0"/>
+				<Client Name="ParaSaveType" Value="1"/>
+				<Client Name="ParaTab"/>
+				<Client Name="Place" Value="1"/>
+				<Client Name="TableIndex"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8E760ACF-CD88-4C08-92DD-0B2C6D65180F}" Class="_DriveAxisBase">
+							<Channels>
+								<Server Name="ActCurrent"/>
+								<Server Name="ActPos"/>
+								<Server Name="ActSpeed"/>
+								<Server Name="ActXw"/>
+								<Server Name="AxEnable"/>
+								<Server Name="AxError"/>
+								<Server Name="AxErrorQuit"/>
+								<Server Name="AxisState"/>
+								<Server Name="AxTorqueControl"/>
+								<Server Name="CmdState"/>
+								<Server Name="ControlWord"/>
+								<Server Name="I_HC"/>
+								<Server Name="Online"/>
+								<Server Name="SDDCmdIntfc"/>
+								<Server Name="SerialNo"/>
+								<Server Name="SetCurrent"/>
+								<Server Name="SetPos"/>
+								<Server Name="SetSpeed"/>
+								<Server Name="StateWord"/>
+								<Server Name="ZPulsLatch"/>
+								<Client Name="AxisExtend"/>
+								<Client Name="AxisNo" Value="1"/>
+								<Client Name="coLinker"/>
+								<Client Name="coStdLib"/>
+								<Client Name="DriveAxisSet"/>
+								<Client Name="DriveMng"/>
+								<Client Name="Place" Value="1"/>
+							</Channels>
+						</Object>
+						<Object Name="MerkerEx2" GUID="{35A78AD4-A4D3-4ABE-9D72-8236201BF41E}" Class="MerkerEx">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="ThreadSafe" Value="0"/>
+							</Channels>
+						</Object>
+						<Object Name="RAMex2" GUID="{4087D4D9-818A-49D3-BEB7-FF34C466AD38}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDAxSet1" GUID="{26F51E37-D3D4-4780-B1D7-2FAFECD04824}" Class="_DriveAxisSet">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="coLinker"/>
+								<Client Name="coMerkerEx"/>
+								<Client Name="coRamEx"/>
+								<Client Name="FileHandle"/>
+								<Client Name="OverwriteMotorPara" Value="0"/>
+								<Client Name="ParaSaveType" Value="1"/>
+								<Client Name="ParaTab"/>
+								<Client Name="TableIndex"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+			<AdditionalData>
+				<Entry Name="DeviceType" Value="Axis"/>
+			</AdditionalData>
+		</Object>
+		<Object
+			Name       = "_DriveAxis_Y_Axle1"
+			GUID       = "{D64E5CD9-4A4A-467D-AEEC-AA0177DB8A9C}"
+			Class      = "_DriveAxis"
+			Position   = "(2070,90)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="ActCurrent"/>
+				<Server Name="ActPos"/>
+				<Server Name="ActSpeed"/>
+				<Server Name="ActXw"/>
+				<Server Name="AxEnable"/>
+				<Server Name="AxError"/>
+				<Server Name="AxErrorQuit"/>
+				<Server Name="AxisState"/>
+				<Server Name="AxTorqueControl"/>
+				<Server Name="CmdState"/>
+				<Server Name="ControlWord"/>
+				<Server Name="I_HC"/>
+				<Server Name="Online"/>
+				<Server Name="SDDCmdIntfc"/>
+				<Server Name="SerialNo"/>
+				<Server Name="SetCurrent"/>
+				<Server Name="SetPos"/>
+				<Server Name="SetSpeed"/>
+				<Server Name="StateWord"/>
+				<Server Name="ZPulsLatch"/>
+				<Client Name="AxisExtend"/>
+				<Client Name="AxisNo" Value="1"/>
+				<Client Name="DriveMng"/>
+				<Client Name="FileHandle"/>
+				<Client Name="OverwriteMotorPara" Value="0"/>
+				<Client Name="ParaSaveType" Value="1"/>
+				<Client Name="ParaTab"/>
+				<Client Name="Place" Value="0"/>
+				<Client Name="TableIndex"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8E760ACF-CD88-4C08-92DD-0B2C6D65180F}" Class="_DriveAxisBase">
+							<Channels>
+								<Server Name="ActCurrent"/>
+								<Server Name="ActPos"/>
+								<Server Name="ActSpeed"/>
+								<Server Name="ActXw"/>
+								<Server Name="AxEnable"/>
+								<Server Name="AxError"/>
+								<Server Name="AxErrorQuit"/>
+								<Server Name="AxisState"/>
+								<Server Name="AxTorqueControl"/>
+								<Server Name="CmdState"/>
+								<Server Name="ControlWord"/>
+								<Server Name="I_HC"/>
+								<Server Name="Online"/>
+								<Server Name="SDDCmdIntfc"/>
+								<Server Name="SerialNo"/>
+								<Server Name="SetCurrent"/>
+								<Server Name="SetPos"/>
+								<Server Name="SetSpeed"/>
+								<Server Name="StateWord"/>
+								<Server Name="ZPulsLatch"/>
+								<Client Name="AxisExtend"/>
+								<Client Name="AxisNo" Value="1"/>
+								<Client Name="coLinker"/>
+								<Client Name="coStdLib"/>
+								<Client Name="DriveAxisSet"/>
+								<Client Name="DriveMng"/>
+								<Client Name="Place" Value="0"/>
+							</Channels>
+						</Object>
+						<Object Name="MerkerEx2" GUID="{35A78AD4-A4D3-4ABE-9D72-8236201BF41E}" Class="MerkerEx">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="ThreadSafe" Value="0"/>
+							</Channels>
+						</Object>
+						<Object Name="RAMex2" GUID="{4087D4D9-818A-49D3-BEB7-FF34C466AD38}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDAxSet1" GUID="{26F51E37-D3D4-4780-B1D7-2FAFECD04824}" Class="_DriveAxisSet">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="coLinker"/>
+								<Client Name="coMerkerEx"/>
+								<Client Name="coRamEx"/>
+								<Client Name="FileHandle"/>
+								<Client Name="OverwriteMotorPara" Value="0"/>
+								<Client Name="ParaSaveType" Value="1"/>
+								<Client Name="ParaTab"/>
+								<Client Name="TableIndex"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+			<AdditionalData>
+				<Entry Name="DeviceType" Value="Axis"/>
+			</AdditionalData>
+		</Object>
+		<Object
+			Name       = "_DriveAxis_Y_Axle2"
+			GUID       = "{7D9B0E85-736F-4419-A0E3-373D965DF851}"
+			Class      = "_DriveAxis"
+			Position   = "(2070,1440)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="ActCurrent"/>
+				<Server Name="ActPos"/>
+				<Server Name="ActSpeed"/>
+				<Server Name="ActXw"/>
+				<Server Name="AxEnable"/>
+				<Server Name="AxError"/>
+				<Server Name="AxErrorQuit"/>
+				<Server Name="AxisState"/>
+				<Server Name="AxTorqueControl"/>
+				<Server Name="CmdState"/>
+				<Server Name="ControlWord"/>
+				<Server Name="I_HC"/>
+				<Server Name="Online"/>
+				<Server Name="SDDCmdIntfc"/>
+				<Server Name="SerialNo"/>
+				<Server Name="SetCurrent"/>
+				<Server Name="SetPos"/>
+				<Server Name="SetSpeed"/>
+				<Server Name="StateWord"/>
+				<Server Name="ZPulsLatch"/>
+				<Client Name="AxisExtend"/>
+				<Client Name="AxisNo" Value="2"/>
+				<Client Name="DriveMng"/>
+				<Client Name="FileHandle"/>
+				<Client Name="OverwriteMotorPara" Value="0"/>
+				<Client Name="ParaSaveType" Value="1"/>
+				<Client Name="ParaTab"/>
+				<Client Name="Place" Value="0"/>
+				<Client Name="TableIndex"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8E760ACF-CD88-4C08-92DD-0B2C6D65180F}" Class="_DriveAxisBase">
+							<Channels>
+								<Server Name="ActCurrent"/>
+								<Server Name="ActPos"/>
+								<Server Name="ActSpeed"/>
+								<Server Name="ActXw"/>
+								<Server Name="AxEnable"/>
+								<Server Name="AxError"/>
+								<Server Name="AxErrorQuit"/>
+								<Server Name="AxisState"/>
+								<Server Name="AxTorqueControl"/>
+								<Server Name="CmdState"/>
+								<Server Name="ControlWord"/>
+								<Server Name="I_HC"/>
+								<Server Name="Online"/>
+								<Server Name="SDDCmdIntfc"/>
+								<Server Name="SerialNo"/>
+								<Server Name="SetCurrent"/>
+								<Server Name="SetPos"/>
+								<Server Name="SetSpeed"/>
+								<Server Name="StateWord"/>
+								<Server Name="ZPulsLatch"/>
+								<Client Name="AxisExtend"/>
+								<Client Name="AxisNo" Value="2"/>
+								<Client Name="coLinker"/>
+								<Client Name="coStdLib"/>
+								<Client Name="DriveAxisSet"/>
+								<Client Name="DriveMng"/>
+								<Client Name="Place" Value="0"/>
+							</Channels>
+						</Object>
+						<Object Name="MerkerEx2" GUID="{35A78AD4-A4D3-4ABE-9D72-8236201BF41E}" Class="MerkerEx">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="ThreadSafe" Value="0"/>
+							</Channels>
+						</Object>
+						<Object Name="RAMex2" GUID="{4087D4D9-818A-49D3-BEB7-FF34C466AD38}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDAxSet1" GUID="{26F51E37-D3D4-4780-B1D7-2FAFECD04824}" Class="_DriveAxisSet">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="coLinker"/>
+								<Client Name="coMerkerEx"/>
+								<Client Name="coRamEx"/>
+								<Client Name="FileHandle"/>
+								<Client Name="OverwriteMotorPara" Value="0"/>
+								<Client Name="ParaSaveType" Value="1"/>
+								<Client Name="ParaTab"/>
+								<Client Name="TableIndex"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+			<AdditionalData>
+				<Entry Name="DeviceType" Value="Axis"/>
+			</AdditionalData>
+		</Object>
+		<Object
+			Name       = "_DriveAxis_Y_Axle3"
+			GUID       = "{86A5D4E1-723F-4979-827D-D753F5B673AE}"
+			Class      = "_DriveAxis"
+			Position   = "(2070,2790)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="ActCurrent"/>
+				<Server Name="ActPos"/>
+				<Server Name="ActSpeed"/>
+				<Server Name="ActXw"/>
+				<Server Name="AxEnable"/>
+				<Server Name="AxError"/>
+				<Server Name="AxErrorQuit"/>
+				<Server Name="AxisState"/>
+				<Server Name="AxTorqueControl"/>
+				<Server Name="CmdState"/>
+				<Server Name="ControlWord"/>
+				<Server Name="I_HC"/>
+				<Server Name="Online"/>
+				<Server Name="SDDCmdIntfc"/>
+				<Server Name="SerialNo"/>
+				<Server Name="SetCurrent"/>
+				<Server Name="SetPos"/>
+				<Server Name="SetSpeed"/>
+				<Server Name="StateWord"/>
+				<Server Name="ZPulsLatch"/>
+				<Client Name="AxisExtend"/>
+				<Client Name="AxisNo" Value="1"/>
+				<Client Name="DriveMng"/>
+				<Client Name="FileHandle"/>
+				<Client Name="OverwriteMotorPara" Value="0"/>
+				<Client Name="ParaSaveType" Value="1"/>
+				<Client Name="ParaTab"/>
+				<Client Name="Place" Value="1"/>
+				<Client Name="TableIndex"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8E760ACF-CD88-4C08-92DD-0B2C6D65180F}" Class="_DriveAxisBase">
+							<Channels>
+								<Server Name="ActCurrent"/>
+								<Server Name="ActPos"/>
+								<Server Name="ActSpeed"/>
+								<Server Name="ActXw"/>
+								<Server Name="AxEnable"/>
+								<Server Name="AxError"/>
+								<Server Name="AxErrorQuit"/>
+								<Server Name="AxisState"/>
+								<Server Name="AxTorqueControl"/>
+								<Server Name="CmdState"/>
+								<Server Name="ControlWord"/>
+								<Server Name="I_HC"/>
+								<Server Name="Online"/>
+								<Server Name="SDDCmdIntfc"/>
+								<Server Name="SerialNo"/>
+								<Server Name="SetCurrent"/>
+								<Server Name="SetPos"/>
+								<Server Name="SetSpeed"/>
+								<Server Name="StateWord"/>
+								<Server Name="ZPulsLatch"/>
+								<Client Name="AxisExtend"/>
+								<Client Name="AxisNo" Value="1"/>
+								<Client Name="coLinker"/>
+								<Client Name="coStdLib"/>
+								<Client Name="DriveAxisSet"/>
+								<Client Name="DriveMng"/>
+								<Client Name="Place" Value="1"/>
+							</Channels>
+						</Object>
+						<Object Name="MerkerEx2" GUID="{35A78AD4-A4D3-4ABE-9D72-8236201BF41E}" Class="MerkerEx">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="ThreadSafe" Value="0"/>
+							</Channels>
+						</Object>
+						<Object Name="RAMex2" GUID="{4087D4D9-818A-49D3-BEB7-FF34C466AD38}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDAxSet1" GUID="{26F51E37-D3D4-4780-B1D7-2FAFECD04824}" Class="_DriveAxisSet">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="coLinker"/>
+								<Client Name="coMerkerEx"/>
+								<Client Name="coRamEx"/>
+								<Client Name="FileHandle"/>
+								<Client Name="OverwriteMotorPara" Value="0"/>
+								<Client Name="ParaSaveType" Value="1"/>
+								<Client Name="ParaTab"/>
+								<Client Name="TableIndex"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+			<AdditionalData>
+				<Entry Name="DeviceType" Value="Axis"/>
+			</AdditionalData>
+		</Object>
+		<Object
+			Name       = "_DriveAxis_Y_Axle4"
+			GUID       = "{2E5CE660-5725-48CC-9390-F33E6B19A838}"
+			Class      = "_DriveAxis"
+			Position   = "(2070,4140)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="ActCurrent"/>
+				<Server Name="ActPos"/>
+				<Server Name="ActSpeed"/>
+				<Server Name="ActXw"/>
+				<Server Name="AxEnable"/>
+				<Server Name="AxError"/>
+				<Server Name="AxErrorQuit"/>
+				<Server Name="AxisState"/>
+				<Server Name="AxTorqueControl"/>
+				<Server Name="CmdState"/>
+				<Server Name="ControlWord"/>
+				<Server Name="I_HC"/>
+				<Server Name="Online"/>
+				<Server Name="SDDCmdIntfc"/>
+				<Server Name="SerialNo"/>
+				<Server Name="SetCurrent"/>
+				<Server Name="SetPos"/>
+				<Server Name="SetSpeed"/>
+				<Server Name="StateWord"/>
+				<Server Name="ZPulsLatch"/>
+				<Client Name="AxisExtend"/>
+				<Client Name="AxisNo" Value="1"/>
+				<Client Name="DriveMng"/>
+				<Client Name="FileHandle"/>
+				<Client Name="OverwriteMotorPara" Value="0"/>
+				<Client Name="ParaSaveType" Value="1"/>
+				<Client Name="ParaTab"/>
+				<Client Name="Place" Value="0"/>
+				<Client Name="TableIndex"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8E760ACF-CD88-4C08-92DD-0B2C6D65180F}" Class="_DriveAxisBase">
+							<Channels>
+								<Server Name="ActCurrent"/>
+								<Server Name="ActPos"/>
+								<Server Name="ActSpeed"/>
+								<Server Name="ActXw"/>
+								<Server Name="AxEnable"/>
+								<Server Name="AxError"/>
+								<Server Name="AxErrorQuit"/>
+								<Server Name="AxisState"/>
+								<Server Name="AxTorqueControl"/>
+								<Server Name="CmdState"/>
+								<Server Name="ControlWord"/>
+								<Server Name="I_HC"/>
+								<Server Name="Online"/>
+								<Server Name="SDDCmdIntfc"/>
+								<Server Name="SerialNo"/>
+								<Server Name="SetCurrent"/>
+								<Server Name="SetPos"/>
+								<Server Name="SetSpeed"/>
+								<Server Name="StateWord"/>
+								<Server Name="ZPulsLatch"/>
+								<Client Name="AxisExtend"/>
+								<Client Name="AxisNo" Value="1"/>
+								<Client Name="coLinker"/>
+								<Client Name="coStdLib"/>
+								<Client Name="DriveAxisSet"/>
+								<Client Name="DriveMng"/>
+								<Client Name="Place" Value="0"/>
+							</Channels>
+						</Object>
+						<Object Name="MerkerEx2" GUID="{35A78AD4-A4D3-4ABE-9D72-8236201BF41E}" Class="MerkerEx">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="ThreadSafe" Value="0"/>
+							</Channels>
+						</Object>
+						<Object Name="RAMex2" GUID="{4087D4D9-818A-49D3-BEB7-FF34C466AD38}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDAxSet1" GUID="{26F51E37-D3D4-4780-B1D7-2FAFECD04824}" Class="_DriveAxisSet">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="coLinker"/>
+								<Client Name="coMerkerEx"/>
+								<Client Name="coRamEx"/>
+								<Client Name="FileHandle"/>
+								<Client Name="OverwriteMotorPara" Value="0"/>
+								<Client Name="ParaSaveType" Value="1"/>
+								<Client Name="ParaTab"/>
+								<Client Name="TableIndex"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+			<AdditionalData>
+				<Entry Name="DeviceType" Value="Axis"/>
+			</AdditionalData>
+		</Object>
+		<Object
+			Name       = "_DriveMng_MDD1002"
+			GUID       = "{62AECBD1-2486-4C2B-8CA2-25631A2D0BDE}"
+			Class      = "_DriveMng_MDD100"
+			Position   = "(900,90)"
+			Visualized = "true"
+			CyclicTime = "cCT">
+			<Channels>
+				<Server Name="CmdState"/>
+				<Server Name="CRC_ErrorCounter"/>
+				<Server Name="DeviceAddress"/>
+				<Server Name="DeviceID"/>
+				<Server Name="DriveType"/>
+				<Server Name="FwDate"/>
+				<Server Name="FWVersion"/>
+				<Server Name="HWVersion"/>
+				<Server Name="Input1"/>
+				<Server Name="Input2"/>
+				<Server Name="Input3"/>
+				<Server Name="Input4"/>
+				<Server Name="Input5"/>
+				<Server Name="Input6"/>
+				<Server Name="Input7"/>
+				<Server Name="Input8"/>
+				<Server Name="Online"/>
+				<Server Name="Release"/>
+				<Server Name="RetryCounter"/>
+				<Server Name="SerialNo"/>
+				<Server Name="ValidateSerNo"/>
+				<Server Name="VaranOut_1"/>
+				<Server Name="VendorID"/>
+				<Client Name="FetchDigitalInputs" Value="0"/>
+				<Client Name="Required" Value="HwRequired"/>
+				<Client Name="SerNoValidation"/>
+				<Client Name="Transparent" Value="0"/>
+				<Client Name="UserAction"/>
+				<Client Name="VaranIn" Value="0"/>
+				<Client Name="VaranTimeMultiplier"/>
+				<Parameter KeyName="CableLength" Value="1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{49F99B4B-ACA4-451B-A6DA-380119A66980}" Class="_DriveMngBase">
+							<Channels>
+								<Server Name="AxisAvailable"/>
+								<Server Name="CmdState"/>
+								<Server Name="DeviceAddress"/>
+								<Server Name="DeviceID"/>
+								<Server Name="DriveType"/>
+								<Server Name="HWVersion"/>
+								<Server Name="Online"/>
+								<Server Name="Release"/>
+								<Server Name="RetryCounter"/>
+								<Server Name="SerialNo"/>
+								<Server Name="VendorID"/>
+								<Client Name="cOnline"/>
+								<Client Name="coStdLib"/>
+								<Client Name="FwDatetr"/>
+								<Client Name="FwNumStr"/>
+								<Client Name="To_TaskObjectControl"/>
+								<Client Name="ToBusIF"/>
+								<Client Name="toVaran"/>
+							</Channels>
+						</Object>
+						<Object Name="FWDateString" GUID="{227F70C7-F001-4715-AAC1-ABEC4C6C79BE}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="FWNumSTring" GUID="{89017E6F-B1BE-49B6-815E-AC1DA707E598}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="VaranDriveBase" GUID="{81FB6BA1-E2FC-4451-B822-A08D27FCAC0F}" Class="_VaranDriveBase">
+							<Channels>
+								<Server Name="CRC_ErrorCounter"/>
+								<Server Name="DeviceAddress"/>
+								<Server Name="DeviceID"/>
+								<Server Name="Input1"/>
+								<Server Name="Input2"/>
+								<Server Name="Input3"/>
+								<Server Name="Input4"/>
+								<Server Name="Input5"/>
+								<Server Name="Input6"/>
+								<Server Name="Input7"/>
+								<Server Name="Input8"/>
+								<Server Name="Online"/>
+								<Server Name="Release"/>
+								<Server Name="RetryCounter"/>
+								<Server Name="SerialNo"/>
+								<Server Name="State"/>
+								<Server Name="Synchron"/>
+								<Server Name="ValidateSerNo"/>
+								<Server Name="VaranOut_1"/>
+								<Server Name="VendorID"/>
+								<Client Name="FetchDigitalInputs" Value="0"/>
+								<Client Name="Required" Value="HwRequired"/>
+								<Client Name="SerNoValidation"/>
+								<Client Name="Transparent" Value="0"/>
+								<Client Name="UserAction"/>
+								<Client Name="VaranIn" Value="0"/>
+								<Client Name="VaranTimeMultiplier"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{4F8ADAEB-11BC-424D-A610-2A3263C72A44}" Class="Varan_Base">
+											<Channels>
+												<Server Name="ConnectCounter"/>
+												<Server Name="DeviceAddress"/>
+												<Server Name="DeviceID"/>
+												<Server Name="DiagControl"/>
+												<Server Name="FaultCounter"/>
+												<Server Name="Online"/>
+												<Server Name="Release"/>
+												<Server Name="RetryCounter"/>
+												<Server Name="RXLost"/>
+												<Server Name="SerialNo"/>
+												<Server Name="State"/>
+												<Server Name="TXLost"/>
+												<Server Name="ValidateSerNo"/>
+												<Server Name="VendorID"/>
+												<Client Name="Required" Value="HwRequired"/>
+												<Client Name="SerNoValidation"/>
+												<Client Name="TimeBase" Value="0"/>
+												<Client Name="TimeBaseOffset" Value="0"/>
+												<Client Name="To_MultiTask"/>
+												<Client Name="To_StdLib"/>
+												<Client Name="Transparent" Value="0"/>
+												<Client Name="UserAction"/>
+												<Client Name="VaranIn" Value="0"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="SerialNoStr" GUID="{DBAA28A2-B730-4B3D-BE77-52A87CFBF0B0}" Class="String">
+															<Channels>
+																<Server Name="Data"/>
+																<Client Name="SingleRealloc" Value="1"/>
+															</Channels>
+															<!-- List of Networks in this component -->
+															<Networks>
+																<Network>
+																	<!-- List of Components in this network -->
+																	<Components>
+																		<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+																			<Channels>
+																				<Server Name="Data"/>
+																				<Client Name="DataBuffer"/>
+																				<Client Name="SingleRealloc" Value="1"/>
+																			</Channels>
+																			<!-- List of Networks in this component -->
+																			<Networks>
+																				<Network>
+																					<!-- List of Components in this network -->
+																					<Components>
+																						<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+																							<Channels>
+																								<Server Name="Data"/>
+																							</Channels>
+																						</Object>
+																					</Components>
+																					<Connections>
+																					</Connections>
+																				</Network>
+																			</Networks>
+																		</Object>
+																		<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+																			<Channels>
+																				<Server Name="m_udLength"/>
+																				<Client Name="ThreadSafe" Value="0"/>
+																			</Channels>
+																		</Object>
+																	</Components>
+																	<Connections>
+																	</Connections>
+																</Network>
+															</Networks>
+														</Object>
+														<Object Name="SerNoBackup" GUID="{7F2EEFF0-0F12-46DA-B0E6-9555A5C07FA2}" Class="RamFile">
+															<Channels>
+																<Server Name="FileNameHex"/>
+																<Server Name="m_udLength"/>
+																<Server Name="SizeError"/>
+																<Client Name="Alarm"/>
+																<Client Name="MultiTask"/>
+																<Client Name="Setup" Value="2#1101"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="Hub_Base0" GUID="{DCCA7F12-6BB0-4896-879A-9E7762EC5DDB}" Class="Hub_Base">
+											<Channels>
+												<Server Name="Control"/>
+												<Client Name="Splitter_Place" Value="0"/>
+												<Client Name="VaranIn"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{5D6D62E4-B5A0-489A-88A5-E5683DD5B86D}" Class="VaranManager_Base">
+															<Channels>
+																<Server Name="Control"/>
+																<Client Name="To_FileSys"/>
+																<Client Name="To_OSKernel"/>
+																<Client Name="To_StdLib"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+			<AdditionalData>
+				<Entry Name="DeviceType" Value="MDD100"/>
+			</AdditionalData>
+		</Object>
+		<Object
+			Name       = "DriveAxleErr_X_Axle1"
+			GUID       = "{4CE9970C-1E40-47D1-AC5E-EB246C995548}"
+			Class      = "DriveAxleErr"
+			Position   = "(3420,5490)"
+			Visualized = "true"
+			CyclicTime = "cCT">
+			<Channels>
+				<Server Name="DriveOnline"/>
+				<Server Name="DrivesEnabled"/>
+				<Server Name="DrivesOk"/>
+				<Server Name="GetErrorInfo"/>
+				<Server Name="I_DERROR"/>
+				<Server Name="I_STATUS"/>
+				<Server Name="I_StatusNbr"/>
+				<Server Name="ManagerEnabled"/>
+				<Server Name="State"/>
+				<Client Name="DriveAxis"/>
+				<Client Name="ErrorCode"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{771D5D23-0D5D-409F-939C-13815D6C1F04}" Class="_DriveErrorHandling">
+							<Channels>
+								<Server Name="GetErrorInfo"/>
+								<Server Name="I_DERROR"/>
+								<Server Name="I_STATUS"/>
+								<Server Name="State"/>
+								<Client Name="DriveAxis"/>
+								<Client Name="ErrorCode"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5D924F4A-1ABE-40D2-9865-FF18A3FDFCE0}" Class="_DriveParaBase">
+											<Channels>
+												<Server Name="State"/>
+												<Client Name="DriveAxis"/>
+												<Client Name="ErrorCode"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "DriveAxleErr_X_Axle2"
+			GUID       = "{35B02A35-7424-4CFF-A56F-0E116B756976}"
+			Class      = "DriveAxleErr"
+			Position   = "(3420,6840)"
+			Visualized = "true"
+			CyclicTime = "cCT">
+			<Channels>
+				<Server Name="DriveOnline"/>
+				<Server Name="DrivesEnabled"/>
+				<Server Name="DrivesOk"/>
+				<Server Name="GetErrorInfo"/>
+				<Server Name="I_DERROR"/>
+				<Server Name="I_STATUS"/>
+				<Server Name="I_StatusNbr"/>
+				<Server Name="ManagerEnabled"/>
+				<Server Name="State"/>
+				<Client Name="DriveAxis"/>
+				<Client Name="ErrorCode"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{771D5D23-0D5D-409F-939C-13815D6C1F04}" Class="_DriveErrorHandling">
+							<Channels>
+								<Server Name="GetErrorInfo"/>
+								<Server Name="I_DERROR"/>
+								<Server Name="I_STATUS"/>
+								<Server Name="State"/>
+								<Client Name="DriveAxis"/>
+								<Client Name="ErrorCode"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5D924F4A-1ABE-40D2-9865-FF18A3FDFCE0}" Class="_DriveParaBase">
+											<Channels>
+												<Server Name="State"/>
+												<Client Name="DriveAxis"/>
+												<Client Name="ErrorCode"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "DriveAxleErr_X_Axle3"
+			GUID       = "{BC96B188-B280-4E72-84CB-96F9900D0F21}"
+			Class      = "DriveAxleErr"
+			Position   = "(3420,8190)"
+			Visualized = "true"
+			CyclicTime = "cCT">
+			<Channels>
+				<Server Name="DriveOnline"/>
+				<Server Name="DrivesEnabled"/>
+				<Server Name="DrivesOk"/>
+				<Server Name="GetErrorInfo"/>
+				<Server Name="I_DERROR"/>
+				<Server Name="I_STATUS"/>
+				<Server Name="I_StatusNbr"/>
+				<Server Name="ManagerEnabled"/>
+				<Server Name="State"/>
+				<Client Name="DriveAxis"/>
+				<Client Name="ErrorCode"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{771D5D23-0D5D-409F-939C-13815D6C1F04}" Class="_DriveErrorHandling">
+							<Channels>
+								<Server Name="GetErrorInfo"/>
+								<Server Name="I_DERROR"/>
+								<Server Name="I_STATUS"/>
+								<Server Name="State"/>
+								<Client Name="DriveAxis"/>
+								<Client Name="ErrorCode"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5D924F4A-1ABE-40D2-9865-FF18A3FDFCE0}" Class="_DriveParaBase">
+											<Channels>
+												<Server Name="State"/>
+												<Client Name="DriveAxis"/>
+												<Client Name="ErrorCode"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "DriveAxleErr_X_Axle4"
+			GUID       = "{4656EDB4-493D-4757-A6C8-9351C651F024}"
+			Class      = "DriveAxleErr"
+			Position   = "(3420,9540)"
+			Visualized = "true"
+			CyclicTime = "cCT">
+			<Channels>
+				<Server Name="DriveOnline"/>
+				<Server Name="DrivesEnabled"/>
+				<Server Name="DrivesOk"/>
+				<Server Name="GetErrorInfo"/>
+				<Server Name="I_DERROR"/>
+				<Server Name="I_STATUS"/>
+				<Server Name="I_StatusNbr"/>
+				<Server Name="ManagerEnabled"/>
+				<Server Name="State"/>
+				<Client Name="DriveAxis"/>
+				<Client Name="ErrorCode"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{771D5D23-0D5D-409F-939C-13815D6C1F04}" Class="_DriveErrorHandling">
+							<Channels>
+								<Server Name="GetErrorInfo"/>
+								<Server Name="I_DERROR"/>
+								<Server Name="I_STATUS"/>
+								<Server Name="State"/>
+								<Client Name="DriveAxis"/>
+								<Client Name="ErrorCode"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5D924F4A-1ABE-40D2-9865-FF18A3FDFCE0}" Class="_DriveParaBase">
+											<Channels>
+												<Server Name="State"/>
+												<Client Name="DriveAxis"/>
+												<Client Name="ErrorCode"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "DriveAxleErr_Y_Axle1"
+			GUID       = "{BA89D5BC-F432-4FFD-8A40-54E9E843175D}"
+			Class      = "DriveAxleErr"
+			Position   = "(3420,90)"
+			Visualized = "true"
+			CyclicTime = "cCT">
+			<Channels>
+				<Server Name="DriveOnline"/>
+				<Server Name="DrivesEnabled"/>
+				<Server Name="DrivesOk"/>
+				<Server Name="GetErrorInfo"/>
+				<Server Name="I_DERROR"/>
+				<Server Name="I_STATUS"/>
+				<Server Name="I_StatusNbr"/>
+				<Server Name="ManagerEnabled"/>
+				<Server Name="State"/>
+				<Client Name="DriveAxis"/>
+				<Client Name="ErrorCode"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{771D5D23-0D5D-409F-939C-13815D6C1F04}" Class="_DriveErrorHandling">
+							<Channels>
+								<Server Name="GetErrorInfo"/>
+								<Server Name="I_DERROR"/>
+								<Server Name="I_STATUS"/>
+								<Server Name="State"/>
+								<Client Name="DriveAxis"/>
+								<Client Name="ErrorCode"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5D924F4A-1ABE-40D2-9865-FF18A3FDFCE0}" Class="_DriveParaBase">
+											<Channels>
+												<Server Name="State"/>
+												<Client Name="DriveAxis"/>
+												<Client Name="ErrorCode"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "DriveAxleErr_Y_Axle2"
+			GUID       = "{698B0572-8B24-4646-A0EA-95419F680BB3}"
+			Class      = "DriveAxleErr"
+			Position   = "(3420,1440)"
+			Visualized = "true"
+			CyclicTime = "cCT">
+			<Channels>
+				<Server Name="DriveOnline"/>
+				<Server Name="DrivesEnabled"/>
+				<Server Name="DrivesOk"/>
+				<Server Name="GetErrorInfo"/>
+				<Server Name="I_DERROR"/>
+				<Server Name="I_STATUS"/>
+				<Server Name="I_StatusNbr"/>
+				<Server Name="ManagerEnabled"/>
+				<Server Name="State"/>
+				<Client Name="DriveAxis"/>
+				<Client Name="ErrorCode"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{771D5D23-0D5D-409F-939C-13815D6C1F04}" Class="_DriveErrorHandling">
+							<Channels>
+								<Server Name="GetErrorInfo"/>
+								<Server Name="I_DERROR"/>
+								<Server Name="I_STATUS"/>
+								<Server Name="State"/>
+								<Client Name="DriveAxis"/>
+								<Client Name="ErrorCode"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5D924F4A-1ABE-40D2-9865-FF18A3FDFCE0}" Class="_DriveParaBase">
+											<Channels>
+												<Server Name="State"/>
+												<Client Name="DriveAxis"/>
+												<Client Name="ErrorCode"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "DriveAxleErr_Y_Axle3"
+			GUID       = "{33084F6A-5726-4BA7-A585-CFCC32BD6FA2}"
+			Class      = "DriveAxleErr"
+			Position   = "(3420,2790)"
+			Visualized = "true"
+			CyclicTime = "cCT">
+			<Channels>
+				<Server Name="DriveOnline"/>
+				<Server Name="DrivesEnabled"/>
+				<Server Name="DrivesOk"/>
+				<Server Name="GetErrorInfo"/>
+				<Server Name="I_DERROR"/>
+				<Server Name="I_STATUS"/>
+				<Server Name="I_StatusNbr"/>
+				<Server Name="ManagerEnabled"/>
+				<Server Name="State"/>
+				<Client Name="DriveAxis"/>
+				<Client Name="ErrorCode"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{771D5D23-0D5D-409F-939C-13815D6C1F04}" Class="_DriveErrorHandling">
+							<Channels>
+								<Server Name="GetErrorInfo"/>
+								<Server Name="I_DERROR"/>
+								<Server Name="I_STATUS"/>
+								<Server Name="State"/>
+								<Client Name="DriveAxis"/>
+								<Client Name="ErrorCode"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5D924F4A-1ABE-40D2-9865-FF18A3FDFCE0}" Class="_DriveParaBase">
+											<Channels>
+												<Server Name="State"/>
+												<Client Name="DriveAxis"/>
+												<Client Name="ErrorCode"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "DriveAxleErr_Y_Axle4"
+			GUID       = "{E196F344-D238-4591-9697-08BE9B2CE265}"
+			Class      = "DriveAxleErr"
+			Position   = "(3420,4140)"
+			Visualized = "true"
+			CyclicTime = "cCT">
+			<Channels>
+				<Server Name="DriveOnline"/>
+				<Server Name="DrivesEnabled"/>
+				<Server Name="DrivesOk"/>
+				<Server Name="GetErrorInfo"/>
+				<Server Name="I_DERROR"/>
+				<Server Name="I_STATUS"/>
+				<Server Name="I_StatusNbr"/>
+				<Server Name="ManagerEnabled"/>
+				<Server Name="State"/>
+				<Client Name="DriveAxis"/>
+				<Client Name="ErrorCode"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{771D5D23-0D5D-409F-939C-13815D6C1F04}" Class="_DriveErrorHandling">
+							<Channels>
+								<Server Name="GetErrorInfo"/>
+								<Server Name="I_DERROR"/>
+								<Server Name="I_STATUS"/>
+								<Server Name="State"/>
+								<Client Name="DriveAxis"/>
+								<Client Name="ErrorCode"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5D924F4A-1ABE-40D2-9865-FF18A3FDFCE0}" Class="_DriveParaBase">
+											<Channels>
+												<Server Name="State"/>
+												<Client Name="DriveAxis"/>
+												<Client Name="ErrorCode"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "Splitter2"
+			GUID       = "{E9E6B23D-BE56-4943-A3EC-2488D5E397B6}"
+			Class      = "DiasDriveSplitter"
+			Position   = "(4650,90)"
+			Visualized = "true"
+			CyclicTime = "cCT">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="DrivesEnabled"/>
+				<Server Name="DrivesOk"/>
+				<Client Name="DriveAxleM1"/>
+				<Client Name="DriveAxleM2"/>
+				<Client Name="DriveAxleM3"/>
+				<Client Name="DriveAxleM4"/>
+				<Client Name="DriveAxleM5"/>
+				<Client Name="DriveAxleM6"/>
+				<Client Name="DriveAxleM7"/>
+				<Client Name="DriveAxleM8"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+		<Comment Position="(2280,450)" Size="(300,90)" Text="Place : 0&#13;&#10;AxisNo : 2"/>
+		<Comment Position="(1770,240)" Size="(210,90)" Text="Place : 0&#13;&#10;AxisNo : 1"/>
+		<Comment Position="(1770,1590)" Size="(210,90)" Text="Place : 0&#13;&#10;AxisNo :2"/>
+		<Comment Position="(1740,2910)" Size="(210,90)" Text="Place : 1&#13;&#10;AxisNo :1"/>
+		<Comment Position="(1740,4290)" Size="(210,90)" Text="Place : 1&#13;&#10;AxisNo : 2"/>
+		<Comment Position="(1740,6960)" Size="(210,90)" Text="Place : 2&#13;&#10;AxisNo :2"/>
+		<Comment Position="(2280,4500)" Size="(300,90)" Text="Place : 0&#13;&#10;AxisNo : 2"/>
+		<Comment Position="(1770,5640)" Size="(210,90)" Text="Place : 2&#13;&#10;AxisNo :1"/>
+		<Comment Position="(1740,9660)" Size="(210,90)" Text="Place : 3&#13;&#10;AxisNo :2"/>
+		<Comment Position="(1770,8340)" Size="(210,90)" Text="Place : 3&#13;&#10;AxisNo :1"/>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="_DriveAxis_Y_Axle1.DriveMng" Destination="_DriveMng_MDD1002.CmdState" Vertices="(2070,180),(1502,180),"/>
+		<Connection Source="_DriveAxis_Y_Axle2.DriveMng" Destination="_DriveMng_MDD1002.CmdState" Vertices="(2070,1530),(2010,1530),(2010,180),(1502,180),"/>
+		<Connection Source="_DriveAxis_Y_Axle3.DriveMng" Destination="_DriveMng_MDD1002.CmdState" Vertices="(2070,2880),(2010,2880),(2010,180),(1502,180),"/>
+		<Connection Source="DriveAxleErr_Y_Axle3.DriveAxis" Destination="_DriveAxis_Y_Axle3.CmdState" Vertices="(3420,2880),(2672,2880),"/>
+		<Connection Source="_DriveAxis_Y_Axle4.DriveMng" Destination="_DriveMng_MDD1002.CmdState" Vertices="(2070,4230),(2010,4230),(2010,180),(1502,180),"/>
+		<Connection Source="Splitter2.DriveAxleM3" Destination="DriveAxleErr_Y_Axle3.State" Vertices="(4650,300),(4590,300),(4590,180),(4110,180),(4110,2880),(4006,2880),"/>
+		<Connection Source="Splitter2.DriveAxleM1" Destination="DriveAxleErr_Y_Axle1.State" Vertices="(4650,180),(4006,180),"/>
+		<Connection Source="DriveAxleErr_Y_Axle1.DriveAxis" Destination="_DriveAxis_Y_Axle1.CmdState" Vertices="(3420,180),(2672,180),"/>
+		<Connection Source="DriveAxleErr_Y_Axle2.DriveAxis" Destination="_DriveAxis_Y_Axle2.CmdState" Vertices="(3420,1530),(2672,1530),"/>
+		<Connection Source="Splitter2.DriveAxleM2" Destination="DriveAxleErr_Y_Axle2.State" Vertices="(4650,240),(4590,240),(4590,180),(4110,180),(4110,1530),(4006,1530),"/>
+		<Connection Source="Splitter2.DriveAxleM4" Destination="DriveAxleErr_Y_Axle4.State" Vertices="(4650,360),(4590,360),(4590,180),(4110,180),(4110,4230),(4006,4230),"/>
+		<Connection Source="Splitter2.DriveAxleM5" Destination="DriveAxleErr_X_Axle1.State" Vertices="(4650,420),(4590,420),(4590,180),(4110,180),(4110,5580),(4006,5580),"/>
+		<Connection Source="Splitter2.DriveAxleM6" Destination="DriveAxleErr_X_Axle2.State" Vertices="(4650,480),(4590,480),(4590,180),(4110,180),(4110,6930),(4006,6930),"/>
+		<Connection Source="DriveAxleErr_X_Axle2.DriveAxis" Destination="_DriveAxis_X_Axle2.CmdState" Vertices="(3420,6930),(2672,6930),"/>
+		<Connection Source="DriveAxleErr_Y_Axle4.DriveAxis" Destination="_DriveAxis_Y_Axle4.CmdState" Vertices="(3420,4230),(2672,4230),"/>
+		<Connection Source="DriveAxleErr_X_Axle1.DriveAxis" Destination="_DriveAxis_X_Axle1.CmdState" Vertices="(3420,5580),(2672,5580),"/>
+		<Connection Source="Splitter2.DriveAxleM7" Destination="DriveAxleErr_X_Axle3.State" Vertices="(4650,540),(4590,540),(4590,180),(4110,180),(4110,8280),(4006,8280),"/>
+		<Connection Source="Splitter2.DriveAxleM8" Destination="DriveAxleErr_X_Axle4.State" Vertices="(4650,600),(4590,600),(4590,180),(4110,180),(4110,9630),(4006,9630),"/>
+		<Connection Source="DriveAxleErr_X_Axle4.DriveAxis" Destination="_DriveAxis_X_Axle4.CmdState" Vertices="(3420,9630),(2672,9630),"/>
+		<Connection Source="DriveAxleErr_X_Axle3.DriveAxis" Destination="_DriveAxis_X_Axle3.CmdState" Vertices="(3420,8280),(2672,8280),"/>
+		<Connection Source="_DriveAxis_X_Axle1.DriveMng" Destination="_DriveMng_MDD1002.CmdState" Vertices="(2070,5580),(2010,5580),(2010,180),(1502,180),"/>
+		<Connection Source="_DriveAxis_X_Axle2.DriveMng" Destination="_DriveMng_MDD1002.CmdState" Vertices="(2070,6930),(2010,6930),(2010,180),(1502,180),"/>
+		<Connection Source="_DriveAxis_X_Axle3.DriveMng" Destination="_DriveMng_MDD1002.CmdState" Vertices="(2070,8280),(2010,8280),(2010,180),(1502,180),"/>
+		<Connection Source="_DriveAxis_X_Axle4.DriveMng" Destination="_DriveMng_MDD1002.CmdState" Vertices="(2070,9630),(2010,9630),(2010,180),(1502,180),"/>
+		<Connection Source="_DriveMng_MDD1002.VaranIn" Destination="VaranManager_11.VaranOut_1"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

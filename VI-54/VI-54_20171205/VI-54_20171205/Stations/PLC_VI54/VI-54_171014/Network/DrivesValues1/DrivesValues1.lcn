@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="DrivesValues1" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name           = "_LMC_MotorInfo_InfeedConv"
+			GUID           = "{87242A1D-DB68-41C9-9835-FA5FE8959D0E}"
+			Class          = "_LMC_MotorInfo"
+			Position       = "(660,150)"
+			Visualized     = "true"
+			CyclicTime     = "cCT"
+			BackgroundTime = "cBT">
+			<Channels>
+				<Server Name="ActSpeed"/>
+				<Server Name="AxleState"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="CncOperationMode"/>
+				<Server Name="DriveStateWord"/>
+				<Server Name="Enabled"/>
+				<Server Name="ExUnits" Value="cInfeedConvExtUnits"/>
+				<Server Name="Homed"/>
+				<Server Name="I_DERROR"/>
+				<Server Name="I_I2T"/>
+				<Server Name="I_ICMD"/>
+				<Server Name="I_ICONT"/>
+				<Server Name="I_IPEAK"/>
+				<Server Name="I_NCMD"/>
+				<Server Name="I_PBAL"/>
+				<Server Name="I_PE"/>
+				<Server Name="I_STATUS"/>
+				<Server Name="I_TEMPE"/>
+				<Server Name="I_TEMPK"/>
+				<Server Name="I_TEMPM"/>
+				<Server Name="I_VBUS"/>
+				<Server Name="IntUnits" Value="cInfeedConvIntUnits"/>
+				<Server Name="MaxAccDec" Value="cInfeedConvAmax"/>
+				<Server Name="MaxSpeed" Value="cInfeedConvVmax95proc"/>
+				<Server Name="Modulo"/>
+				<Server Name="MoveType" Value="_RAMP_PROFILE"/>
+				<Server Name="SwMaxPos" Value="_LMCAXIS_MAX_POS"/>
+				<Server Name="SwMinPos" Value="_LMCAXIS_MIN_POS"/>
+				<Server Name="Tjerk" Value="0"/>
+				<Client Name="DriveAxis"/>
+				<Client Name="LMC"/>
+				<Client Name="LMC2"/>
+				<Client Name="LMC3"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_DriveActValues1" GUID="{7F5F09EC-91DF-4B6C-BB5A-E8A63DD5B13F}" Class="_DriveActValues">
+							<Channels>
+								<Server Name="I_BCC"/>
+								<Server Name="I_BITS"/>
+								<Server Name="I_CAP"/>
+								<Server Name="I_CAP4"/>
+								<Server Name="I_CAPENC"/>
+								<Server Name="I_DERROR"/>
+								<Server Name="I_FBB"/>
+								<Server Name="I_FPOS"/>
+								<Server Name="I_I2T"/>
+								<Server Name="I_IA"/>
+								<Server Name="I_IB"/>
+								<Server Name="I_ICMD"/>
+								<Server Name="I_ICONT"/>
+								<Server Name="I_ID"/>
+								<Server Name="I_INT1"/>
+								<Server Name="I_INT2"/>
+								<Server Name="I_IPEAK"/>
+								<Server Name="I_IQ"/>
+								<Server Name="I_MPOS"/>
+								<Server Name="I_N"/>
+								<Server Name="I_NCMD"/>
+								<Server Name="I_NFILT"/>
+								<Server Name="I_PBAL"/>
+								<Server Name="I_PCMD"/>
+								<Server Name="I_PE"/>
+								<Server Name="I_POS"/>
+								<Server Name="I_STATUS"/>
+								<Server Name="I_TEMPE"/>
+								<Server Name="I_TEMPK"/>
+								<Server Name="I_TEMPM"/>
+								<Server Name="I_VBUS"/>
+								<Server Name="State"/>
+								<Client Name="DriveAxis"/>
+								<Client Name="ErrorCode"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{18F5B318-632B-4833-9BD5-F5A12097EC14}" Class="_DriveParaBase">
+											<Channels>
+												<Server Name="State"/>
+												<Client Name="DriveAxis"/>
+												<Client Name="ErrorCode"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="CNCState" GUID="{15D71FD6-CCD9-41EE-9E8B-177F42D0F393}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="DriveStateW" GUID="{CC326D51-4F3D-4A5F-885E-D09DC37792E4}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDDriveError" GUID="{17CBBE04-6F5D-40FE-ACFF-CE4622BD1EC5}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDDriveState" GUID="{5B6F3BB4-8119-4EFF-90AB-DA95B600319D}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "_LMC_MotorInfo_OutfeedConv"
+			GUID           = "{1FD265EF-8D96-47A4-9F30-4F1A9C3DAB26}"
+			Class          = "_LMC_MotorInfo"
+			Position       = "(645,1980)"
+			Visualized     = "true"
+			CyclicTime     = "cCT"
+			BackgroundTime = "cBT">
+			<Channels>
+				<Server Name="ActSpeed"/>
+				<Server Name="AxleState"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="CncOperationMode"/>
+				<Server Name="DriveStateWord"/>
+				<Server Name="Enabled"/>
+				<Server Name="ExUnits" Value="cOutfeedConvExtUnits"/>
+				<Server Name="Homed"/>
+				<Server Name="I_DERROR"/>
+				<Server Name="I_I2T"/>
+				<Server Name="I_ICMD"/>
+				<Server Name="I_ICONT"/>
+				<Server Name="I_IPEAK"/>
+				<Server Name="I_NCMD"/>
+				<Server Name="I_PBAL"/>
+				<Server Name="I_PE"/>
+				<Server Name="I_STATUS"/>
+				<Server Name="I_TEMPE"/>
+				<Server Name="I_TEMPK"/>
+				<Server Name="I_TEMPM"/>
+				<Server Name="I_VBUS"/>
+				<Server Name="IntUnits" Value="cOutfeedConvIntUnits"/>
+				<Server Name="MaxAccDec" Value="cOutfeedConvAmax"/>
+				<Server Name="MaxSpeed" Value="cOutfeedConvVmax95proc"/>
+				<Server Name="Modulo"/>
+				<Server Name="MoveType" Value="_RAMP_PROFILE"/>
+				<Server Name="SwMaxPos" Value="_LMCAXIS_MAX_POS"/>
+				<Server Name="SwMinPos" Value="_LMCAXIS_MIN_POS"/>
+				<Server Name="Tjerk" Value="0"/>
+				<Client Name="DriveAxis"/>
+				<Client Name="LMC"/>
+				<Client Name="LMC2"/>
+				<Client Name="LMC3"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_DriveActValues1" GUID="{7F5F09EC-91DF-4B6C-BB5A-E8A63DD5B13F}" Class="_DriveActValues">
+							<Channels>
+								<Server Name="I_BCC"/>
+								<Server Name="I_BITS"/>
+								<Server Name="I_CAP"/>
+								<Server Name="I_CAP4"/>
+								<Server Name="I_CAPENC"/>
+								<Server Name="I_DERROR"/>
+								<Server Name="I_FBB"/>
+								<Server Name="I_FPOS"/>
+								<Server Name="I_I2T"/>
+								<Server Name="I_IA"/>
+								<Server Name="I_IB"/>
+								<Server Name="I_ICMD"/>
+								<Server Name="I_ICONT"/>
+								<Server Name="I_ID"/>
+								<Server Name="I_INT1"/>
+								<Server Name="I_INT2"/>
+								<Server Name="I_IPEAK"/>
+								<Server Name="I_IQ"/>
+								<Server Name="I_MPOS"/>
+								<Server Name="I_N"/>
+								<Server Name="I_NCMD"/>
+								<Server Name="I_NFILT"/>
+								<Server Name="I_PBAL"/>
+								<Server Name="I_PCMD"/>
+								<Server Name="I_PE"/>
+								<Server Name="I_POS"/>
+								<Server Name="I_STATUS"/>
+								<Server Name="I_TEMPE"/>
+								<Server Name="I_TEMPK"/>
+								<Server Name="I_TEMPM"/>
+								<Server Name="I_VBUS"/>
+								<Server Name="State"/>
+								<Client Name="DriveAxis"/>
+								<Client Name="ErrorCode"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{18F5B318-632B-4833-9BD5-F5A12097EC14}" Class="_DriveParaBase">
+											<Channels>
+												<Server Name="State"/>
+												<Client Name="DriveAxis"/>
+												<Client Name="ErrorCode"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="CNCState" GUID="{15D71FD6-CCD9-41EE-9E8B-177F42D0F393}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="DriveStateW" GUID="{CC326D51-4F3D-4A5F-885E-D09DC37792E4}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDDriveError" GUID="{17CBBE04-6F5D-40FE-ACFF-CE4622BD1EC5}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDDriveState" GUID="{5B6F3BB4-8119-4EFF-90AB-DA95B600319D}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "_LMC_MotorInfo_Rejector"
+			GUID           = "{66A4C3CE-E36C-4288-8ED9-25B733D35841}"
+			Class          = "_LMC_MotorInfo"
+			Position       = "(4380,120)"
+			Visualized     = "true"
+			CyclicTime     = "cCT"
+			BackgroundTime = "cBT">
+			<Channels>
+				<Server Name="ActSpeed"/>
+				<Server Name="AxleState"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="CncOperationMode"/>
+				<Server Name="DriveStateWord"/>
+				<Server Name="Enabled"/>
+				<Server Name="ExUnits" Value="cYaxles3ExtUnits"/>
+				<Server Name="Homed"/>
+				<Server Name="I_DERROR"/>
+				<Server Name="I_I2T"/>
+				<Server Name="I_ICMD"/>
+				<Server Name="I_ICONT"/>
+				<Server Name="I_IPEAK"/>
+				<Server Name="I_NCMD"/>
+				<Server Name="I_PBAL"/>
+				<Server Name="I_PE"/>
+				<Server Name="I_STATUS"/>
+				<Server Name="I_TEMPE"/>
+				<Server Name="I_TEMPK"/>
+				<Server Name="I_TEMPM"/>
+				<Server Name="I_VBUS"/>
+				<Server Name="IntUnits" Value="cYaxles3IntUnits"/>
+				<Server Name="MaxAccDec" Value="cYaxles3Amax"/>
+				<Server Name="MaxSpeed" Value="cYaxles3Vmax95proc"/>
+				<Server Name="Modulo"/>
+				<Server Name="MoveType" Value="_RAMP_PROFILE"/>
+				<Server Name="SwMaxPos" Value="_LMCAXIS_MAX_POS"/>
+				<Server Name="SwMinPos" Value="_LMCAXIS_MIN_POS"/>
+				<Server Name="Tjerk"/>
+				<Client Name="DriveAxis"/>
+				<Client Name="LMC"/>
+				<Client Name="LMC2"/>
+				<Client Name="LMC3"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_DriveActValues1" GUID="{7F5F09EC-91DF-4B6C-BB5A-E8A63DD5B13F}" Class="_DriveActValues">
+							<Channels>
+								<Server Name="I_BCC"/>
+								<Server Name="I_BITS"/>
+								<Server Name="I_CAP"/>
+								<Server Name="I_CAP4"/>
+								<Server Name="I_CAPENC"/>
+								<Server Name="I_DERROR"/>
+								<Server Name="I_FBB"/>
+								<Server Name="I_FPOS"/>
+								<Server Name="I_I2T"/>
+								<Server Name="I_IA"/>
+								<Server Name="I_IB"/>
+								<Server Name="I_ICMD"/>
+								<Server Name="I_ICONT"/>
+								<Server Name="I_ID"/>
+								<Server Name="I_INT1"/>
+								<Server Name="I_INT2"/>
+								<Server Name="I_IPEAK"/>
+								<Server Name="I_IQ"/>
+								<Server Name="I_MPOS"/>
+								<Server Name="I_N"/>
+								<Server Name="I_NCMD"/>
+								<Server Name="I_NFILT"/>
+								<Server Name="I_PBAL"/>
+								<Server Name="I_PCMD"/>
+								<Server Name="I_PE"/>
+								<Server Name="I_POS"/>
+								<Server Name="I_STATUS"/>
+								<Server Name="I_TEMPE"/>
+								<Server Name="I_TEMPK"/>
+								<Server Name="I_TEMPM"/>
+								<Server Name="I_VBUS"/>
+								<Server Name="State"/>
+								<Client Name="DriveAxis"/>
+								<Client Name="ErrorCode"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{18F5B318-632B-4833-9BD5-F5A12097EC14}" Class="_DriveParaBase">
+											<Channels>
+												<Server Name="State"/>
+												<Client Name="DriveAxis"/>
+												<Client Name="ErrorCode"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="CNCState" GUID="{15D71FD6-CCD9-41EE-9E8B-177F42D0F393}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="DriveStateW" GUID="{CC326D51-4F3D-4A5F-885E-D09DC37792E4}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDDriveError" GUID="{17CBBE04-6F5D-40FE-ACFF-CE4622BD1EC5}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDDriveState" GUID="{5B6F3BB4-8119-4EFF-90AB-DA95B600319D}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "_LMC_MotorInfo_RejectorConv"
+			GUID           = "{03FE97A5-1792-4631-98BF-0A565A258D81}"
+			Class          = "_LMC_MotorInfo"
+			Position       = "(2520,120)"
+			Visualized     = "true"
+			CyclicTime     = "cCT"
+			BackgroundTime = "cBT">
+			<Channels>
+				<Server Name="ActSpeed"/>
+				<Server Name="AxleState"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="CncOperationMode"/>
+				<Server Name="DriveStateWord"/>
+				<Server Name="Enabled"/>
+				<Server Name="ExUnits" Value="cRejectorConvExtUnits"/>
+				<Server Name="Homed"/>
+				<Server Name="I_DERROR"/>
+				<Server Name="I_I2T"/>
+				<Server Name="I_ICMD"/>
+				<Server Name="I_ICONT"/>
+				<Server Name="I_IPEAK"/>
+				<Server Name="I_NCMD"/>
+				<Server Name="I_PBAL"/>
+				<Server Name="I_PE"/>
+				<Server Name="I_STATUS"/>
+				<Server Name="I_TEMPE"/>
+				<Server Name="I_TEMPK"/>
+				<Server Name="I_TEMPM"/>
+				<Server Name="I_VBUS"/>
+				<Server Name="IntUnits" Value="cRejectorConvIntUnits"/>
+				<Server Name="MaxAccDec" Value="cRejectorConvAmax"/>
+				<Server Name="MaxSpeed" Value="cRejectorConvVmax95proc"/>
+				<Server Name="Modulo"/>
+				<Server Name="MoveType" Value="_RAMP_PROFILE"/>
+				<Server Name="SwMaxPos" Value="_LMCAXIS_MAX_POS"/>
+				<Server Name="SwMinPos" Value="_LMCAXIS_MIN_POS"/>
+				<Server Name="Tjerk"/>
+				<Client Name="DriveAxis"/>
+				<Client Name="LMC"/>
+				<Client Name="LMC2"/>
+				<Client Name="LMC3"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_DriveActValues1" GUID="{7F5F09EC-91DF-4B6C-BB5A-E8A63DD5B13F}" Class="_DriveActValues">
+							<Channels>
+								<Server Name="I_BCC"/>
+								<Server Name="I_BITS"/>
+								<Server Name="I_CAP"/>
+								<Server Name="I_CAP4"/>
+								<Server Name="I_CAPENC"/>
+								<Server Name="I_DERROR"/>
+								<Server Name="I_FBB"/>
+								<Server Name="I_FPOS"/>
+								<Server Name="I_I2T"/>
+								<Server Name="I_IA"/>
+								<Server Name="I_IB"/>
+								<Server Name="I_ICMD"/>
+								<Server Name="I_ICONT"/>
+								<Server Name="I_ID"/>
+								<Server Name="I_INT1"/>
+								<Server Name="I_INT2"/>
+								<Server Name="I_IPEAK"/>
+								<Server Name="I_IQ"/>
+								<Server Name="I_MPOS"/>
+								<Server Name="I_N"/>
+								<Server Name="I_NCMD"/>
+								<Server Name="I_NFILT"/>
+								<Server Name="I_PBAL"/>
+								<Server Name="I_PCMD"/>
+								<Server Name="I_PE"/>
+								<Server Name="I_POS"/>
+								<Server Name="I_STATUS"/>
+								<Server Name="I_TEMPE"/>
+								<Server Name="I_TEMPK"/>
+								<Server Name="I_TEMPM"/>
+								<Server Name="I_VBUS"/>
+								<Server Name="State"/>
+								<Client Name="DriveAxis"/>
+								<Client Name="ErrorCode"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{18F5B318-632B-4833-9BD5-F5A12097EC14}" Class="_DriveParaBase">
+											<Channels>
+												<Server Name="State"/>
+												<Client Name="DriveAxis"/>
+												<Client Name="ErrorCode"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="CNCState" GUID="{15D71FD6-CCD9-41EE-9E8B-177F42D0F393}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="DriveStateW" GUID="{CC326D51-4F3D-4A5F-885E-D09DC37792E4}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDDriveError" GUID="{17CBBE04-6F5D-40FE-ACFF-CE4622BD1EC5}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDDriveState" GUID="{5B6F3BB4-8119-4EFF-90AB-DA95B600319D}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "_LMC_MotorInfo_Y_Conveyor"
+			GUID           = "{2C08CAAA-BC56-4496-86DB-D33F2436947E}"
+			Class          = "_LMC_MotorInfo"
+			Position       = "(6240,120)"
+			Visualized     = "true"
+			CyclicTime     = "cCT"
+			BackgroundTime = "cBT">
+			<Channels>
+				<Server Name="ActSpeed"/>
+				<Server Name="AxleState"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="CncOperationMode"/>
+				<Server Name="DriveStateWord"/>
+				<Server Name="Enabled"/>
+				<Server Name="ExUnits" Value="cYconveyorExtUnits"/>
+				<Server Name="Homed"/>
+				<Server Name="I_DERROR"/>
+				<Server Name="I_I2T"/>
+				<Server Name="I_ICMD"/>
+				<Server Name="I_ICONT"/>
+				<Server Name="I_IPEAK"/>
+				<Server Name="I_NCMD"/>
+				<Server Name="I_PBAL"/>
+				<Server Name="I_PE"/>
+				<Server Name="I_STATUS"/>
+				<Server Name="I_TEMPE"/>
+				<Server Name="I_TEMPK"/>
+				<Server Name="I_TEMPM"/>
+				<Server Name="I_VBUS"/>
+				<Server Name="IntUnits" Value="cYconveyorIntUnits"/>
+				<Server Name="MaxAccDec" Value="cYconveyorAmax"/>
+				<Server Name="MaxSpeed" Value="cYconveyorVmax95proc"/>
+				<Server Name="Modulo"/>
+				<Server Name="MoveType" Value="_RAMP_PROFILE"/>
+				<Server Name="SwMaxPos" Value="_LMCAXIS_MAX_POS"/>
+				<Server Name="SwMinPos" Value="_LMCAXIS_MIN_POS"/>
+				<Server Name="Tjerk"/>
+				<Client Name="DriveAxis"/>
+				<Client Name="LMC"/>
+				<Client Name="LMC2"/>
+				<Client Name="LMC3"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_DriveActValues1" GUID="{7F5F09EC-91DF-4B6C-BB5A-E8A63DD5B13F}" Class="_DriveActValues">
+							<Channels>
+								<Server Name="I_BCC"/>
+								<Server Name="I_BITS"/>
+								<Server Name="I_CAP"/>
+								<Server Name="I_CAP4"/>
+								<Server Name="I_CAPENC"/>
+								<Server Name="I_DERROR"/>
+								<Server Name="I_FBB"/>
+								<Server Name="I_FPOS"/>
+								<Server Name="I_I2T"/>
+								<Server Name="I_IA"/>
+								<Server Name="I_IB"/>
+								<Server Name="I_ICMD"/>
+								<Server Name="I_ICONT"/>
+								<Server Name="I_ID"/>
+								<Server Name="I_INT1"/>
+								<Server Name="I_INT2"/>
+								<Server Name="I_IPEAK"/>
+								<Server Name="I_IQ"/>
+								<Server Name="I_MPOS"/>
+								<Server Name="I_N"/>
+								<Server Name="I_NCMD"/>
+								<Server Name="I_NFILT"/>
+								<Server Name="I_PBAL"/>
+								<Server Name="I_PCMD"/>
+								<Server Name="I_PE"/>
+								<Server Name="I_POS"/>
+								<Server Name="I_STATUS"/>
+								<Server Name="I_TEMPE"/>
+								<Server Name="I_TEMPK"/>
+								<Server Name="I_TEMPM"/>
+								<Server Name="I_VBUS"/>
+								<Server Name="State"/>
+								<Client Name="DriveAxis"/>
+								<Client Name="ErrorCode"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{18F5B318-632B-4833-9BD5-F5A12097EC14}" Class="_DriveParaBase">
+											<Channels>
+												<Server Name="State"/>
+												<Client Name="DriveAxis"/>
+												<Client Name="ErrorCode"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="CNCState" GUID="{15D71FD6-CCD9-41EE-9E8B-177F42D0F393}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="DriveStateW" GUID="{CC326D51-4F3D-4A5F-885E-D09DC37792E4}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDDriveError" GUID="{17CBBE04-6F5D-40FE-ACFF-CE4622BD1EC5}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SDDDriveState" GUID="{5B6F3BB4-8119-4EFF-90AB-DA95B600319D}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="_LMC_MotorInfo_InfeedConv.DriveAxis" Destination="_DriveAxis_InfeedConv.CmdState"/>
+		<Connection Source="_LMC_MotorInfo_RejectorConv.DriveAxis" Destination="_DriveAxis_RejectorConv.CmdState"/>
+		<Connection Source="_LMC_MotorInfo_Rejector.DriveAxis" Destination="_DriveAxis_Rejector.CmdState"/>
+		<Connection Source="_LMC_MotorInfo_Y_Conveyor.DriveAxis" Destination="_DriveAxis_Y_Conveyor.CmdState"/>
+		<Connection Source="_LMC_MotorInfo_OutfeedConv.DriveAxis" Destination="_DriveAxis_OutfeedConv.CmdState"/>
+		<Connection Source="_LMC_MotorInfo_InfeedConv.LMC" Destination="_LMCAxis_InfeedConv.Control"/>
+		<Connection Source="_LMC_MotorInfo_RejectorConv.LMC" Destination="_LMCAxis_RejectorConv.Control"/>
+		<Connection Source="_LMC_MotorInfo_Rejector.LMC" Destination="_LMCAxis_Rejector.Control"/>
+		<Connection Source="_LMC_MotorInfo_Y_Conveyor.LMC" Destination="_LMCAxis_Y_Conveyor.Control"/>
+		<Connection Source="_LMC_MotorInfo_OutfeedConv.LMC" Destination="_LMCAxis_OutfeedConv.Control"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

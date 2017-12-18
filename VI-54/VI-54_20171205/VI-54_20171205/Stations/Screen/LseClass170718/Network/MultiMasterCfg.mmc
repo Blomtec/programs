@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<MultiMasterMgr>
+	<RemoteStations>
+		<RemoteStation
+			Name     = "PLC_VI54"
+			PrjRev   = "0.0"
+			Project  = "VI-54_171014"
+			IP       = "10.10.150.1"
+			Filename = ".\PLC_VI54\VI-54_171014\VI-54_171014.lcp">
+			<RemoteServers>
+				<RemoteServer Name="DI2031.Input12" GUID_Svr="{1FC8CA9D-1F3B-4EBE-8F85-4D836D39B987}" DataType="DINT" GUID_Obj="{C074BBA8-E62F-47EE-951C-366921B7EE58}" WriteProtected="true" Comment="Input 12 value"/>
+			</RemoteServers>
+		</RemoteStation>
+	</RemoteStations>
+</MultiMasterMgr>

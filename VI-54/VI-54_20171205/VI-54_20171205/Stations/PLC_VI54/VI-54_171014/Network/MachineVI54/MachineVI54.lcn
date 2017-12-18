@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="MachineVI54" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "Banner_EZlight1"
+			GUID       = "{658FE513-1167-4A02-97B5-4D8AA1949192}"
+			Class      = "Banner_EZlight"
+			Position   = "(1050,1020)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="oCollorBlue"/>
+				<Client Name="oCollorGreen"/>
+				<Client Name="oCollorRed"/>
+				<Client Name="oCollorWhite"/>
+				<Client Name="oCollorYellow"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "Claxon1"
+			GUID       = "{0E179C9A-F265-4E61-8344-F11CFDD164A3}"
+			Class      = "Claxon"
+			Position   = "(1050,1410)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="ClaxonActief" Value="NietActief"/>
+				<Server Name="Comm"/>
+				<Client Name="oClaxon"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "Drives_Enabled"
+			GUID       = "{EEFAC536-8AE4-4EB0-88BE-BAB4A1568978}"
+			Class      = "Logic_And_2"
+			Position   = "(1050,1830)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="result"/>
+				<Client Name="Op1"/>
+				<Client Name="Op2"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8009175D-DE5A-11D5-B925-0010609208D7}" Class="Logic_And_Base">
+							<Channels>
+								<Server Name="result"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "Drives_OK"
+			GUID       = "{48209E5D-F16F-49E4-B0E6-3528EAD07F41}"
+			Class      = "Logic_And_2"
+			Position   = "(1050,1620)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="result"/>
+				<Client Name="Op1"/>
+				<Client Name="Op2"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8009175D-DE5A-11D5-B925-0010609208D7}" Class="Logic_And_Base">
+							<Channels>
+								<Server Name="result"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "Logic_Or_21"
+			GUID       = "{240246A3-D5E4-443D-BAC7-A7E00E0B6EC6}"
+			Class      = "Logic_Or_2"
+			Position   = "(1050,2760)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="Result"/>
+				<Client Name="Op1"/>
+				<Client Name="Op2"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8009179B-DE5A-11D5-B925-0010609208D7}" Class="Logic_Or_Base">
+							<Channels>
+								<Server Name="Result"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "MyEasy_Filter1"
+			GUID       = "{084FCEB0-8B53-4E60-8753-ED5B24098C49}"
+			Class      = "MyEasy_Filter"
+			Position   = "(510,120)"
+			Visualized = "true"
+			Remotely   = "true"
+			CyclicTime = "cCT">
+			<Channels>
+				<Server Name="output"/>
+				<Client Name="averages" Value="10"/>
+				<Client Name="Div" Value="eDiv1"/>
+				<Client Name="input"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{072B562D-3B83-4683-BD13-F7D2923ECE6D}" Class="Easy_Filter">
+							<Channels>
+								<Server Name="output"/>
+								<Client Name="averages" Value="10"/>
+								<Client Name="input"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "PauseClass1"
+			GUID           = "{A3D54912-0666-4B3A-BB8E-7F98D140851C}"
+			Class          = "PauseClass"
+			Position       = "(2490,1770)"
+			Visualized     = "false"
+			BackgroundTime = "cBT">
+			<Channels>
+				<Server Name="Comm"/>
+				<Server Name="In_ExternPauseDelay"/>
+				<Server Name="In_ExternPauseOptions" Value="PauseClass::eNormalyClosed"/>
+				<Server Name="In_InternPauseDelay"/>
+				<Server Name="In_InternPauseOptions" Value="PauseClass::ePuls"/>
+				<Server Name="Out_PauseDelay"/>
+				<Server Name="Out_PauseOptions" Value="PauseClass::eNormalyClosed"/>
+				<Client Name="In_Extern_Pause"/>
+				<Client Name="In_Intern_Pause"/>
+				<Client Name="Out_Pause"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "Standard1"
+							GUID           = "{FA9E99F8-1F0D-4C28-A7EE-2D137929DDB5}"
+							Class          = "Standard"
+							BackgroundTime = "1000 ms">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "Reset"
+			GUID       = "{AC0CA578-401A-4B51-91E0-DE77A4C3F8E4}"
+			Class      = "Client_Splitter_10"
+			Position   = "(1050,2040)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="To_Splitt"/>
+				<Client Name="Ch1"/>
+				<Client Name="Ch10"/>
+				<Client Name="Ch2"/>
+				<Client Name="Ch3"/>
+				<Client Name="Ch4"/>
+				<Client Name="Ch5"/>
+				<Client Name="Ch6"/>
+				<Client Name="Ch7"/>
+				<Client Name="Ch8"/>
+				<Client Name="Ch9"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{913E6DA3-DF21-11D5-B925-0010609208D7}" Class="Client_Splitter_Base">
+							<Channels>
+								<Server Name="To_Splitt"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "SpeedInput1"
+			GUID       = "{1A3835DE-70AB-4BB8-BF22-2E355F701EEE}"
+			Class      = "SpeedInput"
+			Position   = "(1050,120)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="__________"/>
+				<Server Name="ActInfeedSpeed"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="MaxAccDec"/>
+				<Server Name="MaxAnalogInput" Value="10000"/>
+				<Server Name="MaxSpeed" Value="730"/>
+				<Server Name="PercentageOverride"/>
+				<Server Name="PulsenPerMM"/>
+				<Client Name="iAnlogSpeed"/>
+				<Client Name="iEncoderPos"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "Standard1"
+							GUID           = "{E505A258-8FCC-40FA-9079-8AC11C324C74}"
+							Class          = "Standard"
+							BackgroundTime = "cBT">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "StartStopPiezo1"
+			GUID       = "{96A4AE2B-6205-4E5F-AFCF-5082952D3BF6}"
+			Class      = "StartStopPiezo"
+			Position   = "(1050,690)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="Gestart"/>
+				<Server Name="PiezoBediening" Value="Actief"/>
+				<Server Name="StartNo"/>
+				<Server Name="StopNc"/>
+				<Client Name="iStartNo"/>
+				<Client Name="iStopNo"/>
+				<Client Name="oLEDgreen"/>
+				<Client Name="oLEDred"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="LedGreen" GUID="{1A15CEE2-8DC0-4842-8C35-F0F927B15465}" Class="Merker">
+							<Channels>
+								<Server Name="Data"/>
+							</Channels>
+						</Object>
+						<Object Name="LedRed" GUID="{524D3A77-814D-42C6-992A-3810BFB12134}" Class="Merker">
+							<Channels>
+								<Server Name="Data"/>
+							</Channels>
+						</Object>
+						<Object Name="Merker1" GUID="{8276C955-384E-433C-B34D-A48B0BD89430}" Class="Merker">
+							<Channels>
+								<Server Name="Data"/>
+							</Channels>
+						</Object>
+						<Object
+							Name           = "Standaard"
+							GUID           = "{59C7A0BA-1525-4280-B7BF-3B52DE5AD5FE}"
+							Class          = "Standard"
+							BackgroundTime = "cBT">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "Vi54_Control1"
+			GUID           = "{AF8B30C5-191B-49B9-A2BA-B6EC06D602E3}"
+			Class          = "Vi54_Control"
+			Position       = "(2490,330)"
+			Visualized     = "true"
+			RealTime       = "cRT"
+			CyclicTime     = "cCT"
+			BackgroundTime = "cBT">
+			<Channels>
+				<Server Name="__________"/>
+				<Server Name="CleaningJog"/>
+				<Server Name="CleaningJogDistance"/>
+				<Server Name="CleaningJogOption"/>
+				<Server Name="CleaningMode"/>
+				<Server Name="CleaningSpeed"/>
+				<Server Name="Comm"/>
+				<Server Name="CPU_Load"/>
+				<Server Name="ExternalPause"/>
+				<Server Name="Gestart"/>
+				<Server Name="Gestopt"/>
+				<Server Name="InternalPause"/>
+				<Server Name="JogButtonVisual"/>
+				<Server Name="MasterOverrule"/>
+				<Server Name="PauseActive"/>
+				<Server Name="PauseDelay"/>
+				<Server Name="PauseSignalOptions"/>
+				<Server Name="Reset"/>
+				<Server Name="ResetKnopVisual"/>
+				<Server Name="RunState"/>
+				<Server Name="RunStateInfeedConv"/>
+				<Server Name="UseInpAnalogeSpeed"/>
+				<Client Name="ClaxonComm"/>
+				<Client Name="Comm_CameraMaster"/>
+				<Client Name="Comm_Conveyors"/>
+				<Client Name="Comm_Xaxles"/>
+				<Client Name="Comm_Yaxles"/>
+				<Client Name="iDrivesEnabled"/>
+				<Client Name="iDrivesOk"/>
+				<Client Name="iExternRelease" Value="0"/>
+				<Client Name="iLineSpeed"/>
+				<Client Name="iSafetyOK" Value="0"/>
+				<Client Name="iStart"/>
+				<Client Name="iStop"/>
+				<Client Name="LampComm"/>
+				<Client Name="MainRecipe"/>
+				<Client Name="oMachineOK" Value="0"/>
+				<Client Name="oPause" Value="0"/>
+				<Client Name="oResetSignal"/>
+				<Client Name="vError"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8045C486-C63B-4822-AE04-634772500C83}" Class="RecipeBase">
+							<Channels>
+								<Server Name="Comm"/>
+								<Client Name="MainRecipe"/>
+							</Channels>
+						</Object>
+						<Object Name="MglobalData" GUID="{F53754B8-4AF5-4C1C-8758-C558D147C870}" Class="MerkerEx">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="ThreadSafe" Value="0"/>
+							</Channels>
+						</Object>
+						<Object
+							Name           = "Standard3"
+							GUID           = "{829BA72E-FD05-437C-B75D-3A98B681E363}"
+							Class          = "Standard"
+							BackgroundTime = "cBT">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="Vi54_Control1.Comm_Yaxles" Destination="Y_Axle_Correction1.ObjectServer"/>
+		<Connection Source="StartStopPiezo1.iStartNo" Destination="__IO_Element27" Vertices="(1050,780),(1006,780)," IOObject="Drukknop_start"/>
+		<Connection Source="StartStopPiezo1.iStopNo" Destination="__IO_Element02" Vertices="(1050,840),(1006,840)," IOObject="Drukknop_Stop"/>
+		<Connection Source="Vi54_Control1.iDrivesOk" Destination="Drives_OK.result" Vertices="(2490,1260),(2400,1260),(2400,1380),(1620,1380),(1620,1710),(1350,1710),"/>
+		<Connection Source="Vi54_Control1.iStart" Destination="StartStopPiezo1.StartNo" Vertices="(2490,780),(1546,780),"/>
+		<Connection Source="Vi54_Control1.iStop" Destination="StartStopPiezo1.StopNc" Vertices="(2490,840),(2400,840),(2400,780),(1620,780),(1620,840),(1546,840),"/>
+		<Connection Source="Vi54_Control1.LampComm" Destination="Banner_EZlight1.ClassSvr" Vertices="(2490,900),(2400,900),(2400,780),(1620,780),(1620,1110),(1546,1110),"/>
+		<Connection Source="Vi54_Control1.ClaxonComm" Destination="Claxon1.Comm" Vertices="(2490,960),(2400,960),(2400,780),(1620,780),(1620,1500),(1546,1500),"/>
+		<Connection Source="Vi54_Control1.iDrivesEnabled" Destination="Drives_Enabled.result" Vertices="(2490,1320),(2400,1320),(2400,1380),(1620,1380),(1620,1920),(1350,1920),"/>
+		<Connection Source="Drives_OK.Op1" Destination="Splitter1.DrivesOk"/>
+		<Connection Source="Drives_OK.Op2" Destination="Splitter2.DrivesOk"/>
+		<Connection Source="Drives_Enabled.Op1" Destination="Splitter1.DrivesEnabled"/>
+		<Connection Source="Drives_Enabled.Op2" Destination="Splitter2.DrivesEnabled"/>
+		<Connection Source="Reset.Ch2" Destination="Splitter1.DrivesOk"/>
+		<Connection Source="Reset.Ch3" Destination="Splitter2.DrivesOk"/>
+		<Connection Source="Vi54_Control1.oResetSignal" Destination="Reset.To_Splitt" Vertices="(2490,1380),(1620,1380),(1620,2130),(1546,2130),"/>
+		<Connection Source="Vi54_Control1.Comm_Conveyors" Destination="InfeedConv.ObjectServer"/>
+		<Connection Source="StartStopPiezo1.oLEDgreen" Destination="__IO_Element29" Vertices="(1050,900),(1006,900)," IOObject="Led_Green"/>
+		<Connection Source="StartStopPiezo1.oLEDred" Destination="__IO_Element03" Vertices="(1050,960),(1006,960)," IOObject="Led_Red"/>
+		<Connection Source="Vi54_Control1.vError" Destination="Logic_Or_21.Result" Vertices="(2490,1440),(2400,1440),(2400,1380),(1620,1380),(1620,2850),(1546,2850),"/>
+		<Connection Source="Vi54_Control1.iExternRelease" Destination="__IO_Element30" Vertices="(2490,1080),(2446,1080)," IOObject="ExtMachineOk"/>
+		<Connection Source="Vi54_Control1.oMachineOK" Destination="__IO_Element31" Vertices="(2490,1140),(2446,1140)," IOObject="Machine_Ok"/>
+		<Connection Source="Vi54_Control1.MainRecipe" Destination="MainRecipe1.ClassSvr"/>
+		<Connection Source="Vi54_Control1.Comm_Xaxles" Destination="X_Axle_Correction1.ObjectServer"/>
+		<Connection Source="Vi54_Control1.Comm_CameraMaster" Destination="Camera_master1.ObjectServer"/>
+		<Connection Source="SpeedInput1.iAnlogSpeed" Destination="MyEasy_Filter1.output" Vertices="(1050,210),(1006,210),"/>
+		<Connection Source="Vi54_Control1.oPause" Destination="__IO_Element32" Vertices="(2490,1200),(2446,1200)," IOObject="Machine_Pause"/>
+		<Connection Source="Vi54_Control1.iLineSpeed" Destination="SpeedInput1.ClassSvr" Vertices="(2490,720),(2400,720),(2400,780),(1620,780),(1620,210),(1546,210),"/>
+		<Connection Source="Reset.Ch4" Destination="Sleegers_16Alarms1.AlarmActive"/>
+		<Connection Source="Reset.Ch5" Destination="Sleegers_16AlarmsDrives1.AlarmActive"/>
+		<Connection Source="Reset.Ch1" Destination="ResetErrSafety1.Comm"/>
+	</Connections>
+	<!-- List of temp data objects in this network -->
+	<IOObjects>
+		<IOObject KeyName="__IO_Element02" Name="Drukknop_Stop" Position="(630,810)" Client="StartStopPiezo1.iStopNo"/>
+		<IOObject KeyName="__IO_Element03" Name="Led_Red" Position="(630,930)" Client="StartStopPiezo1.oLEDred"/>
+		<IOObject KeyName="__IO_Element27" Name="Drukknop_start" Position="(630,750)" Client="StartStopPiezo1.iStartNo"/>
+		<IOObject KeyName="__IO_Element29" Name="Led_Green" Position="(630,870)" Client="StartStopPiezo1.oLEDgreen"/>
+		<IOObject KeyName="__IO_Element30" Name="ExtMachineOk" Position="(2070,1050)" Client="Vi54_Control1.iExternRelease"/>
+		<IOObject KeyName="__IO_Element31" Name="Machine_Ok" Position="(2070,1110)" Client="Vi54_Control1.oMachineOK"/>
+		<IOObject KeyName="__IO_Element32" Name="Machine_Pause" Position="(2070,1170)" Client="Vi54_Control1.oPause"/>
+	</IOObjects>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

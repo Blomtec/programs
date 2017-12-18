@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Camera" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "Camera_master1"
+			GUID       = "{0ADCEF3E-9C97-440B-858B-86A47D75F987}"
+			Class      = "Camera_Master"
+			Position   = "(2670,210)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="DataCompleted"/>
+				<Server Name="IsOnline"/>
+				<Server Name="NbrOfTriggers"/>
+				<Server Name="ObjectServer"/>
+				<Server Name="RunningMode"/>
+				<Server Name="SendCommand"/>
+				<Server Name="Stepper"/>
+				<Server Name="TmrNewConnection" Value="2000"/>
+				<Client Name="cPort" Value="550"/>
+				<Client Name="iFc_Trigger"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{9EB3C65D-5371-4EEC-89CF-2C3562C6B1DB}" Class="MachineBase">
+							<Channels>
+								<Server Name="ObjectServer"/>
+								<Server Name="RunningMode"/>
+								<Server Name="Stepper"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="Standaard" GUID="{C476F815-28DA-449B-9BCA-D79F5F9539BE}" Class="Standard">
+											<Channels>
+												<Server Name="ClassSvr"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+															<Channels>
+																<Server Name="ClassSvr"/>
+																<Server Name="LogID"/>
+																<Client Name="ToGrafix"/>
+																<Client Name="ToLinker"/>
+																<Client Name="ToSigCLib"/>
+																<Client Name="ToSysMsg"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object
+							Name           = "_TCPIP_CLIENT2"
+							GUID           = "{22A8A165-D244-425E-B968-39A2BD5D6A14}"
+							Class          = "_TCPIP_CLIENT"
+							BackgroundTime = "always">
+							<Channels>
+								<Server Name="Control"/>
+								<Server Name="SemaName01"/>
+								<Server Name="SemaName02"/>
+								<Server Name="TaskName"/>
+								<Client Name="cConfig"/>
+								<Client Name="cMaxConnections" Value="0"/>
+								<Client Name="co_MultiTask"/>
+								<Client Name="co_SigCLib"/>
+								<Client Name="co_StdLib"/>
+								<Client Name="co_Task"/>
+								<Client Name="cPort" Value="550"/>
+								<Client Name="cSizeOfTXBuffer"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="CheckSum" GUID="{FC39352F-F797-497F-B594-E820A7A22227}" Class="_CheckSum">
+											<Channels>
+												<Server Name="ClassSvr"/>
+											</Channels>
+										</Object>
+										<Object Name="StrSemaName01" GUID="{E85D366E-9709-4F3D-AE62-C1B016CACD7B}" Class="String">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+															<Channels>
+																<Server Name="Data"/>
+																<Client Name="DataBuffer"/>
+																<Client Name="SingleRealloc"/>
+															</Channels>
+															<!-- List of Networks in this component -->
+															<Networks>
+																<Network>
+																	<!-- List of Components in this network -->
+																	<Components>
+																		<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+																			<Channels>
+																				<Server Name="Data"/>
+																			</Channels>
+																		</Object>
+																	</Components>
+																	<Connections>
+																	</Connections>
+																</Network>
+															</Networks>
+														</Object>
+														<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe" Value="0"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="StrSemaName02" GUID="{10DC5FEF-3685-401A-A366-325AC26C1ADC}" Class="String">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+															<Channels>
+																<Server Name="Data"/>
+																<Client Name="DataBuffer"/>
+																<Client Name="SingleRealloc"/>
+															</Channels>
+															<!-- List of Networks in this component -->
+															<Networks>
+																<Network>
+																	<!-- List of Components in this network -->
+																	<Components>
+																		<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+																			<Channels>
+																				<Server Name="Data"/>
+																			</Channels>
+																		</Object>
+																	</Components>
+																	<Connections>
+																	</Connections>
+																</Network>
+															</Networks>
+														</Object>
+														<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe" Value="0"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="StrTaskName" GUID="{C0143FE0-3A33-4991-A32A-076BDAE27564}" Class="String">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+															<Channels>
+																<Server Name="Data"/>
+																<Client Name="DataBuffer"/>
+																<Client Name="SingleRealloc"/>
+															</Channels>
+															<!-- List of Networks in this component -->
+															<Networks>
+																<Network>
+																	<!-- List of Components in this network -->
+																	<Components>
+																		<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+																			<Channels>
+																				<Server Name="Data"/>
+																			</Channels>
+																		</Object>
+																	</Components>
+																	<Connections>
+																	</Connections>
+																</Network>
+															</Networks>
+														</Object>
+														<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe" Value="0"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="IpAdres" GUID="{4E4A4C4C-6792-4889-A64E-D4CA8CCCC44F}" Class="StringRAM">
+							<Channels>
+								<Server Name="Data" Value="&quot;10.10.150.26&quot;"/>
+								<Client Name="SingleRealloc" Value="1"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="MultiTask"/>
+												<Client Name="ThreadSafe" Value="0"/>
+												<Client Name="UseFile"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "CheckData1"
+			GUID       = "{E3B73428-B1FF-4B75-BE54-BED2DA07CDAA}"
+			Class      = "CheckData"
+			Position   = "(3540,210)"
+			Visualized = "true"
+			RealTime   = "cRT">
+			<Channels>
+				<Server Name="Center_Pos_InfeedConv"/>
+				<Server Name="Comm"/>
+				<Server Name="DataCompleted"/>
+				<Server Name="NbrOfTriggers"/>
+				<Server Name="X_Deviation" Value="100"/>
+				<Server Name="Y_Deviation" Value="20"/>
+				<Client Name="Comm_CameraConn"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "Standard1"
+							GUID           = "{5ADA0356-9D77-45E1-AEB3-71CFBEED8C61}"
+							Class          = "Standard"
+							BackgroundTime = "1000 ms">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "ProductTrigger_Camera"
+			GUID       = "{2DE5278C-6EED-4C33-892E-12EBFA5977FD}"
+			Class      = "ProductTrigger"
+			Position   = "(1470,210)"
+			Visualized = "true"
+			RealTime   = "cRT">
+			<Channels>
+				<Server Name="__________"/>
+				<Server Name="___________"/>
+				<Server Name="Comm"/>
+				<Server Name="inpProductCntr"/>
+				<Server Name="NewLookingBeltPos"/>
+				<Server Name="outProductCntr"/>
+				<Server Name="OutputTrigger"/>
+				<Server Name="OutputTriggerTime" Value="100"/>
+				<Server Name="TriggerOffset"/>
+				<Client Name="EncPos"/>
+				<Client Name="inpCntr"/>
+				<Client Name="iTrigger"/>
+				<Client Name="Motion"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "Standard1"
+							GUID           = "{40BFC933-ED45-4638-9657-DBDE2119F44E}"
+							Class          = "Standard"
+							BackgroundTime = "1000 ms">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="ProductTrigger_Camera.Motion" Destination="__IO_Element50" Vertices="(1470,300),(1426,300)," IOObject="LMC_InfeedConv"/>
+		<Connection Source="ProductTrigger_Camera.EncPos" Destination="__IO_Element06" Vertices="(1470,360),(1426,360)," IOObject="ActPos_InfeedConv"/>
+		<Connection Source="ProductTrigger_Camera.iTrigger" Destination="__IO_Element113" Vertices="(1470,420),(1426,420)," IOObject="IO_Element1"/>
+		<Connection Source="CheckData1.Comm_CameraConn" Destination="Camera_master1.ObjectServer" Vertices="(3540,300),(3316,300),"/>
+		<Connection Source="Camera_master1.iFc_Trigger" Destination="ProductTrigger_Camera.Comm" Vertices="(2670,360),(2520,360),(2520,300),(2356,300),"/>
+	</Connections>
+	<!-- List of temp data objects in this network -->
+	<IOObjects>
+		<IOObject KeyName="__IO_Element06" Name="ActPos_InfeedConv" Position="(1050,330)" Client="ProductTrigger_Camera.EncPos"/>
+		<IOObject KeyName="__IO_Element113" Name="IO_Element1" Position="(1050,390)" Client="ProductTrigger_Camera.iTrigger"/>
+		<IOObject KeyName="__IO_Element50" Name="LMC_InfeedConv" Position="(1050,270)" Client="ProductTrigger_Camera.Motion"/>
+	</IOObjects>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

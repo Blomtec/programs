@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<IOConnectionManager Version="2" Detail="0" PLC="">
+	<!-- List of Entries -->
+	<Entry Name="**IOCONN_EMPTY**" Objectsize="284">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection SortIndex="92" KeyName="000005"/>
+			<IOConnection ObjSrv="_DriveAxis_Rejector" Server="CmdState" ObjClt="DriveAxleErr_Rejector" Client="DriveAxis" IOI="IOState" SortIndex="69" KeyName="000027"/>
+			<IOConnection ObjSrv="_DriveAxis_InfeedConv" Server="CmdState" ObjClt="DriveAxleErr_InfeedConv" Client="DriveAxis" IOI="IOState" SortIndex="70" KeyName="000028"/>
+			<IOConnection ObjSrv="_DriveAxis_RejectorConv" Server="CmdState" ObjClt="DriveAxleErr_InfeedConv2" Client="DriveAxis" IOI="IOState" SortIndex="71" KeyName="000029"/>
+			<IOConnection ObjSrv="_DriveAxis_Y_Conveyor" Server="CmdState" ObjClt="DriveAxleErr_Y_Conveyor" Client="DriveAxis" IOI="IOState" SortIndex="72" KeyName="000030"/>
+			<IOConnection ObjSrv="_DriveAxis_OutfeedConv" Server="CmdState" ObjClt="DriveAxleErr_OutfeedConv" Client="DriveAxis" IOI="IOState" SortIndex="73" KeyName="000031"/>
+			<IOConnection ObjSrv="SCP1111" Server="ErrorState" ObjClt="ResetErrSafety1" Client="iCheckErr" IOI="IOState" SortIndex="357" KeyName="000034"/>
+			<IOConnection ObjSrv="SCP1111" Server="QuitComError" ObjClt="ResetErrSafety1" Client="oQuitCommErr" IOI="Output" Type="Digital" SortIndex="358" KeyName="000035"/>
+			<IOConnection ObjSrv="SDM0811" Server="Safe_Input1" ObjClt="Logic_And_21" Client="Op1" IOI="Input" Type="Digital" SortIndex="359" KeyName="000036"/>
+			<IOConnection ObjSrv="SDM0811" Server="Safe_Input2" ObjClt="Logic_And_21" Client="Op2" IOI="Input" Type="Digital" SortIndex="360" KeyName="000037"/>
+			<IOConnection ObjSrv="SDM0811" Server="Safe_Input3" ObjClt="Logic_And_22" Client="Op1" IOI="Input" Type="Digital" SortIndex="361" KeyName="000038"/>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle3" Server="CmdState" ObjClt="DriveAxleErr_Y_Axle3" Client="DriveAxis" IOI="IOState" SortIndex="0" KeyName="000039"/>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle1" Server="CmdState" ObjClt="DriveAxleErr_Y_Axle1" Client="DriveAxis" IOI="IOState" SortIndex="1" KeyName="000040"/>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle2" Server="CmdState" ObjClt="DriveAxleErr_Y_Axle2" Client="DriveAxis" IOI="IOState" SortIndex="2" KeyName="000041"/>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle2" Server="CmdState" ObjClt="DriveAxleErr_X_Axle2" Client="DriveAxis" IOI="IOState" SortIndex="3" KeyName="000042"/>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle4" Server="CmdState" ObjClt="DriveAxleErr_Y_Axle4" Client="DriveAxis" IOI="IOState" SortIndex="4" KeyName="000043"/>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle1" Server="CmdState" ObjClt="DriveAxleErr_X_Axle1" Client="DriveAxis" IOI="IOState" SortIndex="5" KeyName="000044"/>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle4" Server="CmdState" ObjClt="DriveAxleErr_X_Axle4" Client="DriveAxis" IOI="IOState" SortIndex="6" KeyName="000045"/>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle3" Server="CmdState" ObjClt="DriveAxleErr_X_Axle3" Client="DriveAxis" IOI="IOState" SortIndex="7" KeyName="000046"/>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle1" Server="CmdState" ObjClt="_LMC_MotorInfo_Y_axle1" Client="DriveAxis" IOI="IOState" SortIndex="8" KeyName="000047"/>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle2" Server="CmdState" ObjClt="_LMC_MotorInfo_Y_axle2" Client="DriveAxis" IOI="IOState" SortIndex="9" KeyName="000048"/>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle3" Server="CmdState" ObjClt="_LMC_MotorInfo_Y_axle3" Client="DriveAxis" IOI="IOState" SortIndex="10" KeyName="000049"/>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle4" Server="CmdState" ObjClt="_LMC_MotorInfo_Y_axle4" Client="DriveAxis" IOI="IOState" SortIndex="11" KeyName="000050"/>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle1" Server="CmdState" ObjClt="_LMC_MotorInfo_X_axle1" Client="DriveAxis" IOI="IOState" SortIndex="12" KeyName="000051"/>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle2" Server="CmdState" ObjClt="_LMC_MotorInfo_X_axle2" Client="DriveAxis" IOI="IOState" SortIndex="13" KeyName="000052"/>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle3" Server="CmdState" ObjClt="_LMC_MotorInfo_X_axle3" Client="DriveAxis" IOI="IOState" SortIndex="14" KeyName="000053"/>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle4" Server="CmdState" ObjClt="_LMC_MotorInfo_X_axle4" Client="DriveAxis" IOI="IOState" SortIndex="15" KeyName="000054"/>
+			<IOConnection ObjSrv="SDM0811" Server="Safe_Input4" ObjClt="Logic_And_22" Client="Op2" IOI="Input" Type="Digital" SortIndex="362" KeyName="000073"/>
+			<IOConnection ObjSrv="_DriveAxis_InfeedConv" Server="CmdState" ObjClt="_LMC_MotorInfo_InfeedConv" Client="DriveAxis" IOI="IOState" SortIndex="82" KeyName="000074"/>
+			<IOConnection ObjSrv="_DriveAxis_RejectorConv" Server="CmdState" ObjClt="_LMC_MotorInfo_RejectorConv" Client="DriveAxis" IOI="IOState" SortIndex="83" KeyName="000083"/>
+			<IOConnection ObjSrv="_DriveAxis_Rejector" Server="CmdState" ObjClt="_LMC_MotorInfo_Rejector" Client="DriveAxis" IOI="IOState" SortIndex="84" KeyName="000084"/>
+			<IOConnection ObjSrv="_DriveAxis_Y_Conveyor" Server="CmdState" ObjClt="_LMC_MotorInfo_Y_Conveyor" Client="DriveAxis" IOI="IOState" SortIndex="85" KeyName="000085"/>
+			<IOConnection ObjSrv="_DriveAxis_OutfeedConv" Server="CmdState" ObjClt="_LMC_MotorInfo_OutfeedConv" Client="DriveAxis" IOI="IOState" SortIndex="86" KeyName="000086"/>
+			<IOConnection ObjSrv="SDM0811" Server="Safe_Input5" ObjClt="Logic_And_23" Client="Op1" IOI="Input" Type="Digital" SortIndex="363" KeyName="000089"/>
+			<IOConnection ObjSrv="SDM0811" Server="Safe_Input6" ObjClt="Logic_And_23" Client="Op2" IOI="Input" Type="Digital" SortIndex="364" KeyName="000090"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Act_Pos_InfeedConv" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_InfeedConv" Server="ActPos" ObjClt="ProductTriggerWecube_Waste" Client="EncPos" IOI="Input" Type="Analog" SortIndex="91" KeyName="000004"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Act_Pos_Y_Conveyor" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Conveyor" Server="ActPos" ObjClt="ProductTriggerWecube_Y_Positions" Client="EncPos" IOI="Input" Type="Analog" SortIndex="88" KeyName="000088"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActPos_InfeedConv" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_InfeedConv" Server="ActPos" ObjClt="_LMCAxis_InfeedConv" Client="ActPosition" IOI="Input" Type="Analog" SortIndex="342" KeyName="000012"/>
+			<IOConnection ObjSrv="_DriveAxis_InfeedConv" Server="ActPos" ObjClt="ProductTrigger_Camera" Client="EncPos" IOI="Input" Type="Analog" SortIndex="370" KeyName="000096"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActPos_OutfeedConv" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_OutfeedConv" Server="ActPos" ObjClt="_LMCAxis_OutfeedConv" Client="ActPosition" IOI="Input" Type="Analog" SortIndex="350" KeyName="000022"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActPos_Rejector" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Rejector" Server="ActPos" ObjClt="_LMCAxis_Rejector" Client="ActPosition" IOI="Input" Type="Analog" SortIndex="346" KeyName="000016"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActPos_RejectorConv" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_RejectorConv" Server="ActPos" ObjClt="_LMCAxis_RejectorConv" Client="ActPosition" IOI="Input" Type="Analog" SortIndex="344" KeyName="000014"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActPos_X_Axle1" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle1" Server="ActPos" ObjClt="_LMCAxis_X_Axle1" Client="ActPosition" IOI="Input" Type="Analog" SortIndex="16" KeyName="000067"/>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle1" Server="ActPos" ObjClt="ProductTriggerWecube_X_positions" Client="EncPos" IOI="Input" Type="Analog" SortIndex="17" KeyName="000072"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActPos_X_Axle2" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle2" Server="ActPos" ObjClt="_LMCAxis_X_Axle2" Client="ActPosition" IOI="Input" Type="Analog" SortIndex="18" KeyName="000068"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActPos_X_Axle3" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle3" Server="ActPos" ObjClt="_LMCAxis_X_Axle3" Client="ActPosition" IOI="Input" Type="Analog" SortIndex="19" KeyName="000069"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActPos_X_Axle4" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle4" Server="ActPos" ObjClt="_LMCAxis_X_Axle4" Client="ActPosition" IOI="Input" Type="Analog" SortIndex="20" KeyName="000070"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActPos_Y_Axle1" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle1" Server="ActPos" ObjClt="_LMCAxis_Y_Axle1" Client="ActPosition" IOI="Input" Type="Analog" SortIndex="21" KeyName="000063"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActPos_Y_Axle2" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle2" Server="ActPos" ObjClt="_LMCAxis_Y_Axle2" Client="ActPosition" IOI="Input" Type="Analog" SortIndex="22" KeyName="000064"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActPos_Y_Axle3" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle3" Server="ActPos" ObjClt="_LMCAxis_Y_Axle3" Client="ActPosition" IOI="Input" Type="Analog" SortIndex="23" KeyName="000065"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActPos_Y_Axle4" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle4" Server="ActPos" ObjClt="_LMCAxis_Y_Axle4" Client="ActPosition" IOI="Input" Type="Analog" SortIndex="24" KeyName="000066"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ActPos_Y_conveyor" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Conveyor" Server="ActPos" ObjClt="_LMCAxis_Y_Conveyor" Client="ActPosition" IOI="Input" Type="Analog" SortIndex="348" KeyName="000018"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Cmd_Drive_InfeedConv" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_InfeedConv" Server="CmdState" ObjClt="DrivePosControl_InfeedConv1" Client="cDriveAxis" IOI="IOState" SortIndex="352" KeyName="000024"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Cmd_Drive_Rejector" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Rejector" Server="CmdState" ObjClt="DrivePosControl_Rejector" Client="cDriveAxis" IOI="IOState" SortIndex="354" KeyName="000026"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Cmd_Drive_RejectorConv" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_RejectorConv" Server="CmdState" ObjClt="DrivePosControl_RejectorConv" Client="cDriveAxis" IOI="IOState" SortIndex="353" KeyName="000025"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Cmd_Drive_X_Axle1" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle1" Server="CmdState" ObjClt="DrivePosControl_X_axle1" Client="cDriveAxis" IOI="IOState" SortIndex="25" KeyName="000059"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Cmd_Drive_X_Axle2" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle2" Server="CmdState" ObjClt="DrivePosControl_X_axle2" Client="cDriveAxis" IOI="IOState" SortIndex="26" KeyName="000060"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Cmd_Drive_X_Axle3" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle3" Server="CmdState" ObjClt="DrivePosControl_X_axle3" Client="cDriveAxis" IOI="IOState" SortIndex="27" KeyName="000061"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Cmd_Drive_X_Axle4" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle4" Server="CmdState" ObjClt="DrivePosControl_X_axle4" Client="cDriveAxis" IOI="IOState" SortIndex="28" KeyName="000062"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Cmd_Drive_Y_Axle1" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle1" Server="CmdState" ObjClt="DrivePosControl_Y_axle1" Client="cDriveAxis" IOI="IOState" SortIndex="29" KeyName="000055"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Cmd_Drive_Y_Axle2" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle2" Server="CmdState" ObjClt="DrivePosControl_Y_axle2" Client="cDriveAxis" IOI="IOState" SortIndex="30" KeyName="000056"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Cmd_Drive_Y_Axle3" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle3" Server="CmdState" ObjClt="DrivePosControl_Y_axle3" Client="cDriveAxis" IOI="IOState" SortIndex="31" KeyName="000057"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Cmd_Drive_Y_Axle4" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle4" Server="CmdState" ObjClt="DrivePosControl_Y_axle4" Client="cDriveAxis" IOI="IOState" SortIndex="32" KeyName="000058"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Cmd_Drive_Y_Conveyor" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Conveyor" Server="CmdState" ObjClt="DrivePosControl_Y_Conveyor" Client="cDriveAxis" IOI="IOState" SortIndex="355" KeyName="000032"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Cmd_OutfeedConv" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_OutfeedConv" Server="CmdState" ObjClt="DrivePosControl_OutfeedConv" Client="cDriveAxis" IOI="IOState" SortIndex="356" KeyName="000033"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Drukknop_start" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DI2031" Server="Input1" ObjClt="StartStopPiezo1" Client="iStartNo" IOI="Input" Type="Digital" SortIndex="43" KeyName="000000"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Drukknop_Stop" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DI2031" Server="Input2" ObjClt="StartStopPiezo1" Client="iStopNo" IOI="Input" Type="Digital" SortIndex="44" KeyName="000001"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="EmergencyStop" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="Logic_And_21" Server="result" ObjClt="Sleegers_16Alarms1" Client="iAlarm01" SortIndex="365" KeyName="000091"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="ExtMachineOk" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DI2031" Server="Input3" ObjClt="Vi54_Control1" Client="iExternRelease" IOI="Input" Type="Digital" SortIndex="95" KeyName="000008"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Front_Cover" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="Logic_And_22" Server="result" ObjClt="SafetyClass1" Client="SafetyInp1" SortIndex="366" KeyName="000092"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="HwReady_InfeedConv" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_InfeedConv" Server="Online" ObjClt="_LMCAxis_InfeedConv" Client="HWReady" IOI="IOState" Type="Digital" SortIndex="343" KeyName="000013"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="HwReady_OutfeedConv" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_OutfeedConv" Server="Online" ObjClt="_LMCAxis_OutfeedConv" Client="HWReady" IOI="IOState" Type="Digital" SortIndex="351" KeyName="000023"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="HwReady_Rejector" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Rejector" Server="Online" ObjClt="_LMCAxis_Rejector" Client="HWReady" IOI="IOState" Type="Digital" SortIndex="347" KeyName="000017"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="HwReady_RejectorConv" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_RejectorConv" Server="Online" ObjClt="_LMCAxis_RejectorConv" Client="HWReady" IOI="IOState" Type="Digital" SortIndex="345" KeyName="000015"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="HwReady_X_Axle1" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle1" Server="Online" ObjClt="_LMCAxis_X_Axle1" Client="HWReady" IOI="IOState" Type="Digital" SortIndex="33" KeyName="000079"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="HwReady_X_Axle2" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle2" Server="Online" ObjClt="_LMCAxis_X_Axle2" Client="HWReady" IOI="IOState" Type="Digital" SortIndex="34" KeyName="000080"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="HwReady_X_Axle3" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle3" Server="Online" ObjClt="_LMCAxis_X_Axle3" Client="HWReady" IOI="IOState" Type="Digital" SortIndex="35" KeyName="000081"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="HwReady_X_Axle4" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_X_Axle4" Server="Online" ObjClt="_LMCAxis_X_Axle4" Client="HWReady" IOI="IOState" Type="Digital" SortIndex="36" KeyName="000082"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="HwReady_Y_Axle1" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle1" Server="Online" ObjClt="_LMCAxis_Y_Axle1" Client="HWReady" IOI="IOState" Type="Digital" SortIndex="37" KeyName="000075"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="HwReady_Y_Axle2" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle2" Server="Online" ObjClt="_LMCAxis_Y_Axle2" Client="HWReady" IOI="IOState" Type="Digital" SortIndex="38" KeyName="000076"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="HwReady_Y_Axle3" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle3" Server="Online" ObjClt="_LMCAxis_Y_Axle3" Client="HWReady" IOI="IOState" Type="Digital" SortIndex="39" KeyName="000077"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="HwReady_Y_Axle4" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Axle4" Server="Online" ObjClt="_LMCAxis_Y_Axle4" Client="HWReady" IOI="IOState" Type="Digital" SortIndex="40" KeyName="000078"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="HwReady_Y_conveyor" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_DriveAxis_Y_Conveyor" Server="Online" ObjClt="_LMCAxis_Y_Conveyor" Client="HWReady" IOI="IOState" Type="Digital" SortIndex="349" KeyName="000019"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="IO_Element1" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DI2031" Server="Input4" ObjClt="ProductTrigger_Camera" Client="iTrigger" IOI="Input" Type="Digital" SortIndex="371" KeyName="000097"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="iTrigger" Objectsize="360">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection SortIndex="89" KeyName="000002"/>
+			<IOConnection SortIndex="41" KeyName="000009"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Led_Green" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="TO1611" Server="Output7" ObjClt="StartStopPiezo1" Client="oLEDgreen" IOI="Output" Type="Digital" SortIndex="93" KeyName="000006"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Led_Red" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="TO1611" Server="Output8" ObjClt="StartStopPiezo1" Client="oLEDred" IOI="Output" Type="Digital" SortIndex="94" KeyName="000007"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="LMC_InfeedConv" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_LMCAxis_InfeedConv" Server="Control" ObjClt="ProductTriggerWecube_Waste" Client="Motion" SortIndex="90" KeyName="000003"/>
+			<IOConnection ObjSrv="_LMCAxis_InfeedConv" Server="Control" ObjClt="ProductTrigger_Camera" Client="Motion" SortIndex="369" KeyName="000095"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="LMC_X_Axle1" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_LMCAxis_X_Axle1" Server="Control" ObjClt="ProductTriggerWecube_X_positions" Client="Motion" SortIndex="42" KeyName="000071"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="LMC_Y_Conveyor" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="_LMCAxis_Y_Conveyor" Server="Control" ObjClt="ProductTriggerWecube_Y_Positions" Client="Motion" SortIndex="87" KeyName="000087"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Machine_Ok" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="TO1611" Server="Output1" ObjClt="Vi54_Control1" Client="oMachineOK" IOI="Output" Type="Digital" SortIndex="96" KeyName="000010"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Machine_Pause" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="TO1611" Server="Output2" ObjClt="Vi54_Control1" Client="oPause" IOI="Output" Type="Digital" SortIndex="97" KeyName="000011"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Safety_CPU_In_Error" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="SCP1111" Server="RunState" ObjClt="Sleegers_16Alarms1" Client="iAlarm05" IOI="IOState" SortIndex="368" KeyName="000094"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Vi54_CleaningOverrule" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="Vi54_Control1" Server="CleaningMode" ObjClt="SafetyClass1" Client="CleaningMode" SortIndex="341" KeyName="000021"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Vi54_MasterOverrule" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="Vi54_Control1" Server="MasterOverrule" ObjClt="SafetyClass1" Client="MasterOverrule" SortIndex="306" KeyName="000020"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="Waste_Bin" Objectsize="360" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="Logic_And_23" Server="result" ObjClt="SafetyClass1" Client="SafetyInp2" SortIndex="367" KeyName="000093"/>
+		</IOConnections>
+	</Entry>
+	<!-- List of Folders -->
+</IOConnectionManager>

@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Kernel" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "_ActValue1"
+			GUID       = "{31464ABD-B2F1-4209-AB44-2CC2F21AF70D}"
+			Class      = "_ActValue"
+			Position   = "(1050,570)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Server0"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{31E11376-C4E4-4F58-982C-4BD0AF79D3CD}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "_LimitMax1"
+			GUID       = "{C470F9C9-E3D3-477F-944B-A53FE1BA002F}"
+			Class      = "_LimitMax"
+			Position   = "(1050,420)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Server0"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{F02029CF-DA1F-11D7-8BCB-0048545E8899}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "_LimitMin1"
+			GUID       = "{59A1AED1-34F8-4779-9C5D-7B0B9B583DE2}"
+			Class      = "_LimitMin"
+			Position   = "(1050,270)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Server0"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{F02029C7-DA1F-11D7-8BCB-0048545E8899}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AltLock"
+			GUID       = "{B41828A0-21BB-4108-AFD1-11032B6F61DA}"
+			Class      = "Merker"
+			Position   = "(510,1590)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "ChangeServers"
+			GUID       = "{06B93AB5-8659-4FA6-9F3F-30738B6CB6FE}"
+			Class      = "Ram"
+			Position   = "(3180,750)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data"/>
+			</Channels>
+		</Object>
+		<Object
+			Name           = "DateAndTime1"
+			GUID           = "{F335AEA3-795E-46E2-BC06-A8AC217F0DF2}"
+			Class          = "DateAndTime"
+			Position       = "(90,1920)"
+			Visualized     = "true"
+			Remotely       = "true"
+			BackgroundTime = "cBT">
+			<Channels>
+				<Server Name="Day"/>
+				<Server Name="DayOfWeek"/>
+				<Server Name="Hour"/>
+				<Server Name="HourAndMin"/>
+				<Server Name="Minute"/>
+				<Server Name="Month"/>
+				<Server Name="Second"/>
+				<Server Name="Server"/>
+				<Server Name="SuMarch"/>
+				<Server Name="SuOct"/>
+				<Server Name="SysDate"/>
+				<Server Name="SysTime"/>
+				<Server Name="WTime"/>
+				<Server Name="Year"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "_base"
+							GUID           = "{2EA612B5-C0EF-489A-B459-3C3AA38DBE30}"
+							Class          = "_SysDateTime"
+							BackgroundTime = "10 ms">
+							<Channels>
+								<Server Name="DayOfWeek"/>
+								<Server Name="SysDate"/>
+								<Server Name="SysTime"/>
+								<Client Name="DoSummerTime" Value="1"/>
+								<Client Name="System"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="SummerTime" GUID="{8D5F918A-029E-4326-8E46-99E55244583F}" Class="Ram">
+											<Channels>
+												<Server Name="Data"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "InsertLock"
+			GUID       = "{5F9030C7-2BE8-43EE-88E7-3F5B04D88798}"
+			Class      = "Merker"
+			Position   = "(90,1590)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "KeyShiftOn"
+			GUID       = "{88E56A98-4815-4B04-84F2-B283AE89BEDB}"
+			Class      = "Merker"
+			Position   = "(510,1440)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "LevelLogin"
+			GUID       = "{6F69DBBB-071A-4892-8935-339067BAFE8F}"
+			Class      = "Ram"
+			Position   = "(3180,630)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data" Value="4"/>
+			</Channels>
+		</Object>
+		<Object
+			Name           = "Lse"
+			GUID           = "{1BAB91AD-314E-468B-AFDB-0708C6E2B4A0}"
+			Class          = "_Lse"
+			Position       = "(90,120)"
+			Visualized     = "true"
+			Remotely       = "true"
+			BackgroundTime = "always">
+			<Channels>
+				<Server Name="ActivateBubbleHelp"/>
+				<Server Name="AmericanDateFormat" Value="0"/>
+				<Server Name="AmericanTimeFormat"/>
+				<Server Name="CommaSign"/>
+				<Server Name="CompilerVersion"/>
+				<Server Name="CursorWrapHorizontal" Value="1"/>
+				<Server Name="CursorWrapVertical" Value="1"/>
+				<Server Name="DelayScreenSaver" Value="1800000"/>
+				<Server Name="DirectionOnEnter" Value="1"/>
+				<Server Name="GotAlarm"/>
+				<Server Name="Language"/>
+				<Server Name="Lse"/>
+				<Server Name="LseProjectRevision"/>
+				<Server Name="LseVersion"/>
+				<Server Name="NoExternCom"/>
+				<Server Name="OfflineMode"/>
+				<Server Name="OpSysVersion"/>
+				<Server Name="SeekAlgorithm" Value="1"/>
+				<Server Name="SystemMessage"/>
+				<Client Name="EventProcessor"/>
+				<Client Name="Gbcd"/>
+				<Client Name="JpgLib"/>
+				<Client Name="LseReady"/>
+			</Channels>
+		</Object>
+		<Object
+			Name           = "LslRemote1"
+			GUID           = "{75F6C82E-B367-4603-B89F-D346430F3E86}"
+			Class          = "LslRemote"
+			Position       = "(4260,180)"
+			Visualized     = "true"
+			Remotely       = "true"
+			CyclicTime     = "Cct"
+			BackgroundTime = "Cbt">
+			<Channels>
+				<Server Name="OfflineReason"/>
+				<Server Name="RemoteOnline"/>
+				<Client Name="ChangeServers"/>
+				<Client Name="ImageNumber" Value="100"/>
+				<Client Name="IsAllowed"/>
+				<Client Name="LoginLevel"/>
+				<Client Name="Message"/>
+				<Client Name="RemotePassword"/>
+				<Client Name="To_LSE"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "Massage"
+			GUID       = "{85B826C6-572F-4109-8F0A-EA9B838E4EF5}"
+			Class      = "StringRAM"
+			Position   = "(3180,150)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data"/>
+				<Client Name="SingleRealloc" Value="1"/>
+				<Client Name="UseFile"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="DataBuffer"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+											<Channels>
+												<Server Name="Data"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "Message_Retour"
+			GUID       = "{6A37CBE7-963A-44BF-A2AC-DDADC8C1BD80}"
+			Class      = "StringRAM"
+			Position   = "(3180,870)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data"/>
+				<Client Name="SingleRealloc" Value="1"/>
+				<Client Name="UseFile"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="DataBuffer"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+											<Channels>
+												<Server Name="Data"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "RemoteActiv"
+			GUID       = "{44257779-36FA-47B5-885F-D3A67C84ED7D}"
+			Class      = "Ram"
+			Position   = "(3180,330)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data" Value="1"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "RemotePass"
+			GUID       = "{A98F588C-F5AD-4E43-BB05-47D1BE844971}"
+			Class      = "StringRAM"
+			Position   = "(3180,450)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data" Value="&quot;Sigmatek&quot;"/>
+				<Client Name="SingleRealloc" Value="1"/>
+				<Client Name="UseFile"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="DataBuffer"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+											<Channels>
+												<Server Name="Data"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "SaveLoadLoggenUSB1"
+			GUID       = "{9A67550D-90FC-449D-9842-A1E071023248}"
+			Class      = "SaveLoadUSB"
+			Position   = "(1620,1890)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Copy"/>
+				<Server Name="ResultFileCopy"/>
+				<Server Name="Server0">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="UserUSBLinked"/>
+				<Client Name="FileOs"/>
+				<Client Name="Lse"/>
+				<Client Name="System"/>
+				<Client Name="vLevel"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{D3D5BE76-C932-40E6-8DB5-5F011DAD4F63}" Class="_Global">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "ShiftLock"
+			GUID       = "{12850685-F4EA-4289-8AB6-E71762554D63}"
+			Class      = "Merker"
+			Position   = "(90,1440)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "TerminalControl1"
+			GUID       = "{7F3A2894-0775-48EC-BDBE-F1FEBF5AF5E6}"
+			Class      = "TerminalControl"
+			Position   = "(1620,120)"
+			Visualized = "true"
+			Remotely   = "true"
+			CyclicTime = "100 ms">
+			<Channels>
+				<Server Name="ActScreenNbr"/>
+				<Server Name="ActWindowNbr"/>
+				<Server Name="Down"/>
+				<Server Name="F1"/>
+				<Server Name="F2"/>
+				<Server Name="F3"/>
+				<Server Name="F4"/>
+				<Server Name="F5"/>
+				<Server Name="F6"/>
+				<Server Name="F7"/>
+				<Server Name="F8"/>
+				<Server Name="GoInReset"/>
+				<Server Name="KeyCode"/>
+				<Server Name="keypresCnt"/>
+				<Server Name="Left"/>
+				<Server Name="PgDown"/>
+				<Server Name="PgUp"/>
+				<Server Name="Right"/>
+				<Server Name="sDeactivateScreenSaver"/>
+				<Server Name="sDelayBacklight"/>
+				<Server Name="sDelayScreenSaver" Value="2"/>
+				<Server Name="SelectScreen"/>
+				<Server Name="SelectWindow"/>
+				<Server Name="Server0"/>
+				<Server Name="Up"/>
+				<Server Name="WindowEnd"/>
+				<Client Name="Lse"/>
+				<Client Name="OSkernel"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{0B0F4AFC-2EC0-4BDA-BCD2-08DA6800DDF1}" Class="_Global">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="TerminalControl1.Lse" Destination="Lse.Lse" Vertices="(1620,210),(772,210),"/>
+		<Connection Source="_LimitMin1.Lse" Destination="Lse.Lse" Vertices="(1050,360),(772,210),"/>
+		<Connection Source="_LimitMax1.Lse" Destination="Lse.Lse" Vertices="(1050,510),(772,210),"/>
+		<Connection Source="_ActValue1.Lse" Destination="Lse.Lse" Vertices="(1050,660),(780,210),(772,210),"/>
+		<Connection Source="SaveLoadLoggenUSB1.Lse" Destination="Lse.Lse" Vertices="(1620,1980),(1470,1980),(1470,210),(772,210),"/>
+		<Connection Source="LslRemote1.To_LSE" Destination="Lse.Lse" Vertices="(4260,270),(4200,270),(4200,90),(1470,90),(1470,210),(772,210),"/>
+		<Connection Source="SaveLoadLoggenUSB1.vLevel" Destination="AccessControlMain1.ActLevel"/>
+		<Connection Source="LslRemote1.Message" Destination="Massage.Data" Vertices="(4260,390),(3766,240),"/>
+		<Connection Source="LslRemote1.IsAllowed" Destination="RemoteActiv.Data" Vertices="(4260,450),(3766,420),"/>
+		<Connection Source="LslRemote1.RemotePassword" Destination="RemotePass.Data" Vertices="(4260,510),(3766,540),"/>
+		<Connection Source="LslRemote1.LoginLevel" Destination="LevelLogin.Data" Vertices="(4260,570),(3766,720),"/>
+		<Connection Source="LslRemote1.ChangeServers" Destination="ChangeServers.Data" Vertices="(4260,630),(3766,840),"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

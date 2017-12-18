@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="invRecept" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "MainRecipe1"
+			GUID       = "{BE3E8F86-315D-4910-AF02-920E7BE147B9}"
+			Class      = "MainRecipe"
+			Position   = "(480,240)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="DataRecipe" GUID="{353F54A6-25E0-4C02-B4E7-23BF06DEECE3}" Class="MerkerEx">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="ThreadSafe" Value="0"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "Recipe_Camera1"
+			GUID       = "{084AE062-DA87-4820-A69E-FD710E2BAFF6}"
+			Class      = "Recipe_Camera"
+			Position   = "(1890,630)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="Comm"/>
+				<Server Name="TriggerOffset"/>
+				<Client Name="MainRecipe"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{E2158573-3839-4C2B-A54C-C8DAD3D6A963}" Class="RecipeBase">
+							<Channels>
+								<Server Name="Comm"/>
+								<Client Name="MainRecipe"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "Recipe_Machine1"
+			GUID       = "{467530BE-E3A6-408E-8C85-1EB48D4D3D38}"
+			Class      = "Recipe_Machine"
+			Position   = "(1890,240)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="Comm"/>
+				<Server Name="LineSpeed"/>
+				<Server Name="Max_AccDec"/>
+				<Server Name="Max_Speed"/>
+				<Client Name="MainRecipe"/>
+				<Client Name="MotionValues"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{1098BAEF-9612-41A6-965F-075EEA516A37}" Class="RecipeBase">
+							<Channels>
+								<Server Name="Comm"/>
+								<Client Name="MainRecipe"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "Recipe_X_Axle1"
+			GUID       = "{5F147A3C-D10A-4D19-8912-BDDDB6C9BFF0}"
+			Class      = "Recipe_X_Axle"
+			Position   = "(1890,930)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="AccDec"/>
+				<Server Name="Comm"/>
+				<Server Name="Max_AccDec"/>
+				<Server Name="Max_Speed"/>
+				<Server Name="Speed"/>
+				<Client Name="MainRecipe"/>
+				<Client Name="MotionValues"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{D874C26B-0AC7-4F15-8C09-F538DC4DA382}" Class="RecipeBase">
+							<Channels>
+								<Server Name="Comm"/>
+								<Client Name="MainRecipe"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "Recipe_Y_Axle1"
+			GUID       = "{F7AD2768-923F-4750-9847-8C6E88AD965A}"
+			Class      = "Recipe_Y_Axle"
+			Position   = "(1890,1410)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="AccDec"/>
+				<Server Name="Comm"/>
+				<Server Name="Max_AccDec"/>
+				<Server Name="Max_Speed"/>
+				<Server Name="Speed"/>
+				<Client Name="MainRecipe"/>
+				<Client Name="MotionValues"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{E73EDC2A-0818-427A-9B97-75321119CFE6}" Class="RecipeBase">
+							<Channels>
+								<Server Name="Comm"/>
+								<Client Name="MainRecipe"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="Recipe_X_Axle1.MainRecipe" Destination="MainRecipe1.ClassSvr" Vertices="(1890,1020),(1800,1020),(1800,330),(1126,330),"/>
+		<Connection Source="Recipe_Y_Axle1.MainRecipe" Destination="MainRecipe1.ClassSvr" Vertices="(1890,1500),(1800,1500),(1800,330),(1126,330),"/>
+		<Connection Source="Recipe_X_Axle1.MotionValues" Destination="_LMC_MotorInfo_X_axle1.ClassSvr"/>
+		<Connection Source="Recipe_Y_Axle1.MotionValues" Destination="_LMC_MotorInfo_Y_axle1.ClassSvr"/>
+		<Connection Source="Recipe_Machine1.MainRecipe" Destination="MainRecipe1.ClassSvr" Vertices="(1890,330),(1126,330),"/>
+		<Connection Source="Recipe_Machine1.MotionValues" Destination="_LMC_MotorInfo_X_axle1.ClassSvr"/>
+		<Connection Source="Recipe_Camera1.MainRecipe" Destination="MainRecipe1.ClassSvr" Vertices="(1890,720),(1800,720),(1800,330),(1126,330),"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

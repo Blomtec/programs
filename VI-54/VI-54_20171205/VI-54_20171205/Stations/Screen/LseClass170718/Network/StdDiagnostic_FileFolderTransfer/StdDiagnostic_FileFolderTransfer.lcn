@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="StdDiagnostic_FileFolderTransfer" Revision="1.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name           = "DiagnosticStationFileFolderHandler1"
+			GUID           = "{7E98DA52-B42F-47DC-9E3C-DFC1180D2E9C}"
+			Class          = "DiagnosticStationFileFolderHandler"
+			Position       = "(2640,1350)"
+			Visualized     = "true"
+			BackgroundTime = "2 ms">
+			<Channels>
+				<Server Name="sFunctionName" Value="Diagnostic_FktName_FileFolderTransfer"/>
+				<Server Name="sStationName" Value="Diagnostic_StatName_PLC1"/>
+				<Server Name="sStatus"/>
+				<Client Name="cDiagnostic"/>
+				<Client Name="cFileSys"/>
+				<Client Name="cFileTransfer"/>
+				<Client Name="cFolderTransfer"/>
+				<Client Name="cSigCLib"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="FunctionName" GUID="{ACA20344-F8B9-46F5-83C7-7529A06D163C}" Class="String">
+							<Channels>
+								<Server Name="Data" Value="Diagnostic_FktName_FileFolderTransfer"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StationName" GUID="{E2E0C465-60EB-4C2D-B416-1AF230411C7A}" Class="String">
+							<Channels>
+								<Server Name="Data" Value="Diagnostic_StatName_PLC1"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "DiagnosticStationFileFolderHandler_Intern"
+			GUID           = "{8C199367-B002-4C91-8EC9-D5F5D37114C7}"
+			Class          = "DiagnosticStationFileFolderHandler"
+			Position       = "(2640,210)"
+			Visualized     = "false"
+			BackgroundTime = "2 ms">
+			<Channels>
+				<Server Name="sFunctionName" Value="Diagnostic_FktName_FileFolderTransfer"/>
+				<Server Name="sStationName" Value="Diagnostic_StatName_HMI"/>
+				<Server Name="sStatus"/>
+				<Client Name="cDiagnostic"/>
+				<Client Name="cFileSys"/>
+				<Client Name="cFileTransfer" Value="0"/>
+				<Client Name="cFolderTransfer" Value="0"/>
+				<Client Name="cSigCLib"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="FunctionName" GUID="{ACA20344-F8B9-46F5-83C7-7529A06D163C}" Class="String">
+							<Channels>
+								<Server Name="Data" Value="Diagnostic_FktName_FileFolderTransfer"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StationName" GUID="{E2E0C465-60EB-4C2D-B416-1AF230411C7A}" Class="String">
+							<Channels>
+								<Server Name="Data" Value="Diagnostic_StatName_HMI"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "FileDefine1"
+			GUID       = "{95A78C9E-8EE1-4142-BCCC-B5932DDC02DC}"
+			Class      = "FileDefine"
+			Position   = "(3510,210)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="sUserDPNE" Value="&quot;C:\retsvr.dat&quot;"/>
+				<Client Name="cFFHandler"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="UserDPNE" GUID="{06D1559B-FBE4-4CA0-B88D-475B00C93B4D}" Class="String">
+							<Channels>
+								<Server Name="Data" Value="&quot;C:\retsvr.dat&quot;"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "FileDefine2"
+			GUID       = "{A879A2F0-241C-414A-8D8F-D5E40371E9A6}"
+			Class      = "FileDefine"
+			Position   = "(3510,450)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="sUserDPNE" Value="&quot;C:\lsldata\ramfile.cpy&quot;"/>
+				<Client Name="cFFHandler"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="UserDPNE" GUID="{06D1559B-FBE4-4CA0-B88D-475B00C93B4D}" Class="String">
+							<Channels>
+								<Server Name="Data" Value="&quot;C:\lsldata\ramfile.cpy&quot;"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "FileDefine3"
+			GUID       = "{35325880-7243-4F02-9D36-9F4F1FF9AC5E}"
+			Class      = "FileDefine"
+			Position   = "(3510,1350)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="sUserDPNE" Value="&quot;C:\salamander-log.txt&quot;"/>
+				<Client Name="cFFHandler"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="UserDPNE" GUID="{06D1559B-FBE4-4CA0-B88D-475B00C93B4D}" Class="String">
+							<Channels>
+								<Server Name="Data" Value="&quot;C:\salamander-log.txt&quot;"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "FileDefine4"
+			GUID       = "{9D9E2A40-A7EF-416F-92D0-695C854BEBF4}"
+			Class      = "FileDefine"
+			Position   = "(3510,1590)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="sUserDPNE" Value="&quot;C:\lsldata\ramfile.cpy&quot;"/>
+				<Client Name="cFFHandler"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="UserDPNE" GUID="{06D1559B-FBE4-4CA0-B88D-475B00C93B4D}" Class="String">
+							<Channels>
+								<Server Name="Data" Value="&quot;C:\lsldata\ramfile.cpy&quot;"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "FileTransfer_HMI"
+			GUID       = "{824363EA-23AA-4CB6-B126-1CF22E57D22B}"
+			Class      = "FileTransfer"
+			Position   = "(600,210)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="sDestinationID" Value="Diagnostic_ID_FileTransfer_PLC1"/>
+				<Server Name="sErrorNr"/>
+				<Server Name="sMyID" Value="Diagnostic_ID_FileTransfer_HMI"/>
+				<Server Name="sState"/>
+				<Server Name="sSubState"/>
+				<Client Name="cDataManager"/>
+				<Client Name="cPrio" Value="Diagnostic_Prio"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "FileTransferHandle"
+							GUID           = "{9ED5EBE1-B53B-47A0-89F4-EDB95C6EE025}"
+							Class          = "FileTransferHandle"
+							BackgroundTime = "10 ms">
+							<Channels>
+								<Server Name="sCallbackError" Value="-1"/>
+								<Server Name="sCallbackOK" Value="-1"/>
+								<Server Name="sErrorNr"/>
+								<Server Name="sState"/>
+								<Server Name="sSubState"/>
+								<Client Name="cFileSys"/>
+								<Client Name="cGrafix"/>
+								<Client Name="cSigCLib"/>
+								<Client Name="cToCom"/>
+							</Channels>
+						</Object>
+						<Object Name="RecvData" GUID="{18E74258-2910-4777-9B94-754C0323B939}" Class="FileTransfer_RecvData">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="sMyID"/>
+								<Server Name="sRecvCnt"/>
+								<Client Name="cDataMng"/>
+								<Client Name="cFileTransfer"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{EEFDE742-21A9-44CB-8EC1-0F4BFF0ECB16}" Class="Comm_RecvData">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="sMyID"/>
+												<Server Name="sRecvCnt"/>
+												<Client Name="cDataMng"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SendData" GUID="{3232863A-09C2-4327-9871-4A1C04FFB3B3}" Class="Comm_SendData">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="sDestinationId"/>
+								<Server Name="sMyId"/>
+								<Server Name="sSendCnt"/>
+								<Server Name="sSendErr"/>
+								<Client Name="cDataMng"/>
+								<Client Name="cPrio" Value="Diagnostic_Prio"/>
+								<Client Name="cSendErr"/>
+								<Client Name="cSendOk"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "FileTransfer_HMI_Intern"
+			GUID       = "{3771ED33-9546-4BFD-8C97-BFFBF23C528F}"
+			Class      = "FileTransfer"
+			Position   = "(600,780)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="sDestinationID" Value="Diagnostic_ID_FileTransfer_HMI"/>
+				<Server Name="sErrorNr"/>
+				<Server Name="sMyID" Value="Diagnostic_ID_FileTransfer_PLC1"/>
+				<Server Name="sState"/>
+				<Server Name="sSubState"/>
+				<Client Name="cDataManager"/>
+				<Client Name="cPrio" Value="Diagnostic_Prio"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "FileTransferHandle"
+							GUID           = "{9ED5EBE1-B53B-47A0-89F4-EDB95C6EE025}"
+							Class          = "FileTransferHandle"
+							BackgroundTime = "10 ms">
+							<Channels>
+								<Server Name="sCallbackError" Value="-1"/>
+								<Server Name="sCallbackOK" Value="-1"/>
+								<Server Name="sErrorNr"/>
+								<Server Name="sState"/>
+								<Server Name="sSubState"/>
+								<Client Name="cFileSys"/>
+								<Client Name="cGrafix"/>
+								<Client Name="cSigCLib"/>
+								<Client Name="cToCom"/>
+							</Channels>
+						</Object>
+						<Object Name="RecvData" GUID="{18E74258-2910-4777-9B94-754C0323B939}" Class="FileTransfer_RecvData">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="sMyID"/>
+								<Server Name="sRecvCnt"/>
+								<Client Name="cDataMng"/>
+								<Client Name="cFileTransfer"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{EEFDE742-21A9-44CB-8EC1-0F4BFF0ECB16}" Class="Comm_RecvData">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="sMyID"/>
+												<Server Name="sRecvCnt"/>
+												<Client Name="cDataMng"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SendData" GUID="{3232863A-09C2-4327-9871-4A1C04FFB3B3}" Class="Comm_SendData">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="sDestinationId"/>
+								<Server Name="sMyId"/>
+								<Server Name="sSendCnt"/>
+								<Server Name="sSendErr"/>
+								<Client Name="cDataMng"/>
+								<Client Name="cPrio" Value="Diagnostic_Prio"/>
+								<Client Name="cSendErr"/>
+								<Client Name="cSendOk"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "FileTransfer_PLC"
+			GUID       = "{629183EC-F8FB-4201-AA91-F3A1A50BF782}"
+			Class      = "FileTransfer"
+			Position   = "(600,1350)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="sDestinationID" Value="Diagnostic_ID_FileTransfer_PLC1"/>
+				<Server Name="sErrorNr"/>
+				<Server Name="sMyID" Value="Diagnostic_ID_FileTransfer_HMI"/>
+				<Server Name="sState"/>
+				<Server Name="sSubState"/>
+				<Client Name="cDataManager"/>
+				<Client Name="cPrio" Value="Diagnostic_Prio"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "FileTransferHandle"
+							GUID           = "{9ED5EBE1-B53B-47A0-89F4-EDB95C6EE025}"
+							Class          = "FileTransferHandle"
+							BackgroundTime = "10 ms">
+							<Channels>
+								<Server Name="sCallbackError"/>
+								<Server Name="sCallbackOK"/>
+								<Server Name="sErrorNr"/>
+								<Server Name="sState"/>
+								<Server Name="sSubState"/>
+								<Client Name="cFileSys"/>
+								<Client Name="cGrafix"/>
+								<Client Name="cSigCLib"/>
+								<Client Name="cToCom"/>
+							</Channels>
+						</Object>
+						<Object Name="RecvData" GUID="{18E74258-2910-4777-9B94-754C0323B939}" Class="FileTransfer_RecvData">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="sMyID"/>
+								<Server Name="sRecvCnt"/>
+								<Client Name="cDataMng"/>
+								<Client Name="cFileTransfer"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{EEFDE742-21A9-44CB-8EC1-0F4BFF0ECB16}" Class="Comm_RecvData">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="sMyID"/>
+												<Server Name="sRecvCnt"/>
+												<Client Name="cDataMng"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SendData" GUID="{3232863A-09C2-4327-9871-4A1C04FFB3B3}" Class="Comm_SendData">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="sDestinationId"/>
+								<Server Name="sMyId"/>
+								<Server Name="sSendCnt"/>
+								<Server Name="sSendErr"/>
+								<Client Name="cDataMng"/>
+								<Client Name="cPrio" Value="Diagnostic_Prio"/>
+								<Client Name="cSendErr"/>
+								<Client Name="cSendOk"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "FolderDefine1"
+			GUID       = "{E17F9FAB-3A3A-49C2-A380-894FD0E03CCE}"
+			Class      = "FolderDefine"
+			Position   = "(3510,690)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="sUserDPNE" Value="&quot;C:\sysmsg&quot;"/>
+				<Client Name="cFFHandler"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="UserDPNE" GUID="{94B97723-41C1-460E-8E0E-F33AFA74B647}" Class="String">
+							<Channels>
+								<Server Name="Data" Value="&quot;C:\sysmsg&quot;"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "FolderDefine2"
+			GUID       = "{26964F2D-447E-4B83-A26F-FD3186A72321}"
+			Class      = "FolderDefine"
+			Position   = "(3510,1830)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="sUserDPNE" Value="&quot;C:\sysmsg&quot;"/>
+				<Client Name="cFFHandler"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="UserDPNE" GUID="{94B97723-41C1-460E-8E0E-F33AFA74B647}" Class="String">
+							<Channels>
+								<Server Name="Data" Value="&quot;C:\sysmsg&quot;"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "FolderTransfer_HMI"
+			GUID           = "{3AD9538A-FD18-432C-B676-268481C8DB5F}"
+			Class          = "FolderTransfer"
+			Position       = "(1800,450)"
+			Visualized     = "false"
+			BackgroundTime = "100 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="sState"/>
+				<Server Name="sSubState"/>
+				<Client Name="cFileSys"/>
+				<Client Name="cFileTransfer"/>
+				<Client Name="cSigCLib"/>
+			</Channels>
+		</Object>
+		<Object
+			Name           = "FolderTransfer_PLC1"
+			GUID           = "{DE79A8F5-9B82-4F61-A084-7CD183922F36}"
+			Class          = "FolderTransfer"
+			Position       = "(1800,1590)"
+			Visualized     = "false"
+			BackgroundTime = "100 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="sState"/>
+				<Server Name="sSubState"/>
+				<Client Name="cFileSys"/>
+				<Client Name="cFileTransfer"/>
+				<Client Name="cSigCLib"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="FileDefine1.cFFHandler" Destination="DiagnosticStationFileFolderHandler_Intern.sStatus" Vertices="(3510,300),(3346,300),"/>
+		<Connection Source="DiagnosticStationFileFolderHandler_Intern.cFolderTransfer" Destination="FolderTransfer_HMI.ClassSvr" Vertices="(2640,540),(2326,540),"/>
+		<Connection Source="FileDefine2.cFFHandler" Destination="DiagnosticStationFileFolderHandler_Intern.sStatus" Vertices="(3510,540),(3450,540),(3450,300),(3346,300),"/>
+		<Connection Source="FileTransfer_PLC.cDataManager" Destination="DataManagerToPLC1.ClassSvr"/>
+		<Connection Source="DiagnosticStationFileFolderHandler1.cFileTransfer" Destination="FileTransfer_PLC.ClassSvr" Vertices="(2640,1620),(2550,1620),(2550,1440),(1666,1440),"/>
+		<Connection Source="FileTransfer_HMI.cDataManager" Destination="DataManagerInternToPLC.ClassSvr"/>
+		<Connection Source="FileTransfer_HMI_Intern.cDataManager" Destination="DataManagerInternToHMI.ClassSvr"/>
+		<Connection Source="DiagnosticStationFileFolderHandler_Intern.cFileTransfer" Destination="FileTransfer_HMI.ClassSvr" Vertices="(2640,480),(2550,480),(2550,300),(1666,300),"/>
+		<Connection Source="FolderTransfer_HMI.cFileTransfer" Destination="FileTransfer_HMI.ClassSvr" Vertices="(1800,540),(1710,540),(1710,300),(1666,300),"/>
+		<Connection Source="FolderTransfer_PLC1.cFileTransfer" Destination="FileTransfer_PLC.ClassSvr" Vertices="(1800,1680),(1710,1680),(1710,1440),(1666,1440),"/>
+		<Connection Source="DiagnosticStationFileFolderHandler1.cFolderTransfer" Destination="FolderTransfer_PLC1.ClassSvr" Vertices="(2640,1680),(2326,1680),"/>
+		<Connection Source="FolderDefine1.cFFHandler" Destination="DiagnosticStationFileFolderHandler_Intern.sStatus" Vertices="(3510,780),(3450,780),(3450,300),(3346,300),"/>
+		<Connection Source="FileDefine3.cFFHandler" Destination="DiagnosticStationFileFolderHandler1.sStatus" Vertices="(3510,1440),(3346,1440),"/>
+		<Connection Source="FileDefine4.cFFHandler" Destination="DiagnosticStationFileFolderHandler1.sStatus" Vertices="(3510,1680),(3450,1680),(3450,1440),(3346,1440),"/>
+		<Connection Source="DiagnosticStationFileFolderHandler_Intern.cDiagnostic" Destination="Diagnostic.sStatus"/>
+		<Connection Source="DiagnosticStationFileFolderHandler1.cDiagnostic" Destination="Diagnostic.sStatus"/>
+		<Connection Source="FolderDefine2.cFFHandler" Destination="DiagnosticStationFileFolderHandler1.sStatus" Vertices="(3510,1920),(3450,1920),(3450,1440),(3346,1440),"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+	<RevDoku>
+		<Owner/>
+		<Dokumentation Revision="1.0" Date="2016-05-25" Company="Sigmatek" Description="start release"/>
+	</RevDoku>
+</Network>

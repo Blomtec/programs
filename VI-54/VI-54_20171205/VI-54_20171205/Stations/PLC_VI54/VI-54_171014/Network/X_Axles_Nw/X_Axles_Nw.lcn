@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="X_Axles_Nw" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "X_Axle_Correction1"
+			GUID       = "{5EF7AD8B-A03B-4F44-B019-FE1DADA97489}"
+			Class      = "X_Axle_Correction"
+			Position   = "(930,270)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="CorrectionMM"/>
+				<Server Name="ObjectServer"/>
+				<Server Name="RunningMode"/>
+				<Server Name="StationNbr"/>
+				<Server Name="Stepper"/>
+				<Server Name="X_Axle_Error"/>
+				<Server Name="X_Axle_State"/>
+				<Client Name="Comm_Next"/>
+				<Client Name="iFc_Trigger" Value="0"/>
+				<Client Name="Virtual_Axle"/>
+				<Client Name="X_Axle"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{75D5F85F-08BA-475C-BAEC-151951423897}" Class="MachineBase">
+							<Channels>
+								<Server Name="ObjectServer"/>
+								<Server Name="RunningMode"/>
+								<Server Name="Stepper"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="Standaard" GUID="{C476F815-28DA-449B-9BCA-D79F5F9539BE}" Class="Standard">
+											<Channels>
+												<Server Name="ClassSvr"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+															<Channels>
+																<Server Name="ClassSvr"/>
+																<Server Name="LogID"/>
+																<Client Name="ToGrafix"/>
+																<Client Name="ToLinker"/>
+																<Client Name="ToSigCLib"/>
+																<Client Name="ToSysMsg"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object
+							Name           = "Standard3"
+							GUID           = "{4B6C2691-DC7B-4A87-9E9E-B09D4A99B94F}"
+							Class          = "Standard"
+							BackgroundTime = "1000 ms">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "X_Axle_Correction2"
+			GUID       = "{8952DCE2-5B52-4AFC-B536-E7F4A87B2427}"
+			Class      = "X_Axle_Correction"
+			Position   = "(930,1050)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="CorrectionMM"/>
+				<Server Name="ObjectServer"/>
+				<Server Name="RunningMode"/>
+				<Server Name="StationNbr"/>
+				<Server Name="Stepper"/>
+				<Server Name="X_Axle_Error"/>
+				<Server Name="X_Axle_State"/>
+				<Client Name="Comm_Next"/>
+				<Client Name="iFc_Trigger"/>
+				<Client Name="Virtual_Axle"/>
+				<Client Name="X_Axle"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{75D5F85F-08BA-475C-BAEC-151951423897}" Class="MachineBase">
+							<Channels>
+								<Server Name="ObjectServer"/>
+								<Server Name="RunningMode"/>
+								<Server Name="Stepper"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="Standaard" GUID="{C476F815-28DA-449B-9BCA-D79F5F9539BE}" Class="Standard">
+											<Channels>
+												<Server Name="ClassSvr"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+															<Channels>
+																<Server Name="ClassSvr"/>
+																<Server Name="LogID"/>
+																<Client Name="ToGrafix"/>
+																<Client Name="ToLinker"/>
+																<Client Name="ToSigCLib"/>
+																<Client Name="ToSysMsg"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object
+							Name           = "Standard3"
+							GUID           = "{4B6C2691-DC7B-4A87-9E9E-B09D4A99B94F}"
+							Class          = "Standard"
+							BackgroundTime = "1000 ms">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "X_Axle_Correction3"
+			GUID       = "{87BE7B92-115D-48A5-9D2A-8AA22F52B2C3}"
+			Class      = "X_Axle_Correction"
+			Position   = "(930,1830)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="CorrectionMM"/>
+				<Server Name="ObjectServer"/>
+				<Server Name="RunningMode"/>
+				<Server Name="StationNbr"/>
+				<Server Name="Stepper"/>
+				<Server Name="X_Axle_Error"/>
+				<Server Name="X_Axle_State"/>
+				<Client Name="Comm_Next"/>
+				<Client Name="iFc_Trigger"/>
+				<Client Name="Virtual_Axle"/>
+				<Client Name="X_Axle"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{75D5F85F-08BA-475C-BAEC-151951423897}" Class="MachineBase">
+							<Channels>
+								<Server Name="ObjectServer"/>
+								<Server Name="RunningMode"/>
+								<Server Name="Stepper"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="Standaard" GUID="{C476F815-28DA-449B-9BCA-D79F5F9539BE}" Class="Standard">
+											<Channels>
+												<Server Name="ClassSvr"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+															<Channels>
+																<Server Name="ClassSvr"/>
+																<Server Name="LogID"/>
+																<Client Name="ToGrafix"/>
+																<Client Name="ToLinker"/>
+																<Client Name="ToSigCLib"/>
+																<Client Name="ToSysMsg"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object
+							Name           = "Standard3"
+							GUID           = "{4B6C2691-DC7B-4A87-9E9E-B09D4A99B94F}"
+							Class          = "Standard"
+							BackgroundTime = "1000 ms">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "X_Axle_Correction4"
+			GUID       = "{B3C12CFD-BC54-465C-AB8E-F3577D06C9E2}"
+			Class      = "X_Axle_Correction"
+			Position   = "(930,2610)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="CorrectionMM"/>
+				<Server Name="ObjectServer"/>
+				<Server Name="RunningMode"/>
+				<Server Name="StationNbr"/>
+				<Server Name="Stepper"/>
+				<Server Name="X_Axle_Error"/>
+				<Server Name="X_Axle_State"/>
+				<Client Name="Comm_Next"/>
+				<Client Name="iFc_Trigger"/>
+				<Client Name="Virtual_Axle"/>
+				<Client Name="X_Axle"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{75D5F85F-08BA-475C-BAEC-151951423897}" Class="MachineBase">
+							<Channels>
+								<Server Name="ObjectServer"/>
+								<Server Name="RunningMode"/>
+								<Server Name="Stepper"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="Standaard" GUID="{C476F815-28DA-449B-9BCA-D79F5F9539BE}" Class="Standard">
+											<Channels>
+												<Server Name="ClassSvr"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+															<Channels>
+																<Server Name="ClassSvr"/>
+																<Server Name="LogID"/>
+																<Client Name="ToGrafix"/>
+																<Client Name="ToLinker"/>
+																<Client Name="ToSigCLib"/>
+																<Client Name="ToSysMsg"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object
+							Name           = "Standard3"
+							GUID           = "{4B6C2691-DC7B-4A87-9E9E-B09D4A99B94F}"
+							Class          = "Standard"
+							BackgroundTime = "1000 ms">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="X_Axle_Correction1.Virtual_Axle" Destination="_LMCAxis_Virtual_X.Control"/>
+		<Connection Source="X_Axle_Correction2.Virtual_Axle" Destination="_LMCAxis_Virtual_X.Control"/>
+		<Connection Source="X_Axle_Correction3.Virtual_Axle" Destination="_LMCAxis_Virtual_X.Control"/>
+		<Connection Source="X_Axle_Correction4.Virtual_Axle" Destination="_LMCAxis_Virtual_X.Control"/>
+		<Connection Source="X_Axle_Correction1.Comm_Next" Destination="X_Axle_Correction2.ObjectServer" Vertices="(930,540),(870,540),(870,1020),(1740,1020),(1740,1140),(1696,1140),"/>
+		<Connection Source="X_Axle_Correction2.Comm_Next" Destination="X_Axle_Correction3.ObjectServer" Vertices="(930,1320),(870,1320),(870,1800),(870,1800),(1740,1800),(1740,1920),(1696,1920),"/>
+		<Connection Source="X_Axle_Correction3.Comm_Next" Destination="X_Axle_Correction4.ObjectServer" Vertices="(930,2100),(870,2100),(870,2580),(1740,2580),(1740,2700),(1696,2700),"/>
+		<Connection Source="X_Axle_Correction1.X_Axle" Destination="_LMCAxis_X_Axle1.Control"/>
+		<Connection Source="X_Axle_Correction2.X_Axle" Destination="_LMCAxis_X_Axle2.Control"/>
+		<Connection Source="X_Axle_Correction3.X_Axle" Destination="_LMCAxis_X_Axle3.Control"/>
+		<Connection Source="X_Axle_Correction4.X_Axle" Destination="_LMCAxis_X_Axle4.Control"/>
+		<Connection Source="X_Axle_Correction1.iFc_Trigger" Destination="ProductTriggerWecube_X_positions.Comm"/>
+		<Connection Source="X_Axle_Correction2.iFc_Trigger" Destination="ProductTriggerWecube_X_positions.Comm"/>
+		<Connection Source="X_Axle_Correction3.iFc_Trigger" Destination="ProductTriggerWecube_X_positions.Comm"/>
+		<Connection Source="X_Axle_Correction4.iFc_Trigger" Destination="ProductTriggerWecube_X_positions.Comm"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

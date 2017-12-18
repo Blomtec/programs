@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Project
+	Version            = "11"
+	Name               = "LseClass170718"
+	OnlineConnection   = "10.10.150.10"
+	SolutionType       = "Large"
+	WriteSrvListOnSave = "true"
+	CLASSType          = "true"
+	OPCSettings        = "true">
+	<OnlineConnectionInfo>
+		<TCPIP ConfigName="10.10.150.10" BUS="3" Password="" IP="10.10.150.10" PORT="1954" SomeFlags="0" PLCID="" Repeater="0"/>
+	</OnlineConnectionInfo>
+	<HeaderFiles>
+		<File Path=".\Include\unit.h"/>
+		<File Path=".\Include\global.h"/>
+		<File Path=".\Include\UserDef.h"/>
+		<File Path=".\Include\types.h"/>
+		<File Path=".\Include\channels.h"/>
+		<File Path=".\Include\C_global.h"/>
+		<File Path=".\Include\C_types.h"/>
+		<File Path=".\Include\C_channels.h"/>
+		<File Path=".\Include\lslpublictypes.h"/>
+		<File Path=".\Source\cppcode\T_nuc.h" Global="true"/>
+		<File Path=".\Source\cppcode\T_types.h" Global="true"/>
+		<File Path=".\Source\cppcode\T_ipc.h" Global="true"/>
+		<File Path=".\Source\cppcode\Comintfc.h" Global="true"/>
+		<File Path=".\Source\cppcode\T_color.h" Global="true"/>
+		<File Path=".\Source\cppcode\T_USER.H" Global="true"/>
+		<File Path=".\lsl_st_mt.h"/>
+		<File Path=".\Class\_AlarmXBuffer\AlarmXBuffer.h"/>
+		<File Path=".\Class\Ram\Ram.h" Global="true"/>
+		<File Path=".\Class\StringInternal\StringDefs.h" Global="true"/>
+		<File Path=".\Class\_AlarmX0Para\_AlarmX0Para.h"/>
+		<File Path=".\Class\AlarmDisplayList\AlarmTemp.h"/>
+		<File Path=".\Class\AlarmTitleLine\Alarms.h"/>
+		<File Path=".\Class\_SysDateTime\_SysDateTime.h" Global="true"/>
+		<File Path=".\lsl_st_pci.h"/>
+		<File Path=".\lsl_st_kernel.h"/>
+		<File Path=".\lsl_st_Usb.h"/>
+		<File Path=".\lsl_st_gpio.h"/>
+		<File Path=".\Source\interfaces\lsl_st_pwm.h"/>
+		<File Path=".\SystemTypes.h" Global="true"/>
+		<File Path=".\Source\code\OsiBaseNew.h"/>
+		<File Path=".\St_grconst.h" Global="true"/>
+		<File Path=".\St_graph.h" Global="true"/>
+		<File Path=".\MultiTaskTypes.h" Global="true"/>
+		<File Path=".\CanTypes.h" Global="true"/>
+		<File Path=".\SysMsgTypes.h" Global="true"/>
+		<File Path=".\Source\code\OsiBase.h"/>
+		<File Path=".\GraphicTypes.h" Global="true"/>
+		<File Path=".\lsl_st_syssernum.h"/>
+		<File Path=".\Lsl_st_ifssr.h" Global="true"/>
+		<File Path=".\Class\PLC_Info\XRegs.h"/>
+		<File Path=".\LoaderItf.h"/>
+		<File Path=".\lsl_st_sysinfo.h"/>
+		<File Path=".\LinkerTypes.h" Global="true"/>
+		<File Path=".\File_IOTypes.h" Global="true"/>
+		<File Path=".\IPTypes.h" Global="true"/>
+		<File Path=".\Class\SigCLib\SigCLib.h"/>
+		<File Path=".\Class\SigCLib\SigCLibNew.h"/>
+		<File Path=".\Class\SigCLib\CStrLib.h"/>
+		<File Path=".\Class\SigCLib\CTimeLib.h"/>
+		<File Path=".\Class\SigCLib\CSortLib.h"/>
+		<File Path=".\Class\SigCLib\CFileLib.h"/>
+		<File Path=".\Class\SigCLib\CMemLib.h"/>
+		<File Path=".\Class\SigCLib\CNetworkLib.h"/>
+		<File Path=".\Class\SigCLib\DefineCompiler.h"/>
+		<File Path=".\Class\SigCLib\CMathLib.h"/>
+		<File Path=".\Class\SigCLib\CCrcLib.h"/>
+		<File Path=".\Class\SigCLib\CStrLib16.h"/>
+		<File Path=".\Class\SigCLib\CStrLibIntern.h"/>
+		<File Path=".\lsl_st_tcp_user.h" Global="true"/>
+		<File Path=".\Class\TCPCommunication\TCPCommunication.h"/>
+		<File Path=".\Class\DataManager\DataManager.h"/>
+		<File Path=".\Class\TCPCommunicationLogViewer\TCPCommunicationLogViewer.h"/>
+		<File Path=".\Class\TCPComReceiveData\SynchRdWr.h" Global="true"/>
+		<File Path=".\Class\EventJournal\Event.h" Global="true"/>
+		<File Path=".\Class\FileExplorerButtonUser\FileExplorer.h"/>
+		<File Path=".\Class\FileTransfer\Diagnostic_Def.h" Global="true"/>
+		<File Path=".\Class\SCBase\SCBaseGl.h" Global="true"/>
+		<File Path=".\Class\StringBase\AsciiChar.h" Global="true"/>
+		<File Path=".\Class\_16Alarms\Defines.h"/>
+		<File Path=".\Source\code\Global_Functions\H_Get_ptr_on_Obj.h" Global="true"/>
+		<File Path=".\lsl_st_systrace.h"/>
+		<File Path=".\Class\_LMCAxisBase\C_MathAxis.h"/>
+		<File Path=".\Class\_LMCAxisBase\_LMCTraceView.h"/>
+		<File Path=".\Class\_LMCMathFunctions\C_MathFunct.h"/>
+		<File Path=".\Class\_LMCProfileBase\C_MathProfile.h"/>
+		<File Path=".\Class\_LMCProfileBase\LMCProfileDefines.h" Global="true"/>
+	</HeaderFiles>
+	<ClassFiles>
+		<File Path=".\Source\cppcode\T_alarm.cpp"/>
+		<File Path=".\Source\cppcode\T_batch.cpp"/>
+		<File Path=".\Source\cppcode\T_bmp.cpp"/>
+		<File Path=".\Source\cppcode\T_com.cpp"/>
+		<File Path=".\Source\cppcode\T_complr.cpp"/>
+		<File Path=".\Source\cppcode\T_copy.cpp"/>
+		<File Path=".\Source\cppcode\T_crc.cpp"/>
+		<File Path=".\Source\cppcode\T_ctext.cpp"/>
+		<File Path=".\Source\cppcode\T_cursor.cpp"/>
+		<File Path=".\Source\cppcode\T_Diag.cpp"/>
+		<File Path=".\Source\cppcode\T_direct.cpp"/>
+		<File Path=".\Source\cppcode\T_edit.cpp"/>
+		<File Path=".\Source\cppcode\T_file.cpp"/>
+		<File Path=".\Source\cppcode\T_font.cpp"/>
+		<File Path=".\Source\cppcode\T_gfx.cpp"/>
+		<File Path=".\Source\cppcode\T_ibxlst.cpp"/>
+		<File Path=".\Source\cppcode\T_icon.cpp"/>
+		<File Path=".\Source\cppcode\T_init.cpp"/>
+		<File Path=".\Source\cppcode\T_kbrd.cpp"/>
+		<File Path=".\Source\cppcode\T_lib.cpp"/>
+		<File Path=".\Source\cppcode\T_LseOsz.cpp"/>
+		<File Path=".\Source\cppcode\T_main.cpp"/>
+		<File Path=".\Source\cppcode\T_memo.cpp"/>
+		<File Path=".\Source\cppcode\t_menu.cpp"/>
+		<File Path=".\Source\cppcode\T_obj.cpp"/>
+		<File Path=".\Source\cppcode\T_outio.cpp"/>
+		<File Path=".\Source\cppcode\T_ovrlod.cpp"/>
+		<File Path=".\Source\cppcode\T_pal.cpp"/>
+		<File Path=".\Source\cppcode\T_picmem.cpp"/>
+		<File Path=".\Source\cppcode\T_picpic.cpp"/>
+		<File Path=".\Source\cppcode\T_picsub.cpp"/>
+		<File Path=".\Source\cppcode\T_popsub.cpp"/>
+		<File Path=".\Source\cppcode\T_popup.cpp"/>
+		<File Path=".\Source\cppcode\T_pos.cpp"/>
+		<File Path=".\Source\cppcode\T_prj.cpp"/>
+		<File Path=".\Source\cppcode\T_save.cpp"/>
+		<File Path=".\Source\cppcode\T_scan.cpp"/>
+		<File Path=".\Source\cppcode\T_schema.cpp"/>
+		<File Path=".\Source\cppcode\T_scroll.cpp"/>
+		<File Path=".\Source\cppcode\T_Scrsvr.cpp"/>
+		<File Path=".\Source\cppcode\T_seek.cpp"/>
+		<File Path=".\Source\cppcode\T_Sett.cpp"/>
+		<File Path=".\Source\cppcode\T_setup.cpp"/>
+		<File Path=".\Source\cppcode\T_soft.cpp"/>
+		<File Path=".\Source\cppcode\T_stack.cpp"/>
+		<File Path=".\Source\cppcode\t_text.cpp"/>
+		<File Path=".\Source\cppcode\T_tool.cpp"/>
+		<File Path=".\Source\cppcode\T_urge.cpp"/>
+		<File Path=".\Source\cppcode\T_user.cpp"/>
+		<File Path=".\Source\cppcode\T_valid.cpp"/>
+		<File Path=".\Source\cppcode\T_varia.cpp"/>
+		<File Path=".\Source\cppcode\T_win.cpp"/>
+		<File Path=".\Source\cppcode\T_Hotkey.cpp"/>
+		<File Path=".\Source\cppcode\T_3d.cpp"/>
+		<File Path=".\Source\cppcode\t_urge1.cpp"/>
+		<File Path=".\Source\cppcode\t_move.cpp"/>
+		<File Path=".\Source\cppcode\t_watch.cpp"/>
+		<File Path=".\Source\cppcode\t_lang.cpp"/>
+		<File Path=".\Source\cppcode\T_JPG.cpp"/>
+		<File Path=".\Source\cppcode\T_Help.cpp"/>
+		<File Path=".\Source\cppcode\t_theme.cpp"/>
+		<File Path=".\Source\cppcode\T_render.cpp"/>
+		<File Path=".\Source\cppcode\T_comid.cpp"/>
+		<File Path=".\Source\cppcode\T_slider.cpp"/>
+		<File Path=".\Source\cppcode\T_explor.cpp"/>
+		<File Path=".\Source\cppcode\T_mesbox.cpp"/>
+		<File Path=".\Source\cppcode\T_task2.cpp"/>
+		<File Path=".\Source\cppcode\T_Tree.cpp"/>
+		<File Path=".\Source\cppcode\T_picadd.cpp"/>
+		<File Path=".\Source\cppcode\T_gfxgif.cpp"/>
+		<File Path=".\Source\cppcode\T_combox.cpp"/>
+		<File Path=".\Source\cppcode\T_piccar.cpp"/>
+		<File Path=".\Source\cppcode\T_convert.cpp"/>
+		<File Path=".\Class\_AlarmDisplay\_AlarmDisplay.st"/>
+		<File Path=".\Class\_AlarmX0Para\_AlarmX0Para.st"/>
+		<File Path=".\Class\_AlarmX1Para\_AlarmX1Para.st"/>
+		<File Path=".\Class\_AlarmXBuffer\_AlarmXBuffer.st"/>
+		<File Path=".\Class\_Bit32\_Bit32.st"/>
+		<File Path=".\Class\_Bit32Ram\_Bit32Ram.st"/>
+		<File Path=".\Class\_Global\_Global.st"/>
+		<File Path=".\Class\_HotAlarm\_HotAlarm.st"/>
+		<File Path=".\Class\_LanguageSelection\_LanguageSelection.st"/>
+		<File Path=".\Class\_LimitMax\_LimitMax.st"/>
+		<File Path=".\Class\_LimitMin\_LimitMin.st"/>
+		<File Path=".\Class\_Lse\_Lse.st"/>
+		<File Path=".\Class\_MyIO\_MyIO.st"/>
+		<File Path=".\Class\_OsziLSE\_OsziLSE.st"/>
+		<File Path=".\Class\_OsziLSEBackground\_OsziLSEBackground.st"/>
+		<File Path=".\Class\_Radio32\_Radio32.st"/>
+		<File Path=".\Class\_Radio32Ram\_Radio32Ram.st"/>
+		<File Path=".\Class\_Screen\_Screen.st"/>
+		<File Path=".\Class\_ScrollArea\_ScrollArea.st"/>
+		<File Path=".\Class\_ScrollArea2\_ScrollArea2.st"/>
+		<File Path=".\Class\_SysDateTime\_SysDateTime.st"/>
+		<File Path=".\Class\_ToolCat\_ToolCat.st"/>
+		<File Path=".\Class\_XAccess\_XAccess.st"/>
+		<File Path=".\Class\AlarmDisplayList\AlarmDisplayList.st"/>
+		<File Path=".\Class\AlarmTitleLine\AlarmTitleLine.st"/>
+		<File Path=".\Class\GetBroadCastData\GetBroadCastData.st"/>
+		<File Path=".\Class\KeyPadANumStdTemplate\KeyPadANumStdTemplate.st"/>
+		<File Path=".\Class\KeyPadImagesStdTemplate\KeyPadImagesStdTemplate.st"/>
+		<File Path=".\Class\KeyPadNumStdTemplate\KeyPadNumStdTemplate.st"/>
+		<File Path=".\Class\MerkerEx\MerkerEx.st"/>
+		<File Path=".\Class\Ram\Ram.st"/>
+		<File Path=".\Class\ScreenSaver\ScreenSaver.st"/>
+		<File Path=".\Class\String\String.st"/>
+		<File Path=".\Class\StringInternal\StringInternal.st"/>
+		<File Path=".\Class\SystemLogging\SystemLogging.st"/>
+		<File Path=".\Class\TitleLine\TitleLine.st"/>
+		<File Path=".\Class\TouchCalib\TouchCalib.st"/>
+		<File Path=".\Class\VirtualBaseInit\VirtualBaseInit.st"/>
+		<File Path=".\Class\DisplaySettings\DisplaySettings.st"/>
+		<File Path=".\Class\USB_DataExchange\USB_DataExchange.st"/>
+		<File Path=".\Source\code\OsiBaseNew.st"/>
+		<File Path=".\Source\code\OsiBase.st"/>
+		<File Path=".\Class\_Can\_Can.st"/>
+		<File Path=".\Class\_Grafix\_Grafix.st"/>
+		<File Path=".\Class\_MultiTask\_MultiTask.st"/>
+		<File Path=".\Class\_OSKernel\_OSKernel.st"/>
+		<File Path=".\Class\_StdLib\_StdLib.st"/>
+		<File Path=".\Class\_SysMsg\_SysMsg.st"/>
+		<File Path=".\Class\_TaskObjectControl\_TaskObjectControl.st"/>
+		<File Path=".\Class\Graphic\Graphic.st"/>
+		<File Path=".\Class\System\System.st"/>
+		<File Path=".\Class\PLC_Info\cpu_id.c"/>
+		<File Path=".\Class\PLC_Info\PLC_Info.st"/>
+		<File Path=".\Class\SigCLib\CStrLib.cpp"/>
+		<File Path=".\Class\SigCLib\CTimeLib.cpp"/>
+		<File Path=".\Class\SigCLib\CSortLib.cpp"/>
+		<File Path=".\Class\SigCLib\CFileLib.cpp"/>
+		<File Path=".\Class\SigCLib\CMemLib.cpp"/>
+		<File Path=".\Class\SigCLib\CNetworkLib.cpp"/>
+		<File Path=".\Class\SigCLib\CMathLib.cpp"/>
+		<File Path=".\Class\SigCLib\CCrcLib.cpp"/>
+		<File Path=".\Class\SigCLib\CStrLib16.cpp"/>
+		<File Path=".\Class\_FileSys\_FileSys.st"/>
+		<File Path=".\Class\_IP\_IP.st"/>
+		<File Path=".\Class\_Linker\_Linker.st"/>
+		<File Path=".\Class\SigCLib\SigCLib.st"/>
+		<File Path=".\Class\ASCII_BIN\ASCII_BIN.st"/>
+		<File Path=".\Class\SCL_GetClassVersion\SCL_GetClassVersion.st"/>
+		<File Path=".\Class\_CheckSum\_CheckSum.st"/>
+		<File Path=".\Class\_FileExplorer\_FileExplorer.st"/>
+		<File Path=".\Class\_FileExplorerButton\_FileExplorerButton.st"/>
+		<File Path=".\Class\_FileExplorerToolCat\_FileExplorerToolCat.st"/>
+		<File Path=".\Class\CriticalSection\CriticalSection.st"/>
+		<File Path=".\Class\DataManager\DataManager.st"/>
+		<File Path=".\Class\DataManagerFIFO\DataManagerFIFO.st"/>
+		<File Path=".\Class\DataManagerPriority\DataManagerPriority.st"/>
+		<File Path=".\Class\GetTaskHandle\GetTaskHandle.st"/>
+		<File Path=".\Class\KeyPadAnumFileExplorer\KeyPadAnumFileExplorer.st"/>
+		<File Path=".\Class\KeyPadImages\KeyPadImages.st"/>
+		<File Path=".\Class\NetworkConfig\NetworkConfig.st"/>
+		<File Path=".\Class\RamRingBuffer\RamRingBuffer.st"/>
+		<File Path=".\Class\TCPCommunication\TCPCommunication.st"/>
+		<File Path=".\Class\TCPCommunicationLogFilter\TCPCommunicationLogFilter.st"/>
+		<File Path=".\Class\TCPCommunicationLogViewer\TCPCommunicationLogViewer.st"/>
+		<File Path=".\Class\TCPComReceive\TCPComReceive.st"/>
+		<File Path=".\Class\TCPComSend\TCPComSend.st"/>
+		<File Path=".\Class\AccessControlCreateAdmin\AccessControlCreateAdmin.st"/>
+		<File Path=".\Class\AccessControlList\AccessControlList.st"/>
+		<File Path=".\Class\AccessControlMain\AccessControlMain.st"/>
+		<File Path=".\Class\AccessControlUSBDetection\AccessControlUSBDetection.st"/>
+		<File Path=".\Class\AddEventToPLC\AddEventToPLC.st"/>
+		<File Path=".\Class\Bit32Mask\Bit32Mask.st"/>
+		<File Path=".\Class\CheckOnlineStatus\CheckOnlineStatus.st"/>
+		<File Path=".\Class\Comm_RecvData\Comm_RecvData.st"/>
+		<File Path=".\Class\Comm_SendData\Comm_SendData.st"/>
+		<File Path=".\Class\DiagnoseHelpClass\DiagnoseHelpClass.st"/>
+		<File Path=".\Class\Diagnostic\Diagnostic.st"/>
+		<File Path=".\Class\DiagnosticBase\DiagnosticBase.st"/>
+		<File Path=".\Class\DiagnosticStation\DiagnosticStation.st"/>
+		<File Path=".\Class\DiagnosticStation_PLC\DiagnosticStation_PLC.st"/>
+		<File Path=".\Class\DiagnosticStationBase\DiagnosticStationBase.st"/>
+		<File Path=".\Class\DiagnosticStationFileFolderHandler\DiagnosticStationFileFolderHandler.st"/>
+		<File Path=".\Class\DiagnosticStationHandler\DiagnosticStationHandler.st"/>
+		<File Path=".\Class\DiagnosticStationHandlerBase\DiagnosticStationHandlerBase.st"/>
+		<File Path=".\Class\DiagnosticUserFunction\DiagnosticUserFunction.st"/>
+		<File Path=".\Class\DiagnosticUserFunction_PLC\DiagnosticUserFunction_PLC.st"/>
+		<File Path=".\Class\DiagnosticWork\DiagnosticWork.st"/>
+		<File Path=".\Class\DiagnosticWork_PLC\DiagnosticWork_PLC.st"/>
+		<File Path=".\Class\EventExport\EventExport.st"/>
+		<File Path=".\Class\EventJournal\EventJournal.st"/>
+		<File Path=".\Class\EventQueue\EventQueue.st"/>
+		<File Path=".\Class\EventTitleLine\EventTitleLine.st"/>
+		<File Path=".\Class\EventUserInput\EventUserInput.st"/>
+		<File Path=".\Class\FileDefine\FileDefine.st"/>
+		<File Path=".\Class\FileExplorerButtonUser\FileExplorerButtonUser.st"/>
+		<File Path=".\Class\FileExplorerToolCatUser\FileExplorerToolCatUser.st"/>
+		<File Path=".\Class\FileTransfer\FileTransfer.st"/>
+		<File Path=".\Class\FileTransfer_RecvData\FileTransfer_RecvData.st"/>
+		<File Path=".\Class\FileTransferHandle\FileTransferHandle.st"/>
+		<File Path=".\Class\FolderDefine\FolderDefine.st"/>
+		<File Path=".\Class\FolderTransfer\FolderTransfer.st"/>
+		<File Path=".\Class\GetOSVersion\GetOSVersion.st"/>
+		<File Path=".\Class\ProjectGlobal\ProjectGlobal.st"/>
+		<File Path=".\Class\ProjectInfo_User\ProjectInfo_User.st"/>
+		<File Path=".\Class\ProjectInfo_UserPLC\ProjectInfo_UserPLC.st"/>
+		<File Path=".\Class\ReadValue\ReadValue.st"/>
+		<File Path=".\Class\ReceiveDataCMD\ReceiveDataCMD.st"/>
+		<File Path=".\Class\ReceiveDataCMD_PLC\ReceiveDataCMD_PLC.st"/>
+		<File Path=".\Class\SendDataCMD\SendDataCMD.st"/>
+		<File Path=".\Class\SendDataCMD_PLC\SendDataCMD_PLC.st"/>
+		<File Path=".\Class\ShowHexInDec\ShowHexInDec.st"/>
+		<File Path=".\Class\SRAMInfo_User\SRAMInfo_User.st"/>
+		<File Path=".\Class\SRAMInfo_UserPLC\SRAMInfo_UserPLC.st"/>
+		<File Path=".\Class\SyncTimeHMI\SyncTimeHMI.st"/>
+		<File Path=".\Class\SystemInfo_User\SystemInfo_User.st"/>
+		<File Path=".\Class\SystemInfo_UserPLC\SystemInfo_UserPLC.st"/>
+		<File Path=".\Class\TCPComReceiveData\TCPComReceiveData.st"/>
+		<File Path=".\Class\TCPComSendData\TCPComSendData.st"/>
+		<File Path=".\Class\USBDetection\USBDetection.st"/>
+		<File Path=".\Class\WriteValue\WriteValue.st"/>
+		<File Path=".\Class\BackLight_ETV\BackLight_ETV.st"/>
+		<File Path=".\Class\TerminalControl\TerminalControl.st"/>
+		<File Path=".\Class\DateAndTime\DateAndTime.st"/>
+		<File Path=".\Class\HourCounter\HourCounter.st"/>
+		<File Path=".\Class\RAMex\RAMex.st"/>
+		<File Path=".\Class\SCBase\SCBase.st"/>
+		<File Path=".\Class\Standard\Standard.st"/>
+		<File Path=".\Class\StringBase\StringBase.st"/>
+		<File Path=".\Class\StringBaseGB\StringBaseGB.st"/>
+		<File Path=".\Class\StringRAM\StringRAM.st"/>
+		<File Path=".\Class\_ActValue\_ActValue.st"/>
+		<File Path=".\Class\Merker\Merker.st"/>
+		<File Path=".\Class\CPU_Info\CPU_Info.st"/>
+		<File Path=".\Class\GetOSVer\GetOSVer.st"/>
+		<File Path=".\Class\LasalBuiltDate\LasalBuiltDate.st"/>
+		<File Path=".\Class\LseBuiltDate\LseBuiltDate.st"/>
+		<File Path=".\Class\LslRemote\LslRemote.st"/>
+		<File Path=".\Class\_16Alarms\_16Alarms.st"/>
+		<File Path=".\Class\GiveConfigNumber\GiveConfigNumber.st"/>
+		<File Path=".\Class\SleegersControl\SleegersControl.st"/>
+		<File Path=".\Class\SaveLoadUSB\SaveLoadUSB.st"/>
+		<File Path=".\Source\code\Global_Functions\Get_ptr_on_Obj.st"/>
+		<File Path=".\Class\Client_Splitter_10\Client_Splitter_10.st"/>
+		<File Path=".\Class\Client_Splitter_Base\Client_Splitter_Base.st"/>
+		<File Path=".\Class\RecipeHandle\RecipeHandle.st"/>
+		<File Path=".\Class\RecipeName\RecipeName.st"/>
+		<File Path=".\Class\SaveAcces\SaveAcces.st"/>
+		<File Path=".\Class\Logic_And\Logic_And.st"/>
+		<File Path=".\Class\Logic_And_10\Logic_And_10.st"/>
+		<File Path=".\Class\Logic_And_Base\Logic_And_Base.st"/>
+		<File Path=".\Class\Logic_Or_10\Logic_Or_10.st"/>
+		<File Path=".\Class\Logic_Or_Base\Logic_Or_Base.st"/>
+		<File Path=".\Class\Sfc_Logic_Or_Base\Sfc_Logic_Or_Base.st"/>
+		<File Path=".\Class\Const\Const.st"/>
+		<File Path=".\Class\OrClass\OrClass.st"/>
+		<File Path=".\Class\_16Alarm_Drive\_16Alarm_Drive.st"/>
+		<File Path=".\Source\cppcode\T_Offline.cpp"/>
+		<File Path=".\Class\AlarmDisplayList2\AlarmDisplayList2.st"/>
+		<File Path=".\Class\_FirstAlarm\_FirstAlarm.st"/>
+		<File Path=".\Class\AlarmClass\AlarmClass.st"/>
+		<File Path=".\Class\_TCPIP_CLIENT\_TCPIP_CLIENT.st"/>
+		<File Path=".\Class\ParameterLogFile\ParameterLogFile.st"/>
+		<File Path=".\Class\Management\Management.st"/>
+		<File Path=".\Class\_LMCAxisBase\C_MathAxis.cpp"/>
+		<File Path=".\Class\_LMCMathFunctions\C_MathFunct.cpp"/>
+		<File Path=".\Class\_LMCProfileBase\C_MathProfile.cpp"/>
+		<File Path=".\Source\cppcode\T_WinMove.cpp"/>
+		<File Path=".\Class\_AxisBase\_AxisBase.st"/>
+		<File Path=".\Class\_LMCABSEncoder\_LMCABSEncoder.st"/>
+		<File Path=".\Class\_LMCAxis\_LMCAxis.st"/>
+		<File Path=".\Class\_LMCAxisBase\_LMCAxisBase.st"/>
+		<File Path=".\Class\_LMCAxisRef\_LMCAxisRef.st"/>
+		<File Path=".\Class\_LMCAxisVis\_LMCAxisVis.st"/>
+		<File Path=".\Class\_LMCAxisVisInt\_LMCAxisVisInt.st"/>
+		<File Path=".\Class\_LMCAxisVisLogHandle\_LMCAxisVisLogHandle.st"/>
+		<File Path=".\Class\_LMCAxisVisLogViewer\_LMCAxisVisLogViewer.st"/>
+		<File Path=".\Class\_LMCAxisVisPara\_LMCAxisVisPara.st"/>
+		<File Path=".\Class\_LMCBaseCoord\_LMCBaseCoord.st"/>
+		<File Path=".\Class\_LMCCalcModelBase\_LMCCalcModelBase.st"/>
+		<File Path=".\Class\_LMCCalcModelController\_LMCCalcModelController.st"/>
+		<File Path=".\Class\_LMCMath_SO3\_LMCMath_SO3.st"/>
+		<File Path=".\Class\_LMCMathFunctions\_LMCMathFunctions.st"/>
+		<File Path=".\Class\_LMCProfile\_LMCProfile.st"/>
+		<File Path=".\Class\_LMCProfileBase\_LMCProfileBase.st"/>
+		<File Path=".\Class\_LMCProfileBuffer\_LMCProfileBuffer.st"/>
+		<File Path=".\Class\_LMCProfileLog\_LMCProfileLog.st"/>
+		<File Path=".\Class\_LMCProfileVis\_LMCProfileVis.st"/>
+		<File Path=".\Class\_LMCProfileVisAxis\_LMCProfileVisAxis.st"/>
+		<File Path=".\Class\_LMCProfileVisInt\_LMCProfileVisInt.st"/>
+		<File Path=".\Class\_LMCProfileVisMovePara\_LMCProfileVisMovePara.st"/>
+		<File Path=".\Class\_LMCPublisher\_LMCPublisher.st"/>
+		<File Path=".\Class\_LMCRefBase\_LMCRefBase.st"/>
+		<File Path=".\Class\_LMCRobotBase\_LMCRobotBase.st"/>
+		<File Path=".\Class\_LMCRobotLog\_LMCRobotLog.st"/>
+		<File Path=".\Class\_LMCSafety\_LMCSafety.st"/>
+		<File Path=".\Class\_LMCTool\_LMCTool.st"/>
+		<File Path=".\Class\CalcDelta\CalcDelta.st"/>
+		<File Path=".\Class\CalcDeltaSC\CalcDeltaSC.st"/>
+		<File Path=".\Class\Controller\Controller.st"/>
+		<File Path=".\Class\GetLimits\GetLimits.st"/>
+		<File Path=".\Class\WindowEnd\WindowEnd.st"/>
+		<File Path=".\Class\PlcOnline\PlcOnline.st"/>
+	</ClassFiles>
+	<NetworkFiles>
+		<File Path=".\Network\Kernel\Kernel.lcn"/>
+		<File Path=".\Network\AlarmVis\AlarmVis.lcn"/>
+		<File Path=".\Network\NewAgeSettings\NewAgeSettings.lcn"/>
+		<File Path=".\Network\StdAccessControlExtended\StdAccessControlExtended.lcn"/>
+		<File Path=".\Network\StdCommunicationIntern\StdCommunicationIntern.lcn"/>
+		<File Path=".\Network\StdCommunicationToPLC\StdCommunicationToPLC.lcn"/>
+		<File Path=".\Network\StdDiagnostic\StdDiagnostic.lcn"/>
+		<File Path=".\Network\StdDiagnostic_FileFolderTransfer\StdDiagnostic_FileFolderTransfer.lcn"/>
+		<File Path=".\Network\StdDiagnostic_ProjectInfo\StdDiagnostic_ProjectInfo.lcn"/>
+		<File Path=".\Network\StdDiagnostic_SRAMInfo\StdDiagnostic_SRAMInfo.lcn"/>
+		<File Path=".\Network\StdDiagnostic_SystemInfo\StdDiagnostic_SystemInfo.lcn"/>
+		<File Path=".\Network\StdEvent\StdEvent.lcn"/>
+		<File Path=".\Network\StdPLCInfo\StdPLCInfo.lcn"/>
+		<File Path=".\Network\StdSettings\StdSettings.lcn"/>
+		<File Path=".\Network\AlarmTerminal\AlarmTerminal.lcn"/>
+		<File Path=".\Network\NewDataBase\NewDataBase.lcn"/>
+	</NetworkFiles>
+	<ObjectFiles>
+		<File Path=".\Loader\Source\Loader.lob" Downloadable="false"/>
+	</ObjectFiles>
+	<DocuFiles>
+		<File Path=".\Class\_Bit32\Bit32.pdf"/>
+		<File Path=".\Class\_Bit32\Bit32_eng.pdf"/>
+		<File Path=".\Class\GetBroadCastData\GetBroadcastData.pdf"/>
+		<File Path=".\Class\GetBroadCastData\GetBroadcastData_eng.pdf"/>
+		<File Path=".\Class\KeyPadImages\KeyPadImages.pdf"/>
+		<File Path=".\Class\KeyPadImages\KeyPadImages_eng.pdf"/>
+		<File Path=".\Class\_AlarmXBuffer\_AlarmXBuffer.pdf"/>
+		<File Path=".\Class\_AlarmXBuffer\_AlarmXBuffer_en.pdf"/>
+		<File Path=".\Class\TitleLine\Title.UDC"/>
+		<File Path=".\Class\AlarmDisplayList\AlarmDisplayList.UDC"/>
+		<File Path=".\Class\TouchCalib\Dokumentation_TouchCalib_v1.0.pdf"/>
+		<File Path=".\Class\SCL_GetClassVersion\SCL GetClassVersion.pdf"/>
+		<File Path=".\Class\TCPCommunication\TCPCommunication.pdf"/>
+		<File Path=".\Class\FileTransfer\FileTransfer.pdf"/>
+		<File Path=".\Class\EventJournal\EventJournal.UDC"/>
+		<File Path=".\Class\AccessControlList\AccessControl.UDC"/>
+		<File Path=".\Class\FolderTransfer\FolderTransfer.pdf"/>
+		<File Path=".\Class\Standard\Standard.doc"/>
+		<File Path=".\Class\SCBase\SCBase.doc"/>
+		<File Path=".\Class\_LMCAxis\_LMCAxis.vov"/>
+		<File Path=".\Class\_LMCProfile\_LMCProfile.vov"/>
+		<File Path=".\Class\CalcDelta\DeltaRoboterVOV.vov"/>
+	</DocuFiles>
+	<Options>
+		<Target UseFPU="true" Processor="ARM">
+		</Target>
+		<Compiler
+			CompilerVersion         = "39"
+			VariableNeverUsed       = "true"
+			ValueNeverUsed          = "true"
+			LabelNeverUsed          = "true"
+			ParameterNeverUsed      = "true"
+			VariableUnitialized     = "true"
+			RetValueUnitialized     = "true"
+			PrivateDataAccess       = "true"
+			SemicolonMissing        = "true"
+			ConditionConstant       = "true"
+			ExactTypeChecking       = "true"
+			CheckConnectionTypes    = "true"
+			CompileCFiles           = "true"
+			Alignment               = "4 Byte"
+			ReducedClientDependency = "true"
+			MaxModuleErrorCount     = "100">
+		</Compiler>
+		<Directories
+			Class       = ".\Class\"
+			Network     = ".\Network\"
+			Source      = ".\Source\"
+			Include     = ".\Include\"
+			Loader      = ".\Loader\"
+			PrjInternal = ".\ProjectInternal\">
+		</Directories>
+	</Options>
+	<SigmatekFolders>
+		<OSInterfaceFolders>
+			<Folder Name="old">
+				<Class Name="Graphic"/>
+				<Class Name="System"/>
+			</Folder>
+		</OSInterfaceFolders>
+		<Folder Name="Components">
+			<Folder Name="SCL_ClassRevision">
+				<Class Name="SCL_GetClassVersion"/>
+			</Folder>
+		</Folder>
+		<Folder Name="Hardware">
+			<Folder Name="Communication">
+				<Folder Name="USB">
+					<Folder Name="Communication">
+						<Class Name="USB_DataExchange"/>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="Special">
+				<Folder Name="Divers">
+					<Class Name="BackLight_ETV"/>
+					<Class Name="DisplaySettings"/>
+				</Folder>
+				<Folder Name="Info">
+					<Class Name="PLC_Info"/>
+				</Folder>
+			</Folder>
+		</Folder>
+		<Folder Name="Sfc">
+			<Folder Name="Logic">
+				<Folder Name="Logic_Or">
+					<Folder Name="BaseClass">
+						<Class Name="Sfc_Logic_Or_Base"/>
+					</Folder>
+				</Folder>
+			</Folder>
+		</Folder>
+		<Folder Name="System">
+			<Folder Name="Visualisation">
+				<Folder Name="LseRtk">
+					<Folder Name="Project">
+						<Class Name="_Lse"/>
+					</Folder>
+					<Folder Name="UserInterface">
+						<Class Name="_Global"/>
+						<Class Name="_LanguageSelection"/>
+						<Class Name="_Screen"/>
+						<Class Name="_ScrollArea"/>
+						<Class Name="_ScrollArea2"/>
+					</Folder>
+				</Folder>
+			</Folder>
+		</Folder>
+		<Folder Name="Template">
+			<Folder Name="Alarm">
+				<Class Name="AlarmDisplayList"/>
+			</Folder>
+		</Folder>
+		<Folder Name="Tools">
+			<Folder Name="Communication">
+				<Class Name="LslRemote"/>
+				<Folder Name="TCPCom">
+					<Class Name="DataManager"/>
+					<Class Name="TCPCommunication"/>
+					<Class Name="TCPCommunicationLogFilter"/>
+					<Class Name="TCPCommunicationLogViewer"/>
+					<Class Name="TCPComReceive"/>
+					<Class Name="TCPComSend"/>
+					<Folder Name="Internal">
+						<Class Name="DataManagerFIFO"/>
+						<Class Name="DataManagerPriority"/>
+					</Folder>
+				</Folder>
+				<Folder Name="TCPIP">
+					<Class Name="_TCPIP_CLIENT"/>
+				</Folder>
+			</Folder>
+			<Folder Name="Conversion">
+				<Class Name="ASCII_BIN"/>
+			</Folder>
+			<Folder Name="Divers">
+				<Class Name="_CheckSum"/>
+				<Class Name="CriticalSection"/>
+				<Class Name="GetTaskHandle"/>
+				<Class Name="NetworkConfig"/>
+				<Class Name="RamRingBuffer"/>
+			</Folder>
+			<Folder Name="Logic">
+				<Folder Name="ClientSplitter">
+					<Class Name="Client_Splitter_10"/>
+					<Folder Name="BaseClass">
+						<Class Name="Client_Splitter_Base"/>
+					</Folder>
+				</Folder>
+				<Folder Name="Logic">
+					<Folder Name="AND">
+						<Class Name="Logic_And_10"/>
+					</Folder>
+					<Folder Name="BaseClass">
+						<Class Name="Logic_And_Base"/>
+						<Class Name="Logic_Or_Base"/>
+					</Folder>
+					<Folder Name="OR">
+						<Class Name="Logic_Or_10"/>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="Memory">
+				<Class Name="Const"/>
+				<Class Name="Merker"/>
+				<Class Name="MerkerEx"/>
+				<Class Name="Ram"/>
+				<Class Name="RAMex"/>
+				<Class Name="String"/>
+				<Class Name="StringInternal"/>
+				<Class Name="StringRAM"/>
+				<Class Name="VirtualBaseInit"/>
+			</Folder>
+			<Folder Name="Motion">
+				<Class Name="_LMCAxis"/>
+				<Class Name="_LMCProfile"/>
+				<Folder Name="_Internal">
+					<Class Name="_LMCMathFunctions"/>
+					<Class Name="_LMCPublisher"/>
+					<Class Name="Controller"/>
+					<Folder Name="_LMCAxisInternal">
+						<Class Name="_AxisBase"/>
+						<Class Name="_LMCABSEncoder"/>
+						<Class Name="_LMCAxisBase"/>
+						<Class Name="_LMCAxisRef"/>
+						<Class Name="_LMCAxisVis"/>
+						<Class Name="_LMCAxisVisInt"/>
+						<Class Name="_LMCAxisVisLogHandle"/>
+						<Class Name="_LMCAxisVisLogViewer"/>
+						<Class Name="_LMCAxisVisPara"/>
+						<Class Name="_LMCRefBase"/>
+						<Class Name="_LMCSafety"/>
+					</Folder>
+					<Folder Name="_LMCProfileInternal">
+						<Class Name="_LMCProfileBase"/>
+						<Class Name="_LMCProfileBuffer"/>
+						<Class Name="_LMCProfileLog"/>
+						<Class Name="_LMCProfileVis"/>
+						<Class Name="_LMCProfileVisAxis"/>
+						<Class Name="_LMCProfileVisInt"/>
+						<Class Name="_LMCProfileVisMovePara"/>
+					</Folder>
+					<Folder Name="_LMCRoboticInternal">
+						<Class Name="_LMCCalcModelController"/>
+						<Class Name="_LMCMath_SO3"/>
+						<Class Name="_LMCRobotLog"/>
+					</Folder>
+				</Folder>
+				<Folder Name="_LMCRobotic">
+					<Class Name="_LMCBaseCoord"/>
+					<Class Name="_LMCCalcModelBase"/>
+					<Class Name="_LMCRobotBase"/>
+					<Class Name="_LMCTool"/>
+					<Folder Name="CalcModels">
+						<Class Name="CalcDelta"/>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="Template">
+				<Folder Name="Alarm">
+					<Class Name="AlarmTitleLine"/>
+				</Folder>
+				<Folder Name="General">
+					<Class Name="TitleLine"/>
+					<Class Name="TouchCalib"/>
+				</Folder>
+				<Folder Name="SystemLogging">
+					<Class Name="SystemLogging"/>
+				</Folder>
+			</Folder>
+			<Folder Name="Visualisation">
+				<Folder Name="LseRtk">
+					<Folder Name="Alarm">
+						<Folder Name="PLC">
+							<Class Name="_AlarmX0Para"/>
+							<Class Name="_AlarmX1Para"/>
+							<Class Name="_AlarmXBuffer"/>
+						</Folder>
+						<Folder Name="Visu">
+							<Class Name="_AlarmDisplay"/>
+							<Class Name="_HotAlarm"/>
+						</Folder>
+					</Folder>
+					<Folder Name="Project">
+					</Folder>
+					<Folder Name="UserInterface">
+						<Class Name="_Bit32"/>
+						<Class Name="_Bit32Ram"/>
+						<Class Name="_FileExplorer"/>
+						<Class Name="_FileExplorerButton"/>
+						<Class Name="_FileExplorerToolCat"/>
+						<Class Name="_LimitMax"/>
+						<Class Name="_LimitMin"/>
+						<Class Name="_MyIO"/>
+						<Class Name="_OsziLSE"/>
+						<Class Name="_OsziLSEBackground"/>
+						<Class Name="_Radio32"/>
+						<Class Name="_Radio32Ram"/>
+						<Class Name="_SysDateTime"/>
+						<Class Name="_ToolCat"/>
+						<Class Name="_XAccess"/>
+						<Class Name="GetBroadCastData"/>
+						<Class Name="KeyPadAnumFileExplorer"/>
+						<Class Name="KeyPadANumStdTemplate"/>
+						<Class Name="KeyPadImages"/>
+						<Class Name="KeyPadImagesStdTemplate"/>
+						<Class Name="KeyPadNumStdTemplate"/>
+						<Class Name="ScreenSaver"/>
+					</Folder>
+				</Folder>
+			</Folder>
+		</Folder>
+	</SigmatekFolders>
+	<ClassFolders>
+		<Folder Name="Alarms">
+			<Class Name="_FirstAlarm"/>
+		</Folder>
+		<Folder Name="Dbase">
+			<Class Name="SaveLoadUSB"/>
+		</Folder>
+		<Folder Name="LibrarySC">
+			<Class Name="Standard"/>
+			<Folder Name="Base">
+				<Class Name="SCBase"/>
+				<Class Name="StringBase"/>
+				<Class Name="StringBaseGB"/>
+			</Folder>
+		</Folder>
+		<Folder Name="LSE">
+			<Folder Name="Alarms">
+				<Class Name="_16Alarm_Drive"/>
+				<Class Name="_16Alarms"/>
+				<Class Name="GiveConfigNumber"/>
+			</Folder>
+			<Folder Name="Screen">
+				<Class Name="_ActValue"/>
+				<Class Name="CPU_Info"/>
+				<Class Name="DateAndTime"/>
+				<Class Name="GetOSVer"/>
+				<Class Name="LasalBuiltDate"/>
+				<Class Name="LseBuiltDate"/>
+				<Class Name="SaveAcces"/>
+				<Class Name="TerminalControl"/>
+			</Folder>
+		</Folder>
+		<Folder Name="Machine">
+		</Folder>
+		<Folder Name="MyBase">
+			<Class Name="RecipeHandle"/>
+			<Class Name="RecipeName"/>
+		</Folder>
+		<Folder Name="Template">
+			<Folder Name="Access">
+				<Class Name="AccessControlCreateAdmin"/>
+				<Class Name="AccessControlList"/>
+				<Class Name="AccessControlMain"/>
+				<Class Name="AccessControlUSBDetection"/>
+			</Folder>
+			<Folder Name="Communication">
+				<Class Name="CheckOnlineStatus"/>
+				<Class Name="Comm_RecvData"/>
+				<Class Name="Comm_SendData"/>
+				<Class Name="ReadValue"/>
+				<Class Name="SyncTimeHMI"/>
+				<Class Name="TCPComReceiveData"/>
+				<Class Name="TCPComSendData"/>
+				<Class Name="WriteValue"/>
+			</Folder>
+			<Folder Name="Diagnose">
+				<Class Name="DiagnoseHelpClass"/>
+				<Class Name="GetOSVersion"/>
+				<Class Name="ShowHexInDec"/>
+			</Folder>
+			<Folder Name="Diagnostic">
+				<Class Name="Diagnostic"/>
+				<Class Name="DiagnosticBase"/>
+				<Class Name="DiagnosticStation"/>
+				<Class Name="DiagnosticStation_PLC"/>
+				<Class Name="DiagnosticStationBase"/>
+				<Class Name="DiagnosticStationHandler"/>
+				<Class Name="DiagnosticStationHandlerBase"/>
+				<Class Name="DiagnosticUserFunction"/>
+				<Class Name="DiagnosticUserFunction_PLC"/>
+				<Class Name="DiagnosticWork"/>
+				<Class Name="DiagnosticWork_PLC"/>
+				<Class Name="ReceiveDataCMD"/>
+				<Class Name="ReceiveDataCMD_PLC"/>
+				<Class Name="SendDataCMD"/>
+				<Class Name="SendDataCMD_PLC"/>
+				<Folder Name="FileFolderTransfer">
+					<Class Name="DiagnosticStationFileFolderHandler"/>
+					<Class Name="FileDefine"/>
+					<Class Name="FileTransfer"/>
+					<Class Name="FolderDefine"/>
+					<Class Name="FolderTransfer"/>
+					<Folder Name="InternalClasses">
+						<Class Name="FileTransfer_RecvData"/>
+						<Class Name="FileTransferHandle"/>
+					</Folder>
+				</Folder>
+				<Folder Name="ProjectInfo">
+					<Class Name="ProjectInfo_User"/>
+					<Class Name="ProjectInfo_UserPLC"/>
+				</Folder>
+				<Folder Name="SRAMInfo">
+					<Class Name="SRAMInfo_User"/>
+					<Class Name="SRAMInfo_UserPLC"/>
+				</Folder>
+				<Folder Name="SystemInfo">
+					<Class Name="SystemInfo_User"/>
+					<Class Name="SystemInfo_UserPLC"/>
+				</Folder>
+			</Folder>
+			<Folder Name="Event">
+				<Class Name="AddEventToPLC"/>
+				<Class Name="EventExport"/>
+				<Class Name="EventJournal"/>
+				<Class Name="EventQueue"/>
+				<Class Name="EventTitleLine"/>
+				<Class Name="EventUserInput"/>
+			</Folder>
+			<Folder Name="FileExplorer">
+				<Class Name="FileExplorerButtonUser"/>
+				<Class Name="FileExplorerToolCatUser"/>
+			</Folder>
+			<Folder Name="General">
+				<Class Name="Bit32Mask"/>
+				<Class Name="ProjectGlobal"/>
+				<Class Name="USBDetection"/>
+			</Folder>
+		</Folder>
+	</ClassFolders>
+	<NetworkFolders>
+		<Folder Name="Alarms">
+			<Network Name="AlarmTerminal"/>
+			<Network Name="AlarmVis"/>
+		</Folder>
+		<Folder Name="Screen">
+			<Network Name="Kernel"/>
+			<Network Name="NewDataBase"/>
+		</Folder>
+		<Folder Name="Template">
+			<Network Name="NewAgeSettings"/>
+			<Folder Name="StandardTemplate">
+				<Folder Name="HMI">
+					<Network Name="StdAccessControlExtended"/>
+					<Network Name="StdCommunicationIntern"/>
+					<Network Name="StdCommunicationToPLC"/>
+					<Network Name="StdEvent"/>
+					<Network Name="StdPLCInfo"/>
+					<Network Name="StdSettings"/>
+					<Folder Name="Diagnostic">
+						<Network Name="StdDiagnostic"/>
+						<Network Name="StdDiagnostic_FileFolderTransfer"/>
+						<Network Name="StdDiagnostic_ProjectInfo"/>
+						<Network Name="StdDiagnostic_SRAMInfo"/>
+						<Network Name="StdDiagnostic_SystemInfo"/>
+					</Folder>
+				</Folder>
+			</Folder>
+		</Folder>
+	</NetworkFolders>
+	<TypeFolders>
+		<Folder Name="_LMC">
+			<Type Name="_LMC_DYN_SWLIMITS"/>
+			<Type Name="_LMCCONTROLLERTYPE"/>
+			<Type Name="_POSFLAGS"/>
+			<Type Name="CNCInternalStruct"/>
+			<Type Name="CurveTable"/>
+			<Type Name="MasterStruct"/>
+			<Folder Name="_LMCAxis">
+				<Type Name="_LMCAXIS_CMDERROR"/>
+				<Type Name="_LMCAXIS_CONTROLBITS"/>
+				<Type Name="_LMCAXIS_COUPLE_GEAR_MODE"/>
+				<Type Name="_LMCAXIS_COUPLEERROR"/>
+				<Type Name="_LMCAXIS_CURVE"/>
+				<Type Name="_LMCAXIS_CURVETABMODE"/>
+				<Type Name="_LMCAXIS_ERROR"/>
+				<Type Name="_LMCAXIS_ERROR_CONFIG"/>
+				<Type Name="_LMCAXIS_FOLLOW_MODE"/>
+				<Type Name="_LMCAXIS_MOVE_RELATIVE_MODE"/>
+				<Type Name="_LMCAXIS_MOVEDIRECTION"/>
+				<Type Name="_LMCAXIS_MOVEPROFILE"/>
+				<Type Name="_LMCAXIS_MOVINGTIMEERROR"/>
+				<Type Name="_LMCAXIS_OPMODE"/>
+				<Type Name="_LMCAXIS_POSMODE"/>
+				<Type Name="_LMCAXIS_POWER_OFF_MODE"/>
+				<Type Name="_LMCAXIS_QUERY_POSITION_MODE"/>
+				<Type Name="_LMCAXIS_READPARAMETER"/>
+				<Type Name="_LMCAXIS_READPOS"/>
+				<Type Name="_LMCAXIS_READSWENDPOS"/>
+				<Type Name="_LMCAXIS_READVELOCITY"/>
+				<Type Name="_LMCAXIS_REFDATA"/>
+				<Type Name="_LMCAXIS_REFMODE"/>
+				<Type Name="_LMCAXIS_SETPARAMETER"/>
+				<Type Name="_LMCAXIS_SETPOSITION"/>
+				<Type Name="_LMCAXIS_SETSERVER"/>
+				<Type Name="_LMCAXIS_SETSWENDPOS"/>
+				<Type Name="_LMCAXIS_STATUS"/>
+				<Type Name="_LMCAXIS_TUNE_MODE"/>
+			</Folder>
+			<Folder Name="_LMCProfile">
+				<Type Name="_LMCCommonCalcParas"/>
+				<Type Name="_LMCPROF_ACTUALVALUES"/>
+				<Type Name="_LMCPROF_CIRCLEPOINT"/>
+				<Type Name="_LMCPROF_CMDINDEX"/>
+				<Type Name="_LMCPROF_EXECUTE"/>
+				<Type Name="_LMCPROF_MoveData"/>
+				<Type Name="_LMCPROF_OBSTACLE"/>
+				<Type Name="_LMCPROF_OPMODE"/>
+				<Type Name="_LMCPROF_POS"/>
+				<Type Name="_LMCPROF_POSITIONS"/>
+				<Type Name="_LMCPROF_RECOUPLEMODE"/>
+				<Type Name="_LMCPROF_RESTIME_CALCMODE"/>
+				<Type Name="_LMCPROF_SETPOS_MODE"/>
+				<Type Name="_LMCPROFCIRCLEDEF"/>
+				<Type Name="_LMCPROFCMDCONFIG"/>
+				<Type Name="_LMCPROFCMDTYPES"/>
+				<Type Name="_LMCPROFCMDTYPES_INTERN"/>
+				<Type Name="_LMCPROFERRORDEF"/>
+				<Type Name="_LMCPROFERRORTYPES"/>
+				<Type Name="_LMCPROFERRWARNCONFIG"/>
+				<Type Name="_LMCPROFILESTATES"/>
+				<Type Name="_LMCPROFINPOSTYPES"/>
+				<Type Name="_LMCPROFINTCMDCONFIG"/>
+				<Type Name="_LMCPROFMOVEPROFILE"/>
+				<Type Name="_LMCPROFPARAMETER"/>
+				<Type Name="_LMCPROFPARAMETERAXIS"/>
+				<Type Name="_LMCPROFPARAMETERGROUPS"/>
+				<Type Name="_LMCPROFSETTINGS"/>
+				<Type Name="_LMCPROFTRANSMODES"/>
+				<Type Name="ProfileCommandStatus"/>
+			</Folder>
+			<Folder Name="old">
+				<Type Name="CncFlags"/>
+				<Type Name="CntrFlgs"/>
+			</Folder>
+		</Folder>
+		<Folder Name="Diagnostic">
+			<Type Name="_Diag_ClsVersCRC"/>
+			<Type Name="_Diag_IPInfo"/>
+			<Type Name="_Diag_LoaderStruct"/>
+			<Type Name="_Diag_ProjectInfo"/>
+			<Type Name="_Diag_SystemInfo"/>
+			<Type Name="_DiagErrorCode"/>
+			<Type Name="_DiagString"/>
+		</Folder>
+		<Folder Name="OPMode">
+			<Type Name="t_e_OPMode"/>
+		</Folder>
+		<Folder Name="SCLibrary">
+			<Type Name="EventModeTxt"/>
+			<Type Name="ImpClkStr"/>
+			<Type Name="IpAdrStr"/>
+			<Type Name="LogRecStr"/>
+			<Type Name="LseDateStr"/>
+			<Type Name="LseTimeStr"/>
+			<Type Name="StepLogStr"/>
+			<Type Name="StepperDataStr"/>
+			<Type Name="StringDateTxt"/>
+			<Type Name="StringTimeTxt"/>
+		</Folder>
+	</TypeFolders>
+	<Units>
+		<UnitGrp Name="Acceleration">
+			<Unit Name="mmPsec2" Factor="1" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Angle">
+			<Unit Name="deg" Factor="10000" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Area">
+			<Unit Name="mm2" Factor="10" Ref="S" Comment="x.x sqare millimeter"/>
+		</UnitGrp>
+		<UnitGrp Name="Force">
+			<Unit Name="kN" Factor="1000 N" Ref="S"/>
+			<Unit Name="N" Factor="1" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Length">
+			<Unit Name="m" Factor="1000 mm" Ref="S"/>
+			<Unit Name="mm" Factor="10000" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Memory">
+			<Unit Name="GB" Factor="1024 MB" Ref="S"/>
+			<Unit Name="kB" Factor="1024" Ref="S"/>
+			<Unit Name="MB" Factor="1024 kB" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Pressure">
+			<Unit Name="bar" Factor="1000" Ref="S" Comment="x.xxx Bar ( MilliBar)"/>
+		</UnitGrp>
+		<UnitGrp Name="Revolution">
+			<Unit Name="RPM" Factor="1000" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Speed">
+			<Unit Name="mlpmin" Factor="1" Ref="S"/>
+			<Unit Name="mmpsec" Factor="10000" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Time">
+			<Unit Name="hours" Factor="60 min" Ref="S"/>
+			<Unit Name="min" Factor="60 secs" Ref="S"/>
+			<Unit Name="ms" Factor="1" Ref="S"/>
+			<Unit Name="sec" Factor="1000" Ref="S"/>
+			<Unit Name="secs" Factor="1000 ms" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Volume">
+			<Unit Name="ccm" Factor="1" Ref="S" Comment="cubic centimeter"/>
+		</UnitGrp>
+	</Units>
+</Project>

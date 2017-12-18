@@ -1,0 +1,1629 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="AlarmMachine" Revision="1.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "_AlarmXBuffer1"
+			GUID       = "{1462DAAB-6303-4F35-82F0-1D42F688CC84}"
+			Class      = "_AlarmXBuffer"
+			Position   = "(330,330)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="QuitAll"/>
+				<Server Name="QuitAllEx"/>
+				<Server Name="QuitGroup"/>
+				<Server Name="QuitGroupEx"/>
+				<Client Name="No" Value="64"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara1"
+			GUID       = "{8931A78E-F6E8-4F84-A6C1-86D5F5F69118}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,300)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara10"
+			GUID       = "{877250C1-A1F1-4BFD-BB3B-E31744EDAE80}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,3000)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara11"
+			GUID       = "{B5A0E205-50D2-4EE9-BF73-E68BE567DFFE}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,3300)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara12"
+			GUID       = "{671FE080-63B0-4A30-870A-451D79BF4C52}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,3600)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara13"
+			GUID       = "{44625074-B52D-4C6E-A55E-DDF81D3EA096}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,3900)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara14"
+			GUID       = "{AC535338-2C47-4BA3-ABA1-A83D2EE274C3}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,4200)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara15"
+			GUID       = "{9DBFBCB5-046F-4F8E-BAE9-C06927353D32}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,4500)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara16"
+			GUID       = "{145C0E54-30BE-46B8-AB30-EC3F5CCDD97C}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,4800)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara2"
+			GUID       = "{EE5FEF3E-7D3D-4FA1-B5DA-093799D2E3E7}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,600)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara3"
+			GUID       = "{4689CECC-7928-44A1-AC80-9B77C92EB657}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,900)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara4"
+			GUID       = "{7CC9FC09-7D02-4A44-B57C-796243275058}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,1200)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara5"
+			GUID       = "{69D1BFE8-3336-4574-8C58-2EC0A61A1454}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,1500)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara6"
+			GUID       = "{F269F1E7-E28E-402E-8727-FC01EAF022E4}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,1800)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara7"
+			GUID       = "{8AAB7FE9-F6EE-45CD-86E7-EB2EC00445FB}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,2100)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara8"
+			GUID       = "{1085CD28-6042-47B3-BDC0-4051BA0B42FE}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,2400)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersPara9"
+			GUID       = "{6D4F5EE2-1A20-4E27-B578-940AC107C06D}"
+			Class      = "AlarmSleegersPara"
+			Position   = "(1320,2700)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4CDE399C-4F13-42FC-8D1A-36717B479C24}" Class="_AlarmX0Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter1"
+			GUID       = "{4211838B-40E5-4C43-A11E-F70D97218AFA}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,300)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter10"
+			GUID       = "{8A93DD35-1214-4B1E-A633-A1D2EC52B86A}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,3540)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter11"
+			GUID       = "{49495752-83F7-46D1-A16F-1A8F09151424}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,3900)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter12"
+			GUID       = "{E551B528-8B1C-43F2-B780-FB791585BA5C}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,4260)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter13"
+			GUID       = "{17567176-0EC3-4587-BF83-0DB097A7C558}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,4620)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter14"
+			GUID       = "{F803DBCD-07D8-4C9E-882B-F2FC81E9742C}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,4980)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter15"
+			GUID       = "{11ACB682-1269-4A0F-A890-6788192BAC5B}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,5340)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter16"
+			GUID       = "{5306EB6B-A62D-4A46-A830-4717457A42F0}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,5700)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter2"
+			GUID       = "{8D89A837-4F6E-41A5-A2D4-964CC785555D}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,660)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter3"
+			GUID       = "{297B0DE4-35B3-495D-9595-DBC5BC3C3C74}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,1020)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter4"
+			GUID       = "{3F388CE9-5B70-4E92-A410-D34975663574}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,1380)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter5"
+			GUID       = "{48DA9B85-E904-4443-A998-F9C6B62D547C}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,1740)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter6"
+			GUID       = "{5EA1F4CB-ED52-45B8-967F-435EEA65EE19}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,2100)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter7"
+			GUID       = "{EBAF0654-C0E1-4F91-B7E4-3B0CF2EA62FC}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,2460)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter8"
+			GUID       = "{2E3D2C51-5487-4823-9973-DB466FF7D0F1}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,2820)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmSleegersParameter9"
+			GUID       = "{85E6007B-B188-4272-AD56-729B2437E37D}"
+			Class      = "AlarmSleegersParameter"
+			Position   = "(3000,3180)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Acknow"/>
+				<Client Name="Config" Value="0"/>
+				<Client Name="Group"/>
+				<Client Name="NextClass"/>
+				<Client Name="Para1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{95A9194E-2C86-4075-A953-BF916F469CB9}" Class="_AlarmX1Para">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="Acknow"/>
+								<Client Name="Config" Value="0"/>
+								<Client Name="Group"/>
+								<Client Name="Para1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{59010D14-43B0-4579-A45C-5A4B8DD3E275}" Class="_AlarmX0Para">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Client Name="Acknow"/>
+												<Client Name="Config" Value="0"/>
+												<Client Name="Group"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "SafetyClass1"
+			GUID       = "{3CC779D4-466C-455D-8F31-B1879931FCFD}"
+			Class      = "SafetyClass"
+			Position   = "(4950,570)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="SafetyOut1"/>
+				<Server Name="SafetyOut2"/>
+				<Server Name="SafetyOut3"/>
+				<Server Name="SafetyOut4"/>
+				<Client Name="CleaningMode"/>
+				<Client Name="MasterOverrule"/>
+				<Client Name="SafetyInp1"/>
+				<Client Name="SafetyInp2"/>
+				<Client Name="SafetyInp3"/>
+				<Client Name="SafetyInp4"/>
+			</Channels>
+		</Object>
+		<Object
+			Name           = "Sleegers_16Alarms1"
+			GUID           = "{488E08D1-19BF-4FF3-9AC8-3EEB4D0AA5C3}"
+			Class          = "Sleegers_16Alarms"
+			Position       = "(5970,330)"
+			Visualized     = "true"
+			BackgroundTime = "100 ms">
+			<Channels>
+				<Server Name="AlarmActive"/>
+				<Server Name="MachineName" Value="MachineType"/>
+				<Client Name="AlarmSleegers"/>
+				<Client Name="Group"/>
+				<Client Name="iAlarm01" Value="LowAlarm"/>
+				<Client Name="iAlarm02"/>
+				<Client Name="iAlarm03" Value="LowAlarm"/>
+				<Client Name="iAlarm04" Value="LowAlarm"/>
+				<Client Name="iAlarm05" Value="0"/>
+				<Client Name="iAlarm06"/>
+				<Client Name="iAlarm07"/>
+				<Client Name="iAlarm08"/>
+				<Client Name="iAlarm09"/>
+				<Client Name="iAlarm10"/>
+				<Client Name="iAlarm11" Value="0"/>
+				<Client Name="iAlarm12" Value="0"/>
+				<Client Name="iAlarm13" Value="0"/>
+				<Client Name="iAlarm14"/>
+				<Client Name="iAlarm15" Value="0"/>
+				<Client Name="iAlarm16"/>
+				<Client Name="Reset"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "Standard4"
+							GUID           = "{5CE0B8ED-B3BB-47BB-9363-F9155CCAEA40}"
+							Class          = "Standard"
+							BackgroundTime = "1000 ms">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "Sleegers_16AlarmsDrives1"
+			GUID           = "{17CB971E-5D5C-4EB1-B0AB-54882804E2AB}"
+			Class          = "Sleegers_16AlarmsDrives"
+			Position       = "(7800,330)"
+			Visualized     = "true"
+			BackgroundTime = "100 ms">
+			<Channels>
+				<Server Name="AlarmActive"/>
+				<Server Name="MachineName" Value="MachineType"/>
+				<Client Name="AlarmSleegers"/>
+				<Client Name="Group"/>
+				<Client Name="iAlarm01"/>
+				<Client Name="iAlarm02"/>
+				<Client Name="iAlarm03"/>
+				<Client Name="iAlarm04"/>
+				<Client Name="iAlarm05"/>
+				<Client Name="iAlarm06"/>
+				<Client Name="iAlarm07"/>
+				<Client Name="iAlarm08"/>
+				<Client Name="iAlarm09"/>
+				<Client Name="iAlarm10"/>
+				<Client Name="iAlarm11"/>
+				<Client Name="iAlarm12"/>
+				<Client Name="iAlarm13"/>
+				<Client Name="iAlarm14"/>
+				<Client Name="iAlarm15"/>
+				<Client Name="iAlarm16"/>
+				<Client Name="Reset"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "Standard4"
+							GUID           = "{D397D0DA-FA3C-445E-B666-04A8F8806290}"
+							Class          = "Standard"
+							BackgroundTime = "1000 ms">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+		<Comment Position="(300,60)" Size="(4229,66)" Text="All the errors of the VI-46"/>
+		<Comment Position="(2760,210)" Size="(1200,90)" Text="Drive Errors"/>
+		<Comment Position="(1320,210)" Size="(1050,90)" Text="General Errors&#13;&#10;"/>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="AlarmSleegersPara2.NextClass" Destination="AlarmSleegersPara3.ClassSvr" Vertices="(1320,870),(1876,990),"/>
+		<Connection Source="AlarmSleegersPara3.NextClass" Destination="AlarmSleegersPara4.ClassSvr" Vertices="(1320,1170),(1876,1290),"/>
+		<Connection Source="AlarmSleegersParameter1.NextClass" Destination="AlarmSleegersParameter2.ClassSvr" Vertices="(3000,630),(3556,750),"/>
+		<Connection Source="SafetyClass1.MasterOverrule" Destination="__Vi41_MasterOverrule1" Vertices="(4950,660),(4906,660)," IOObject="Vi54_MasterOverrule"/>
+		<Connection Source="SafetyClass1.CleaningMode" Destination="__IO_Element04" Vertices="(4950,720),(4906,720)," IOObject="Vi54_CleaningOverrule"/>
+		<Connection Source="AlarmSleegersParameter2.NextClass" Destination="AlarmSleegersParameter3.ClassSvr" Vertices="(3000,990),(3556,1110),"/>
+		<Connection Source="AlarmSleegersParameter3.NextClass" Destination="AlarmSleegersParameter4.ClassSvr" Vertices="(3000,1350),(3556,1470),"/>
+		<Connection Source="Sleegers_16Alarms1.iAlarm01" Destination="__IO_Element46" Vertices="(5970,540),(5926,540)," IOObject="EmergencyStop"/>
+		<Connection Source="AlarmSleegersParameter4.NextClass" Destination="AlarmSleegersParameter5.ClassSvr" Vertices="(3000,1710),(3556,1830),"/>
+		<Connection Source="AlarmSleegersPara4.NextClass" Destination="AlarmSleegersPara5.ClassSvr" Vertices="(1320,1470),(1876,1590),"/>
+		<Connection Source="AlarmSleegersPara5.NextClass" Destination="AlarmSleegersPara6.ClassSvr" Vertices="(1320,1770),(1876,1890),"/>
+		<Connection Source="AlarmSleegersPara6.NextClass" Destination="AlarmSleegersPara7.ClassSvr" Vertices="(1320,2070),(1876,2190),"/>
+		<Connection Source="AlarmSleegersPara7.NextClass" Destination="AlarmSleegersPara8.ClassSvr" Vertices="(1320,2370),(1876,2490),"/>
+		<Connection Source="SafetyClass1.SafetyInp1" Destination="__IO_Element47" Vertices="(4950,780),(4906,780)," IOObject="Front_Cover"/>
+		<Connection Source="AlarmSleegersPara8.NextClass" Destination="AlarmSleegersPara9.ClassSvr" Vertices="(1320,2670),(1876,2790),"/>
+		<Connection Source="AlarmSleegersParameter5.NextClass" Destination="AlarmSleegersParameter6.ClassSvr" Vertices="(3000,2070),(3556,2190),"/>
+		<Connection Source="AlarmSleegersParameter6.NextClass" Destination="AlarmSleegersParameter7.ClassSvr" Vertices="(3000,2430),(3556,2550),"/>
+		<Connection Source="SafetyClass1.SafetyInp2" Destination="__IO_Element48" Vertices="(4950,840),(4906,840)," IOObject="Waste_Bin"/>
+		<Connection Source="AlarmSleegersParameter7.NextClass" Destination="AlarmSleegersParameter8.ClassSvr" Vertices="(3000,2790),(3556,2910),"/>
+		<Connection Source="AlarmSleegersParameter8.NextClass" Destination="AlarmSleegersParameter9.ClassSvr" Vertices="(3000,3150),(3556,3270),"/>
+		<Connection Source="AlarmSleegersPara9.NextClass" Destination="AlarmSleegersPara10.ClassSvr" Vertices="(1320,2970),(1876,3090),"/>
+		<Connection Source="AlarmSleegersPara10.NextClass" Destination="AlarmSleegersPara11.ClassSvr" Vertices="(1320,3270),(1876,3390),"/>
+		<Connection Source="AlarmSleegersPara11.NextClass" Destination="AlarmSleegersPara12.ClassSvr" Vertices="(1320,3570),(1876,3690),"/>
+		<Connection Source="AlarmSleegersPara12.NextClass" Destination="AlarmSleegersPara13.ClassSvr" Vertices="(1320,3870),(1876,3990),"/>
+		<Connection Source="AlarmSleegersPara13.NextClass" Destination="AlarmSleegersPara14.ClassSvr" Vertices="(1320,4170),(1876,4290),"/>
+		<Connection Source="AlarmSleegersPara14.NextClass" Destination="AlarmSleegersPara15.ClassSvr" Vertices="(1320,4470),(1876,4590),"/>
+		<Connection Source="AlarmSleegersPara15.NextClass" Destination="AlarmSleegersPara16.ClassSvr" Vertices="(1320,4770),(1876,4890),"/>
+		<Connection Source="Sleegers_16Alarms1.iAlarm04" Destination="SafetyClass1.SafetyOut2" Vertices="(5970,720),(5356,720),"/>
+		<Connection Source="Sleegers_16Alarms1.iAlarm03" Destination="SafetyClass1.SafetyOut1" Vertices="(5970,660),(5356,660),"/>
+		<Connection Source="Sleegers_16Alarms1.iAlarm05" Destination="__IO_Element49" Vertices="(5970,780),(5926,780)," IOObject="Safety_CPU_In_Error"/>
+		<Connection Source="Sleegers_16Alarms1.AlarmSleegers" Destination="AlarmSleegersPara1.ClassSvr" Vertices="(5970,420),(5850,420),(5850,150),(1950,150),(1950,390),(1876,390),"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.iAlarm01" Destination="DriveAxleErr_InfeedConv.State"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.iAlarm02" Destination="DriveAxleErr_InfeedConv2.State"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.iAlarm03" Destination="DriveAxleErr_Rejector.State"/>
+		<Connection Source="AlarmSleegersParameter9.NextClass" Destination="AlarmSleegersParameter10.ClassSvr" Vertices="(3000,3510),(3556,3630),"/>
+		<Connection Source="AlarmSleegersParameter10.NextClass" Destination="AlarmSleegersParameter11.ClassSvr" Vertices="(3000,3870),(3556,3990),"/>
+		<Connection Source="AlarmSleegersParameter11.NextClass" Destination="AlarmSleegersParameter12.ClassSvr" Vertices="(3000,4230),(3556,4350),"/>
+		<Connection Source="AlarmSleegersParameter12.NextClass" Destination="AlarmSleegersParameter13.ClassSvr" Vertices="(3000,4590),(3556,4710),"/>
+		<Connection Source="AlarmSleegersParameter13.NextClass" Destination="AlarmSleegersParameter14.ClassSvr" Vertices="(3000,4950),(3556,5070),"/>
+		<Connection Source="AlarmSleegersParameter14.NextClass" Destination="AlarmSleegersParameter15.ClassSvr" Vertices="(3000,5310),(3556,5430),"/>
+		<Connection Source="AlarmSleegersParameter15.NextClass" Destination="AlarmSleegersParameter16.ClassSvr" Vertices="(3000,5670),(3556,5790),"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.AlarmSleegers" Destination="AlarmSleegersParameter1.ClassSvr" Vertices="(7800,420),(7680,420),(7680,150),(3660,150),(3660,390),(3556,390),"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.iAlarm04" Destination="DriveAxleErr_Y_Conveyor.State"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.iAlarm05" Destination="DriveAxleErr_OutfeedConv.State"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.iAlarm07" Destination="DriveAxleErr_Y_Axle1.State"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.iAlarm08" Destination="DriveAxleErr_Y_Axle2.State"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.iAlarm09" Destination="DriveAxleErr_Y_Axle3.State"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.iAlarm10" Destination="DriveAxleErr_Y_Axle4.State"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.iAlarm11" Destination="DriveAxleErr_X_Axle1.State"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.iAlarm12" Destination="DriveAxleErr_X_Axle2.State"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.iAlarm13" Destination="DriveAxleErr_X_Axle3.State"/>
+		<Connection Source="Sleegers_16AlarmsDrives1.iAlarm14" Destination="DriveAxleErr_X_Axle4.State"/>
+		<Connection Source="AlarmSleegersPara1.NextClass" Destination="AlarmSleegersPara2.ClassSvr" Vertices="(1320,570),(1876,690),"/>
+	</Connections>
+	<!-- List of temp data objects in this network -->
+	<IOObjects>
+		<IOObject KeyName="__IO_Element04" Name="Vi54_CleaningOverrule" Position="(4530,690)" Client="SafetyClass1.CleaningMode"/>
+		<IOObject KeyName="__IO_Element46" Name="EmergencyStop" Position="(5550,510)" Client="Sleegers_16Alarms1.iAlarm01"/>
+		<IOObject KeyName="__IO_Element47" Name="Front_Cover" Position="(4530,750)" Client="SafetyClass1.SafetyInp1"/>
+		<IOObject KeyName="__IO_Element48" Name="Waste_Bin" Position="(4530,810)" Client="SafetyClass1.SafetyInp2"/>
+		<IOObject KeyName="__IO_Element49" Name="Safety_CPU_In_Error" Position="(5550,750)" Client="Sleegers_16Alarms1.iAlarm05"/>
+		<IOObject KeyName="__Vi41_MasterOverrule1" Name="Vi54_MasterOverrule" Position="(4530,630)" Client="SafetyClass1.MasterOverrule"/>
+	</IOObjects>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

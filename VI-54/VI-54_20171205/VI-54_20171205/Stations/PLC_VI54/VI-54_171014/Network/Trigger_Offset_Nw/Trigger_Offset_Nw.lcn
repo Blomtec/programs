@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Trigger_Offset_Nw" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "ProductTriggerWecube_Waste"
+			GUID       = "{7C217943-7572-41CA-85BF-90A840D70C4D}"
+			Class      = "ProductTriggerCamera"
+			Position   = "(2220,2070)"
+			Visualized = "true"
+			RealTime   = "cRT">
+			<Channels>
+				<Server Name="__________"/>
+				<Server Name="___________"/>
+				<Server Name="ActProdPos"/>
+				<Server Name="Comm"/>
+				<Server Name="inpProductCntr"/>
+				<Server Name="MaxProdCntr"/>
+				<Server Name="NewLookingBeltPos"/>
+				<Server Name="outProductCntr"/>
+				<Server Name="OutputTrigger"/>
+				<Server Name="OutputTriggerTime" Value="100"/>
+				<Server Name="TriggerOffset"/>
+				<Server Name="TriggerType" Value="eWaste_Trigger"/>
+				<Client Name="Comm_CameraCheckData"/>
+				<Client Name="EncPos"/>
+				<Client Name="inpCntr"/>
+				<Client Name="Motion"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "Standard1"
+							GUID           = "{40BFC933-ED45-4638-9657-DBDE2119F44E}"
+							Class          = "Standard"
+							BackgroundTime = "1000 ms">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "ProductTriggerWecube_X_positions"
+			GUID       = "{46833B46-EE59-4382-95CB-B39C66C58E85}"
+			Class      = "ProductTriggerCamera"
+			Position   = "(2220,210)"
+			Visualized = "true"
+			RealTime   = "cRT">
+			<Channels>
+				<Server Name="__________"/>
+				<Server Name="___________"/>
+				<Server Name="ActProdPos"/>
+				<Server Name="Comm"/>
+				<Server Name="inpProductCntr"/>
+				<Server Name="MaxProdCntr"/>
+				<Server Name="NewLookingBeltPos"/>
+				<Server Name="outProductCntr"/>
+				<Server Name="OutputTrigger"/>
+				<Server Name="OutputTriggerTime" Value="100"/>
+				<Server Name="TriggerOffset"/>
+				<Server Name="TriggerType" Value="eX_Trigger"/>
+				<Client Name="Comm_CameraCheckData"/>
+				<Client Name="EncPos"/>
+				<Client Name="inpCntr"/>
+				<Client Name="Motion"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "Standard1"
+							GUID           = "{40BFC933-ED45-4638-9657-DBDE2119F44E}"
+							Class          = "Standard"
+							BackgroundTime = "1000 ms">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "ProductTriggerWecube_Y_Positions"
+			GUID       = "{869B9C03-8390-47DA-8A6D-AA1426D5C0DA}"
+			Class      = "ProductTriggerCamera"
+			Position   = "(2220,1140)"
+			Visualized = "true"
+			RealTime   = "cRT">
+			<Channels>
+				<Server Name="__________"/>
+				<Server Name="___________"/>
+				<Server Name="ActProdPos"/>
+				<Server Name="Comm"/>
+				<Server Name="inpProductCntr"/>
+				<Server Name="MaxProdCntr"/>
+				<Server Name="NewLookingBeltPos"/>
+				<Server Name="outProductCntr"/>
+				<Server Name="OutputTrigger"/>
+				<Server Name="OutputTriggerTime" Value="100"/>
+				<Server Name="TriggerOffset"/>
+				<Server Name="TriggerType" Value="eY_Trigger"/>
+				<Client Name="Comm_CameraCheckData"/>
+				<Client Name="EncPos" Value="0"/>
+				<Client Name="inpCntr"/>
+				<Client Name="Motion" Value="PASSIVE_LMCAXIS"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "Standard1"
+							GUID           = "{40BFC933-ED45-4638-9657-DBDE2119F44E}"
+							Class          = "Standard"
+							BackgroundTime = "1000 ms">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+		<Comment Position="(2250,90)" Size="(840,90)" Text="Product trigger for Y-positions&#13;&#10;"/>
+		<Comment Position="(2250,1020)" Size="(840,90)" Text="Product trigger for X-positions&#13;&#10;"/>
+		<Comment Position="(2250,1950)" Size="(840,90)" Text="Product trigger for waste&#13;&#10;"/>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="ProductTriggerWecube_X_positions.Motion" Destination="__IO_Element18" Vertices="(2220,300),(2176,300)," IOObject="LMC_X_Axle1"/>
+		<Connection Source="ProductTriggerWecube_X_positions.EncPos" Destination="__IO_Element01" Vertices="(2220,360),(2176,360)," IOObject="ActPos_X_Axle1"/>
+		<Connection Source="ProductTriggerWecube_Y_Positions.Motion" Destination="__IO_Element110" Vertices="(2220,1230),(2176,1230)," IOObject="LMC_Y_Conveyor"/>
+		<Connection Source="ProductTriggerWecube_Y_Positions.EncPos" Destination="__IO_Element111" Vertices="(2220,1290),(2176,1290)," IOObject="Act_Pos_Y_Conveyor"/>
+		<Connection Source="ProductTriggerWecube_X_positions.Comm_CameraCheckData" Destination="CheckData1.Comm"/>
+		<Connection Source="ProductTriggerWecube_Y_Positions.Comm_CameraCheckData" Destination="CheckData1.Comm"/>
+		<Connection Source="ProductTriggerWecube_Waste.Comm_CameraCheckData" Destination="CheckData1.Comm"/>
+		<Connection Source="ProductTriggerWecube_Waste.Motion" Destination="__IO_Element112" Vertices="(2220,2160),(2176,2160)," IOObject="LMC_InfeedConv"/>
+		<Connection Source="ProductTriggerWecube_Waste.EncPos" Destination="__IO_Element28" Vertices="(2220,2220),(2176,2220)," IOObject="Act_Pos_InfeedConv"/>
+	</Connections>
+	<!-- List of temp data objects in this network -->
+	<IOObjects>
+		<IOObject KeyName="__IO_Element01" Name="ActPos_X_Axle1" Position="(1800,330)" Client="ProductTriggerWecube_X_positions.EncPos"/>
+		<IOObject KeyName="__IO_Element110" Name="LMC_Y_Conveyor" Position="(1800,1200)" Client="ProductTriggerWecube_Y_Positions.Motion"/>
+		<IOObject KeyName="__IO_Element111" Name="Act_Pos_Y_Conveyor" Position="(1800,1260)" Client="ProductTriggerWecube_Y_Positions.EncPos"/>
+		<IOObject KeyName="__IO_Element112" Name="LMC_InfeedConv" Position="(1800,2130)" Client="ProductTriggerWecube_Waste.Motion"/>
+		<IOObject KeyName="__IO_Element18" Name="LMC_X_Axle1" Position="(1800,270)" Client="ProductTriggerWecube_X_positions.Motion"/>
+		<IOObject KeyName="__IO_Element28" Name="Act_Pos_InfeedConv" Position="(1800,2190)" Client="ProductTriggerWecube_Waste.EncPos"/>
+	</IOObjects>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

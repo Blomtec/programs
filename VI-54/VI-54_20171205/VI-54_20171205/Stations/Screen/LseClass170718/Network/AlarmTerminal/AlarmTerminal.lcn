@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="AlarmTerminal" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "_AlarmXBuffer1"
+			GUID       = "{48D0AF4A-D89C-4B56-AF67-03A3155358A4}"
+			Class      = "_AlarmXBuffer"
+			Position   = "(1980,390)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="ClassSvr">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="QuitAll">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="QuitAllEx">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="QuitGroup">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="QuitGroupEx">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Client Name="No" Value="64"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "AlarmClass1"
+			GUID       = "{47D4E48E-911E-454C-886D-EED7AA84A5D4}"
+			Class      = "AlarmClass"
+			Position   = "(2790,390)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="AlarmNr"/>
+				<Server Name="LongText"/>
+				<Server Name="Server0"/>
+				<Server Name="ShortText"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{39D39A3D-23CB-4E5D-B892-FDC8B942A126}" Class="_HotAlarm">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="Lse"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{2497BFE1-EFCC-11D6-8BC9-0048545E8899}" Class="_MyIO">
+											<Channels>
+												<Server Name="Refresh"/>
+												<Server Name="Server0"/>
+												<Client Name="Graphic"/>
+												<Client Name="Lse"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="AlarmTxtLong" GUID="{5EB31482-0F18-4D18-B001-8216CBF0FC98}" Class="String">
+							<Channels>
+								<Server Name="Data">
+									<OPCSettings WriteProtected="false"/>
+								</Server>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="AlarmTxtShort" GUID="{0C162F6D-32B0-4CA0-A391-7CCBC1DD1379}" Class="String">
+							<Channels>
+								<Server Name="Data">
+									<OPCSettings WriteProtected="false"/>
+								</Server>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "Alarmhistory"
+			GUID       = "{A5E30942-5918-40B1-83AA-F61C66E66042}"
+			Class      = "_AlarmDisplay"
+			Position   = "(390,390)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Acknowledge">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="ActPos">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="Delete">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="NoActive"/>
+				<Server Name="Refresh">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="Server0">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="SortAlgorithm">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Client Name="Filter" Value="0"/>
+				<Client Name="HistoryTemporary" Value="0"/>
+				<Client Name="Lse"/>
+				<Client Name="MaxNo" Value="100"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{FC597408-EBE4-11D6-8BC9-0048545E8899}" Class="_ScrollArea">
+							<Channels>
+								<Server Name="ActPos"/>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="ExtendedScrollBar" Value="0"/>
+								<Client Name="LineHighness"/>
+								<Client Name="LineWidth" Value="1"/>
+								<Client Name="Lse"/>
+								<Client Name="VerticalLevel" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{17373B4C-4288-11D7-8BC9-0048545E8899}" Class="_MyIO">
+											<Channels>
+												<Server Name="Refresh"/>
+												<Server Name="Server0"/>
+												<Client Name="Graphic"/>
+												<Client Name="Lse"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AlarmTemp"
+			GUID       = "{C273C2E4-BAA6-462C-8FD4-3C1143B266B4}"
+			Class      = "_AlarmDisplay"
+			Position   = "(1140,390)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Acknowledge">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="ActPos">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="Delete">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="NoActive"/>
+				<Server Name="Refresh">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="Server0">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="SortAlgorithm">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Client Name="Filter" Value="2"/>
+				<Client Name="HistoryTemporary" Value="0"/>
+				<Client Name="Lse"/>
+				<Client Name="MaxNo" Value="100"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{FC597408-EBE4-11D6-8BC9-0048545E8899}" Class="_ScrollArea">
+							<Channels>
+								<Server Name="ActPos"/>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="ExtendedScrollBar" Value="0"/>
+								<Client Name="LineHighness"/>
+								<Client Name="LineWidth" Value="1"/>
+								<Client Name="Lse"/>
+								<Client Name="VerticalLevel" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{17373B4C-4288-11D7-8BC9-0048545E8899}" Class="_MyIO">
+											<Channels>
+												<Server Name="Refresh"/>
+												<Server Name="Server0"/>
+												<Client Name="Graphic"/>
+												<Client Name="Lse"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="AlarmClass1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="AlarmTemp.Lse" Destination="Lse.Lse"/>
+		<Connection Source="Alarmhistory.Lse" Destination="Lse.Lse"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

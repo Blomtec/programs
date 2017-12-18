@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="StdDiagnostic_ProjectInfo" Revision="1.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "ProjectInfo_DiagnosticStation"
+			GUID       = "{9B5FA38C-B7E5-4B1B-BEBD-8FDB45FBC770}"
+			Class      = "DiagnosticStation"
+			Position   = "(1500,210)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ID_Destination" Value="Diagnostic_ID_ProjectInfo_PLC1"/>
+				<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_HMI"/>
+				<Server Name="sStationName" Value="Diagnostic_StatName_PLC1"/>
+				<Server Name="sStatus"/>
+				<Client Name="cHandler"/>
+				<Client Name="cPrio" Value="Diagnostic_Prio"/>
+				<Client Name="cUserFunction"/>
+				<Client Name="toDataManager"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "DiagnosticWork"
+							GUID           = "{1C489665-23B0-47C3-9F1C-268A49EF14A2}"
+							Class          = "DiagnosticWork"
+							BackgroundTime = "2 ms">
+							<Channels>
+								<Server Name="sStationName" Value="Diagnostic_StatName_PLC1"/>
+								<Server Name="sStatus"/>
+								<Client Name="cHandler"/>
+								<Client Name="cToCom"/>
+								<Client Name="cUserFunction"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{0275C8C1-BFF4-47FF-8D16-80C43D2057D8}" Class="DiagnosticStationBase">
+											<Channels>
+												<Server Name="sStationName" Value="Diagnostic_StatName_PLC1"/>
+												<Server Name="sStatus"/>
+												<Client Name="cHandler"/>
+												<Client Name="cSigCLib"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="StationName" GUID="{F3C1D21E-38D5-4F80-A37C-C8C87F6C417B}" Class="String">
+															<Channels>
+																<Server Name="Data" Value="Diagnostic_StatName_PLC1"/>
+																<Client Name="SingleRealloc" Value="1"/>
+															</Channels>
+															<!-- List of Networks in this component -->
+															<Networks>
+																<Network>
+																	<!-- List of Components in this network -->
+																	<Components>
+																		<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+																			<Channels>
+																				<Server Name="Data"/>
+																				<Client Name="DataBuffer"/>
+																				<Client Name="SingleRealloc" Value="1"/>
+																			</Channels>
+																			<!-- List of Networks in this component -->
+																			<Networks>
+																				<Network>
+																					<!-- List of Components in this network -->
+																					<Components>
+																						<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+																							<Channels>
+																								<Server Name="Data"/>
+																							</Channels>
+																						</Object>
+																					</Components>
+																					<Connections>
+																					</Connections>
+																				</Network>
+																			</Networks>
+																		</Object>
+																		<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+																			<Channels>
+																				<Server Name="m_udLength"/>
+																				<Client Name="ThreadSafe" Value="0"/>
+																			</Channels>
+																		</Object>
+																	</Components>
+																	<Connections>
+																	</Connections>
+																</Network>
+															</Networks>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="ReceiveDataCMD" GUID="{452847E3-7F74-4B32-B1B6-17625C7D0408}" Class="ReceiveDataCMD">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_HMI"/>
+								<Server Name="sRecvCnt"/>
+								<Client Name="cDiagnosticWork"/>
+								<Client Name="toDataManager"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{36376179-82D0-47CC-9728-DD12C88F530D}" Class="TCPComReceive">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_HMI"/>
+												<Server Name="sRecvCnt"/>
+												<Client Name="toDataManager"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SendDataCMD" GUID="{E7D07C1C-2264-41C0-A3A5-AF174DDE1B3C}" Class="SendDataCMD">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="ID_Destination" Value="Diagnostic_ID_ProjectInfo_PLC1"/>
+								<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_HMI"/>
+								<Server Name="sSendCnt"/>
+								<Server Name="sSendErr"/>
+								<Client Name="cPrio" Value="Diagnostic_Prio"/>
+								<Client Name="cStation"/>
+								<Client Name="toDataManager"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{378DFD46-7C48-4C37-BD78-E70C694EA1DD}" Class="TCPComSend">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="ID_Destination" Value="Diagnostic_ID_ProjectInfo_PLC1"/>
+												<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_HMI"/>
+												<Server Name="sSendCnt"/>
+												<Server Name="sSendErr"/>
+												<Client Name="cPrio" Value="Diagnostic_Prio"/>
+												<Client Name="cSendErr"/>
+												<Client Name="cSendOk"/>
+												<Client Name="toDataManager"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "ProjectInfo_DiagnosticStation_Intern"
+			GUID       = "{1778EE83-5174-43E4-B0A1-7DFBB87CCBD9}"
+			Class      = "DiagnosticStation"
+			Position   = "(1500,750)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ID_Destination" Value="Diagnostic_ID_ProjectInfo_PLC1"/>
+				<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_HMI"/>
+				<Server Name="sStationName" Value="Diagnostic_StatName_HMI"/>
+				<Server Name="sStatus"/>
+				<Client Name="cHandler"/>
+				<Client Name="cPrio" Value="Diagnostic_Prio"/>
+				<Client Name="cUserFunction"/>
+				<Client Name="toDataManager"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "DiagnosticWork"
+							GUID           = "{1C489665-23B0-47C3-9F1C-268A49EF14A2}"
+							Class          = "DiagnosticWork"
+							BackgroundTime = "2 ms">
+							<Channels>
+								<Server Name="sStationName" Value="Diagnostic_StatName_HMI"/>
+								<Server Name="sStatus"/>
+								<Client Name="cHandler"/>
+								<Client Name="cToCom"/>
+								<Client Name="cUserFunction"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{0275C8C1-BFF4-47FF-8D16-80C43D2057D8}" Class="DiagnosticStationBase">
+											<Channels>
+												<Server Name="sStationName" Value="Diagnostic_StatName_HMI"/>
+												<Server Name="sStatus"/>
+												<Client Name="cHandler"/>
+												<Client Name="cSigCLib"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="StationName" GUID="{F3C1D21E-38D5-4F80-A37C-C8C87F6C417B}" Class="String">
+															<Channels>
+																<Server Name="Data" Value="Diagnostic_StatName_HMI"/>
+																<Client Name="SingleRealloc" Value="1"/>
+															</Channels>
+															<!-- List of Networks in this component -->
+															<Networks>
+																<Network>
+																	<!-- List of Components in this network -->
+																	<Components>
+																		<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+																			<Channels>
+																				<Server Name="Data"/>
+																				<Client Name="DataBuffer"/>
+																				<Client Name="SingleRealloc" Value="1"/>
+																			</Channels>
+																			<!-- List of Networks in this component -->
+																			<Networks>
+																				<Network>
+																					<!-- List of Components in this network -->
+																					<Components>
+																						<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+																							<Channels>
+																								<Server Name="Data"/>
+																							</Channels>
+																						</Object>
+																					</Components>
+																					<Connections>
+																					</Connections>
+																				</Network>
+																			</Networks>
+																		</Object>
+																		<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+																			<Channels>
+																				<Server Name="m_udLength"/>
+																				<Client Name="ThreadSafe" Value="0"/>
+																			</Channels>
+																		</Object>
+																	</Components>
+																	<Connections>
+																	</Connections>
+																</Network>
+															</Networks>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="ReceiveDataCMD" GUID="{452847E3-7F74-4B32-B1B6-17625C7D0408}" Class="ReceiveDataCMD">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_HMI"/>
+								<Server Name="sRecvCnt"/>
+								<Client Name="cDiagnosticWork"/>
+								<Client Name="toDataManager"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{36376179-82D0-47CC-9728-DD12C88F530D}" Class="TCPComReceive">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_HMI"/>
+												<Server Name="sRecvCnt"/>
+												<Client Name="toDataManager"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SendDataCMD" GUID="{E7D07C1C-2264-41C0-A3A5-AF174DDE1B3C}" Class="SendDataCMD">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="ID_Destination" Value="Diagnostic_ID_ProjectInfo_PLC1"/>
+								<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_HMI"/>
+								<Server Name="sSendCnt"/>
+								<Server Name="sSendErr"/>
+								<Client Name="cPrio" Value="Diagnostic_Prio"/>
+								<Client Name="cStation"/>
+								<Client Name="toDataManager"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{378DFD46-7C48-4C37-BD78-E70C694EA1DD}" Class="TCPComSend">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="ID_Destination" Value="Diagnostic_ID_ProjectInfo_PLC1"/>
+												<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_HMI"/>
+												<Server Name="sSendCnt"/>
+												<Server Name="sSendErr"/>
+												<Client Name="cPrio" Value="Diagnostic_Prio"/>
+												<Client Name="cSendErr"/>
+												<Client Name="cSendOk"/>
+												<Client Name="toDataManager"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "ProjectInfo_DiagnosticStation_PLC_Intern"
+			GUID       = "{FD4D408C-E3D2-44ED-9D8F-5DB5EE493450}"
+			Class      = "DiagnosticStation_PLC"
+			Position   = "(1500,1290)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ID_Destination" Value="Diagnostic_ID_ProjectInfo_HMI"/>
+				<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_PLC1"/>
+				<Client Name="cPrio" Value="Diagnostic_Prio"/>
+				<Client Name="cUserFunction"/>
+				<Client Name="toDataManager"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object
+							Name           = "DiagnosticWork_PLC"
+							GUID           = "{45D5BA62-870C-4341-8B70-23D56B40F7FD}"
+							Class          = "DiagnosticWork_PLC"
+							BackgroundTime = "2 ms">
+							<Channels>
+								<Server Name="sStatus"/>
+								<Client Name="cToCom"/>
+								<Client Name="cUserFunction"/>
+							</Channels>
+						</Object>
+						<Object Name="ReceiveDataCMD_PLC" GUID="{FD751422-E71E-4784-94E9-A8E18ABC1542}" Class="ReceiveDataCMD_PLC">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_PLC1"/>
+								<Server Name="sRecvCnt"/>
+								<Client Name="cDiagnosticWork_PLC"/>
+								<Client Name="toDataManager"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{083EA123-3A46-4BD2-8E09-408CBDC6E337}" Class="TCPComReceive">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_PLC1"/>
+												<Server Name="sRecvCnt"/>
+												<Client Name="toDataManager"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="SendDataCMD_PLC" GUID="{26CF3FC7-2E0D-468E-AF62-B47BB6B4CFA7}" Class="SendDataCMD_PLC">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="ID_Destination" Value="Diagnostic_ID_ProjectInfo_HMI"/>
+								<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_PLC1"/>
+								<Server Name="sSendCnt"/>
+								<Server Name="sSendErr"/>
+								<Client Name="cPrio" Value="Diagnostic_Prio"/>
+								<Client Name="cStation"/>
+								<Client Name="toDataManager"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{D22D053D-E905-4B19-AE01-2DF9E3CB9D4F}" Class="TCPComSend">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="ID_Destination" Value="Diagnostic_ID_ProjectInfo_HMI"/>
+												<Server Name="ID_Source" Value="Diagnostic_ID_ProjectInfo_PLC1"/>
+												<Server Name="sSendCnt"/>
+												<Server Name="sSendErr"/>
+												<Client Name="cPrio" Value="Diagnostic_Prio"/>
+												<Client Name="cSendErr"/>
+												<Client Name="cSendOk"/>
+												<Client Name="toDataManager"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "ProjectInfo_Handler"
+			GUID           = "{A1E345F1-4884-447E-A9BC-AC504F44BB00}"
+			Class          = "DiagnosticStationHandler"
+			Position       = "(450,210)"
+			Visualized     = "false"
+			BackgroundTime = "2 ms">
+			<Channels>
+				<Server Name="sFuctionname" Value="Diagnostic_FktName_ProjectInfo"/>
+				<Server Name="sStatus"/>
+				<Client Name="cDiagnostic"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{4D673167-D65C-4D95-BB87-17F4CDE0666E}" Class="DiagnosticStationHandlerBase">
+							<Channels>
+								<Server Name="sFuctionname" Value="Diagnostic_FktName_ProjectInfo"/>
+								<Server Name="sStatus"/>
+								<Client Name="cDiagnostic"/>
+								<Client Name="cFileSys"/>
+								<Client Name="cSigCLib"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="FunctionName" GUID="{455F930D-3CC7-4654-A904-7F98F4BA6070}" Class="String">
+											<Channels>
+												<Server Name="Data" Value="Diagnostic_FktName_ProjectInfo"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+															<Channels>
+																<Server Name="Data"/>
+																<Client Name="DataBuffer"/>
+																<Client Name="SingleRealloc" Value="1"/>
+															</Channels>
+															<!-- List of Networks in this component -->
+															<Networks>
+																<Network>
+																	<!-- List of Components in this network -->
+																	<Components>
+																		<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+																			<Channels>
+																				<Server Name="Data"/>
+																			</Channels>
+																		</Object>
+																	</Components>
+																	<Connections>
+																	</Connections>
+																</Network>
+															</Networks>
+														</Object>
+														<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+															<Channels>
+																<Server Name="m_udLength"/>
+																<Client Name="ThreadSafe" Value="0"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "ProjectInfo_Intern"
+			GUID       = "{216BF853-F463-40DE-923A-F70F26610247}"
+			Class      = "ProjectInfo_User"
+			Position   = "(450,870)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="sStatus"/>
+				<Client Name="cFileSys"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8252D454-0127-40F3-ADAD-C5346A5346C2}" Class="DiagnosticUserFunction">
+							<Channels>
+								<Server Name="sStatus"/>
+								<Client Name="cSigCLib"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "ProjectInfo_PLC"
+			GUID       = "{63AB1E4B-FA81-407C-A7ED-8997620DC05E}"
+			Class      = "ProjectInfo_User"
+			Position   = "(450,480)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="sStatus"/>
+				<Client Name="cFileSys"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8252D454-0127-40F3-ADAD-C5346A5346C2}" Class="DiagnosticUserFunction">
+							<Channels>
+								<Server Name="sStatus"/>
+								<Client Name="cSigCLib"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "ProjectInfo_UserPLC_Inter"
+			GUID       = "{B9D0B93D-B707-4E09-8898-221B45349223}"
+			Class      = "ProjectInfo_UserPLC"
+			Position   = "(570,1350)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="sStatus"/>
+				<Client Name="cSigCLib"/>
+				<Client Name="cStdLib"/>
+				<Client Name="ocLinker"/>
+				<Client Name="ocProjectName"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{CBEE3422-7392-464F-BE0C-977EECD8C22B}" Class="DiagnosticUserFunction_PLC">
+							<Channels>
+								<Server Name="sStatus"/>
+							</Channels>
+						</Object>
+						<Object Name="ASCII_BIN" GUID="{E093BA51-C234-4214-BEE7-27F6CF65A0F4}" Class="ASCII_BIN">
+							<Channels>
+								<Server Name="Obj_channel"/>
+							</Channels>
+						</Object>
+						<Object Name="SCL_GetClassVersion" GUID="{00F73829-9D51-4FEA-A1D6-89C5E7012C42}" Class="SCL_GetClassVersion">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Client Name="cConvert"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="ProjectInfo_Handler.cDiagnostic" Destination="Diagnostic.sStatus"/>
+		<Connection Source="ProjectInfo_DiagnosticStation.toDataManager" Destination="DataManagerToPLC1.ClassSvr"/>
+		<Connection Source="ProjectInfo_DiagnosticStation.cHandler" Destination="ProjectInfo_Handler.sStatus" Vertices="(1500,300),(976,300),"/>
+		<Connection Source="ProjectInfo_DiagnosticStation_Intern.cUserFunction" Destination="ProjectInfo_Intern.sStatus" Vertices="(1500,960),(886,960),"/>
+		<Connection Source="ProjectInfo_DiagnosticStation_Intern.cHandler" Destination="ProjectInfo_Handler.sStatus" Vertices="(1500,840),(1042,840),(1042,300),(976,300),"/>
+		<Connection Source="ProjectInfo_DiagnosticStation.cUserFunction" Destination="ProjectInfo_PLC.sStatus" Vertices="(1500,420),(1410,420),(1410,570),(886,570),"/>
+		<Connection Source="ProjectInfo_DiagnosticStation_Intern.toDataManager" Destination="DataManagerInternToPLC.ClassSvr"/>
+		<Connection Source="ProjectInfo_DiagnosticStation_PLC_Intern.cUserFunction" Destination="ProjectInfo_UserPLC_Inter.sStatus" Vertices="(1500,1440),(1008,1440),"/>
+		<Connection Source="ProjectInfo_UserPLC_Inter.ocProjectName" Destination="PLCInfo1.ApplicationName"/>
+		<Connection Source="ProjectInfo_DiagnosticStation_PLC_Intern.toDataManager" Destination="DataManagerInternToHMI.ClassSvr"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+	<RevDoku>
+		<Owner/>
+		<Dokumentation Revision="1.0" Date="2016-05-25" Company="Sigmatek" Description="start release"/>
+	</RevDoku>
+</Network>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<SlnStation Name="Screen" OnlineConnection="10.10.150.10" Color="9811536">
+	<OnlineConnectionInfo>
+		<TCPIP ConfigName="10.10.150.10" BUS="3" Password="" IP="10.10.150.10" PORT="1954" SomeFlags="0" PLCID="" Repeater="0"/>
+	</OnlineConnectionInfo>
+	<SlnProjects>
+		<SlnClassProject Name="LseClass170718" File=".\LseClass170718\LseClass170718.lcp">
+		</SlnClassProject>
+	</SlnProjects>
+</SlnStation>

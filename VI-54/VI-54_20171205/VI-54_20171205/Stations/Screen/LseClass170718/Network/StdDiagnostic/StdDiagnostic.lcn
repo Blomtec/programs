@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="StdDiagnostic" Revision="1.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name           = "Diagnostic"
+			GUID           = "{1D6D984E-06F6-4A91-B6BE-429EA9F2C082}"
+			Class          = "Diagnostic"
+			Position       = "(472,540)"
+			Visualized     = "true"
+			BackgroundTime = "2 ms">
+			<Channels>
+				<Server Name="sLogError" Value="1"/>
+				<Server Name="sProgress"/>
+				<Server Name="sStartExport"/>
+				<Server Name="sStatus"/>
+				<Server Name="sTraceError" Value="1"/>
+				<Client Name="cDriveLetter"/>
+				<Client Name="cSystemLogging"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{43731DC2-6631-4410-93D8-FFD32AC79AAD}" Class="DiagnosticBase">
+							<Channels>
+								<Server Name="sLogError" Value="1"/>
+								<Server Name="sProgress"/>
+								<Server Name="sStartExport"/>
+								<Server Name="sStatus"/>
+								<Server Name="sTraceError" Value="1"/>
+								<Client Name="cDriveLetter"/>
+								<Client Name="cFileSys"/>
+								<Client Name="cSigCLib"/>
+								<Client Name="cSystemLogging"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+		<Comment Position="(270,60)" Size="(1080,450)" Text="Hier melden sich die einzelnen Diagnosebestandteile an -&#13;&#10;z.B.: SystemLogFiles, UserFilesFolder, RetentiveData, SystemInformation, Projektinformation&#13;&#10;&#13;&#10;&#13;&#10;Wird auf sStartExport geschrieben, wird nachgesehen wer angemeldet ist und diese hintereinander aufgerufen (sStatus = Busy).&#13;&#10;&#13;&#10;Erst wenn alle fertig sind, wird der Server sStatus auf Ready gesetzt.&#13;&#10;"/>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="Diagnostic.cDriveLetter" Destination="USBDetection1.DriveLetter"/>
+		<Connection Source="Diagnostic.cSystemLogging" Destination="SystemLogging1.ClassSvr"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+	<RevDoku>
+		<Owner/>
+		<Dokumentation Revision="1.0" Date="2016-05-25" Company="Sigmatek" Description="start release"/>
+	</RevDoku>
+</Network>

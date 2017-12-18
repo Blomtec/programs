@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Conveyors" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "InfeedConv"
+			GUID       = "{CC4E295B-03A5-4D0D-8CB0-FA5FEB3A333E}"
+			Class      = "InfeedBelt"
+			Position   = "(1770,270)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="AxleInfeedError"/>
+				<Server Name="AxleInfeedState"/>
+				<Server Name="ObjectServer"/>
+				<Server Name="RunningMode"/>
+				<Server Name="StationNbr"/>
+				<Server Name="Stepper"/>
+				<Client Name="AxleInfeed"/>
+				<Client Name="NextBelt" Value="0"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{37EE7D66-408C-4765-A6B6-481D3F1CCCC8}" Class="MachineBase">
+							<Channels>
+								<Server Name="ObjectServer"/>
+								<Server Name="Runningmode"/>
+								<Server Name="Stepper"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="Standaard" GUID="{C476F815-28DA-449B-9BCA-D79F5F9539BE}" Class="Standard">
+											<Channels>
+												<Server Name="ClassSvr"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+															<Channels>
+																<Server Name="ClassSvr"/>
+																<Server Name="LogID"/>
+																<Client Name="ToGrafix"/>
+																<Client Name="ToLinker"/>
+																<Client Name="ToSigCLib"/>
+																<Client Name="ToSysMsg"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "OutfeedConv"
+			GUID       = "{A0BD05BC-3879-4998-9DCE-BE8D958987CF}"
+			Class      = "InfeedBelt"
+			Position   = "(1770,1980)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="AxleInfeedError"/>
+				<Server Name="AxleInfeedState"/>
+				<Server Name="ObjectServer"/>
+				<Server Name="RunningMode"/>
+				<Server Name="StationNbr"/>
+				<Server Name="Stepper"/>
+				<Client Name="AxleInfeed"/>
+				<Client Name="NextBelt"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{37EE7D66-408C-4765-A6B6-481D3F1CCCC8}" Class="MachineBase">
+							<Channels>
+								<Server Name="ObjectServer"/>
+								<Server Name="Runningmode"/>
+								<Server Name="Stepper"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="Standaard" GUID="{C476F815-28DA-449B-9BCA-D79F5F9539BE}" Class="Standard">
+											<Channels>
+												<Server Name="ClassSvr"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+															<Channels>
+																<Server Name="ClassSvr"/>
+																<Server Name="LogID"/>
+																<Client Name="ToGrafix"/>
+																<Client Name="ToLinker"/>
+																<Client Name="ToSigCLib"/>
+																<Client Name="ToSysMsg"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "RejectorConv"
+			GUID       = "{6CE4F038-DF2D-4409-BE1A-98422B168B7B}"
+			Class      = "InfeedBelt"
+			Position   = "(1770,840)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="AxleInfeedError"/>
+				<Server Name="AxleInfeedState"/>
+				<Server Name="ObjectServer"/>
+				<Server Name="RunningMode"/>
+				<Server Name="StationNbr"/>
+				<Server Name="Stepper"/>
+				<Client Name="AxleInfeed"/>
+				<Client Name="NextBelt" Value="0"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{37EE7D66-408C-4765-A6B6-481D3F1CCCC8}" Class="MachineBase">
+							<Channels>
+								<Server Name="ObjectServer"/>
+								<Server Name="Runningmode"/>
+								<Server Name="Stepper"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="Standaard" GUID="{C476F815-28DA-449B-9BCA-D79F5F9539BE}" Class="Standard">
+											<Channels>
+												<Server Name="ClassSvr"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+															<Channels>
+																<Server Name="ClassSvr"/>
+																<Server Name="LogID"/>
+																<Client Name="ToGrafix"/>
+																<Client Name="ToLinker"/>
+																<Client Name="ToSigCLib"/>
+																<Client Name="ToSysMsg"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "Y_Conveyor"
+			GUID       = "{F0738733-E03F-42BD-9DA2-23F91C7319F7}"
+			Class      = "InfeedBelt"
+			Position   = "(1770,1410)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="AxleInfeedError"/>
+				<Server Name="AxleInfeedState"/>
+				<Server Name="ObjectServer"/>
+				<Server Name="RunningMode"/>
+				<Server Name="StationNbr"/>
+				<Server Name="Stepper"/>
+				<Client Name="AxleInfeed"/>
+				<Client Name="NextBelt" Value="0"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{37EE7D66-408C-4765-A6B6-481D3F1CCCC8}" Class="MachineBase">
+							<Channels>
+								<Server Name="ObjectServer"/>
+								<Server Name="Runningmode"/>
+								<Server Name="Stepper"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="Standaard" GUID="{C476F815-28DA-449B-9BCA-D79F5F9539BE}" Class="Standard">
+											<Channels>
+												<Server Name="ClassSvr"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+															<Channels>
+																<Server Name="ClassSvr"/>
+																<Server Name="LogID"/>
+																<Client Name="ToGrafix"/>
+																<Client Name="ToLinker"/>
+																<Client Name="ToSigCLib"/>
+																<Client Name="ToSysMsg"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+		<Comment Position="(1800,150)" Size="(780,90)" Text="Conveyors of the machine"/>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="InfeedConv.AxleInfeed" Destination="_LMCAxis_InfeedConv.Control"/>
+		<Connection Source="Y_Conveyor.AxleInfeed" Destination="_LMCAxis_Y_Conveyor.Control"/>
+		<Connection Source="RejectorConv.AxleInfeed" Destination="_LMCAxis_RejectorConv.Control"/>
+		<Connection Source="OutfeedConv.AxleInfeed" Destination="_LMCAxis_OutfeedConv.Control"/>
+		<Connection Source="InfeedConv.NextBelt" Destination="RejectorConv.ObjectServer" Vertices="(1770,420),(1680,420),(1680,780),(2670,780),(2670,930),(2596,930),"/>
+		<Connection Source="RejectorConv.NextBelt" Destination="Y_Conveyor.ObjectServer" Vertices="(1770,990),(1680,990),(1680,1350),(2670,1350),(2670,1500),(2596,1500),"/>
+		<Connection Source="Y_Conveyor.NextBelt" Destination="OutfeedConv.ObjectServer" Vertices="(1770,1560),(1680,1560),(1680,1920),(2670,1920),(2670,2070),(2596,2070),"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

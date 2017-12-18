@@ -1,0 +1,48 @@
+#Synadia_V10
+
+# osx noise
+.DS_Store
+profile
+
+# General
+Thumbs.db
+
+# Sigmacontrol
+*.lob
+#!/**/class/**/*.lob
+#!/**/Source/cppcode/*.lob
+!/**/Network/*.lob
+*.xml
+!/**/Drive/**/.xml
+!/**/Network/*.xml
+*.lcb
+*.bin
+*.mme
+/**/Network/ConfigObjects.st
+/**/Network/**/*.st
+*.ldi
+*.lcc
+*.lwl
+*.tmp
+*.lock
+*.lba
+/**/*.ini
+/**/FilesStates.lse
+/**/LoadDocuments.lse
+!/**/*.ram
+
+
+# xcode noise
+build/*
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
+
+# svn & cvs
+.svn
+CVS

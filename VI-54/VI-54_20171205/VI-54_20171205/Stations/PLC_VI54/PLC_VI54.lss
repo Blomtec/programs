@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<SlnStation Name="PLC_VI54" OnlineConnection="StandaardPLC" Color="12813661">
+	<OnlineConnectionInfo>
+		<TCPIP ConfigName="StandaardPLC" BUS="3" Password="" IP="10.10.150.1" PORT="1954" SomeFlags="0" PLCID="" Repeater="0"/>
+	</OnlineConnectionInfo>
+	<SlnProjects>
+		<SlnClassProject Name="VI-54_171014" File=".\VI-54_171014\VI-54_171014.lcp">
+		</SlnClassProject>
+	</SlnProjects>
+</SlnStation>

@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="StdAccessControlExtended" Revision="1.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "_BitAccessTitle"
+			GUID       = "{239C3136-7F5C-4869-9663-5DDDD0BE8277}"
+			Class      = "_Bit32"
+			Position   = "(90,1560)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="Data" Value="2#111111"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "AccessControlLoginHelp"
+			GUID       = "{34A229D9-A1B2-4B81-A088-559DC9535352}"
+			Class      = "AccessControlList"
+			Position   = "(1680,630)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="SelectFunction"/>
+				<Server Name="Server0"/>
+				<Server Name="UpdateList"/>
+				<Server Name="UserUsbLinked"/>
+				<Server Name="Visible"/>
+				<Client Name="coAccessControl"/>
+				<Client Name="coSystemLogging"/>
+				<Client Name="LineWidth" Value="0"/>
+				<Client Name="Lse"/>
+				<Client Name="Mode" Value="1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{9977A37A-76E1-432E-A867-1BB798F38617}" Class="_ScrollArea2">
+							<Channels>
+								<Server Name="ActPos"/>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="ExtendedScrollBar" Value="0"/>
+								<Client Name="LineHighness"/>
+								<Client Name="LineWidth" Value="0"/>
+								<Client Name="Lse"/>
+								<Client Name="VerticalLevel" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{320FDD86-597C-43AD-A600-2F311A5C5FC2}" Class="_ScrollArea">
+											<Channels>
+												<Server Name="ActPos"/>
+												<Server Name="Refresh"/>
+												<Server Name="Server0"/>
+												<Client Name="ExtendedScrollBar" Value="0"/>
+												<Client Name="LineHighness"/>
+												<Client Name="LineWidth" Value="0"/>
+												<Client Name="Lse"/>
+												<Client Name="VerticalLevel" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{17373B4C-4288-11D7-8BC9-0048545E8899}" Class="_MyIO">
+															<Channels>
+																<Server Name="Refresh"/>
+																<Server Name="Server0"/>
+																<Client Name="Graphic"/>
+																<Client Name="Lse"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="Dummy" GUID="{F5EC8281-4317-4ED1-A70C-205EA8149617}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AccessControlMain1"
+			GUID       = "{B4E7E846-9555-46EA-8A8A-91F071CEDFB5}"
+			Class      = "AccessControlMain"
+			Position   = "(540,210)"
+			Visualized = "true"
+			Remotely   = "true"
+			RealTime   = "1 ms">
+			<Channels>
+				<Server Name="ActLevel"/>
+				<Server Name="ActUser"/>
+				<Server Name="CopyUserFile"/>
+				<Server Name="EInfo"/>
+				<Server Name="ELevel"/>
+				<Server Name="EPassword"/>
+				<Server Name="EPassword2"/>
+				<Server Name="EPasswordOld"/>
+				<Server Name="ETimeOut"/>
+				<Server Name="EUsbSN"/>
+				<Server Name="EUserName"/>
+				<Server Name="LoggedInWithUsb"/>
+				<Server Name="LPassword" Value="0"/>
+				<Server Name="LUserName"/>
+				<Server Name="MSGNr"/>
+				<Server Name="NextScreen"/>
+				<Server Name="SelectFunction"/>
+				<Server Name="Server0"/>
+				<Server Name="UserFile"/>
+				<Server Name="UserIsLoggedIn"/>
+				<Client Name="AccessConfig" Value="0"/>
+				<Client Name="ActScreenNr"/>
+				<Client Name="coDriveLetter"/>
+				<Client Name="coEventQueue"/>
+				<Client Name="coFileSys"/>
+				<Client Name="coGlobal"/>
+				<Client Name="coSystem"/>
+				<Client Name="coSystemLogging"/>
+				<Client Name="Deactivate"/>
+				<Client Name="Lse"/>
+				<Client Name="RefreshList"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8005E018-7B4A-4188-9852-0A318F5B3C83}" Class="_Global">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+						<Object Name="StrActUser" GUID="{1B803DCB-2376-45FB-B870-33B2941EB6E4}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StrEditInfo" GUID="{7AE4601E-7C0E-4B98-9FAE-154D0AC7622D}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StrEditPassword" GUID="{6357ED1B-6D36-45F1-86E4-5BC76B2C562A}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StrEditPassword2" GUID="{4AD4D94F-791D-499E-BC7A-D60EBDEE4ABA}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StrEditPasswordOld" GUID="{6D0599E8-293F-4EB4-B2D3-4FA402CEFC05}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StrEditUsbSN" GUID="{B42CFCF6-D3EB-4ED1-85B9-D31E0A6FF116}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StrEditUserName" GUID="{D89E4404-D5E5-4B0C-98BC-A886F3BF376D}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StrLoginPassword" GUID="{B4830AE8-893B-488C-A2E6-89F745D42EC1}" Class="String">
+							<Channels>
+								<Server Name="Data" Value="0"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StrLoginUserName" GUID="{54806AE7-2519-4475-9F81-BB64E7FBDBD8}" Class="String">
+							<Channels>
+								<Server Name="Data" Value="0"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="StrUserFile" GUID="{179FDEAC-8007-4279-BC94-5ACC0AF9E553}" Class="String">
+							<Channels>
+								<Server Name="Data" Value="&quot;C:\&quot;"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AccessControlUSBDetection1"
+			GUID       = "{0C5726D9-934B-4D1B-87C9-DE6DCB57D789}"
+			Class      = "AccessControlUSBDetection"
+			Position   = "(1680,1050)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="Server0"/>
+				<Client Name="cFileSys"/>
+				<Client Name="coAccessControl"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{56E9436D-D72C-443B-9EF7-926E2A8F6D47}" Class="_Global">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AccessControlUsermanagement"
+			GUID       = "{87C7F4F5-D326-4D34-B020-705B701D41D2}"
+			Class      = "AccessControlList"
+			Position   = "(1680,210)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="SelectFunction"/>
+				<Server Name="Server0"/>
+				<Server Name="UpdateList"/>
+				<Server Name="UserUsbLinked"/>
+				<Server Name="Visible"/>
+				<Client Name="coAccessControl"/>
+				<Client Name="coSystemLogging"/>
+				<Client Name="LineWidth" Value="0"/>
+				<Client Name="Lse"/>
+				<Client Name="Mode" Value="0"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{9977A37A-76E1-432E-A867-1BB798F38617}" Class="_ScrollArea2">
+							<Channels>
+								<Server Name="ActPos"/>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="ExtendedScrollBar" Value="0"/>
+								<Client Name="LineHighness" Value="25"/>
+								<Client Name="LineWidth" Value="0"/>
+								<Client Name="Lse"/>
+								<Client Name="VerticalLevel" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{320FDD86-597C-43AD-A600-2F311A5C5FC2}" Class="_ScrollArea">
+											<Channels>
+												<Server Name="ActPos"/>
+												<Server Name="Refresh"/>
+												<Server Name="Server0"/>
+												<Client Name="ExtendedScrollBar" Value="0"/>
+												<Client Name="LineHighness" Value="25"/>
+												<Client Name="LineWidth" Value="0"/>
+												<Client Name="Lse"/>
+												<Client Name="VerticalLevel" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{17373B4C-4288-11D7-8BC9-0048545E8899}" Class="_MyIO">
+															<Channels>
+																<Server Name="Refresh"/>
+																<Server Name="Server0"/>
+																<Client Name="Graphic"/>
+																<Client Name="Lse"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="Dummy" GUID="{F5EC8281-4317-4ED1-A70C-205EA8149617}" Class="String">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{B9D2D328-1416-469A-BE13-9F6CBBB1958D}" Class="StringInternal">
+											<Channels>
+												<Server Name="Data"/>
+												<Client Name="DataBuffer"/>
+												<Client Name="SingleRealloc" Value="1"/>
+											</Channels>
+											<!-- List of Networks in this component -->
+											<Networks>
+												<Network>
+													<!-- List of Components in this network -->
+													<Components>
+														<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+															<Channels>
+																<Server Name="Data"/>
+															</Channels>
+														</Object>
+													</Components>
+													<Connections>
+													</Connections>
+												</Network>
+											</Networks>
+										</Object>
+										<Object Name="MerkerEx0" GUID="{53955FF7-8ABE-4B49-B914-227100C3FDEF}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "AccessTitle"
+			GUID       = "{306B0D30-35C0-4166-BDC4-78B7AEEDD59C}"
+			Class      = "TitleLine"
+			Position   = "(540,1500)"
+			Visualized = "true">
+			<Channels>
+				<Server Name="Refresh"/>
+				<Server Name="Server0"/>
+				<Client Name="ColumnChoice"/>
+				<Client Name="coSystemLogging"/>
+				<Client Name="Lse"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{963E5410-E12F-4EDF-9EAB-DAFD7C99C40A}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "PlcOnline1"
+			GUID           = "{6B94B7C1-0B53-44EA-87FC-86D3B1E49309}"
+			Class          = "PlcOnline"
+			Position       = "(1680,1830)"
+			Visualized     = "false"
+			BackgroundTime = "cBT">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="WindowNbr" Value="UC_OFFLINEWINDOW"/>
+				<Client Name="ActWindow"/>
+				<Client Name="LogOut"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "SleegersControl1"
+			GUID       = "{6BD7F9AB-75B8-4569-8506-A7E475F8C28E}"
+			Class      = "SleegersControl"
+			Position   = "(1680,1320)"
+			Visualized = "true"
+			CyclicTime = "500 µs">
+			<Channels>
+				<Server Name="BackToOldScreen"/>
+				<Server Name="CarButtonHw"/>
+				<Server Name="CarRecipes"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="Index"/>
+				<Server Name="OffsetCaroucelHw"/>
+				<Server Name="ScrollBar"/>
+				<Client Name="coAccessControlMain"/>
+				<Client Name="CommTerminal"/>
+				<Client Name="NewScreen"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="AccessTitle.ColumnChoice" Destination="_BitAccessTitle.Data" Vertices="(540,1650),(390,1650),"/>
+		<Connection Source="AccessControlLoginHelp.Lse" Destination="Lse.Lse"/>
+		<Connection Source="AccessControlUsermanagement.coSystemLogging" Destination="SystemLogging1.ClassSvr"/>
+		<Connection Source="AccessControlLoginHelp.coSystemLogging" Destination="SystemLogging1.ClassSvr"/>
+		<Connection Source="AccessTitle.coSystemLogging" Destination="SystemLogging1.ClassSvr"/>
+		<Connection Source="AccessControlMain1.coDriveLetter" Destination="USBDetection1.DriveLetter"/>
+		<Connection Source="AccessControlMain1.ActScreenNr" Destination="GlobalScreen1.ActScreen"/>
+		<Connection Source="AccessControlMain1.coGlobal" Destination="GlobalScreen1.Server0"/>
+		<Connection Source="AccessControlMain1.RefreshList" Destination="AccessControlUsermanagement.UpdateList" Vertices="(540,780),(120,780),(120,120),(2370,120),(2370,360),(2266,360),"/>
+		<Connection Source="AccessTitle.Lse" Destination="Lse.Lse"/>
+		<Connection Source="AccessControlMain1.coEventQueue" Destination="EventQueue1.ClassSvr"/>
+		<Connection Source="AccessControlMain1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="AccessControlUsermanagement.Lse" Destination="Lse.Lse"/>
+		<Connection Source="AccessControlUSBDetection1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="AccessControlUsermanagement.coAccessControl" Destination="AccessControlMain1.Server0" Vertices="(1680,480),(1230,480),(1230,300),(1098,300),"/>
+		<Connection Source="AccessControlLoginHelp.coAccessControl" Destination="AccessControlMain1.Server0" Vertices="(1680,900),(1230,900),(1230,300),(1098,300),"/>
+		<Connection Source="AccessControlMain1.coSystemLogging" Destination="SystemLogging1.ClassSvr"/>
+		<Connection Source="AccessControlUSBDetection1.coAccessControl" Destination="AccessControlMain1.Server0" Vertices="(1680,1260),(1230,1260),(1230,300),(1098,300),"/>
+		<Connection Source="SleegersControl1.coAccessControlMain" Destination="AccessControlMain1.Server0" Vertices="(1680,1410),(1230,1410),(1230,300),(1098,300),"/>
+		<Connection Source="SleegersControl1.NewScreen" Destination="TerminalControl1.SelectScreen"/>
+		<Connection Source="SleegersControl1.CommTerminal" Destination="TerminalControl1.Server0"/>
+		<Connection Source="PlcOnline1.ActWindow" Destination="TerminalControl1.ActWindowNbr"/>
+		<Connection Source="PlcOnline1.LogOut" Destination="AccessControlMain1.SelectFunction" Vertices="(1680,1980),(1230,1980),(1230,360),(1098,360),"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+	<RevDoku>
+		<Owner Company="Sigmatek"/>
+		<Dokumentation Revision="1.0" Date="2016-05-25" Company="Sigmatek" Description="start release"/>
+	</RevDoku>
+</Network>

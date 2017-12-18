@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Project
+	Version            = "11"
+	Name               = "VI-54_171014"
+	OnlineConnection   = "StandaardPLC"
+	SolutionType       = "Large"
+	WriteSrvListOnSave = "true"
+	CLASSType          = "true">
+	<OnlineConnectionInfo>
+		<TCPIP ConfigName="StandaardPLC" BUS="3" Password="" IP="10.10.150.1" PORT="1954" SomeFlags="0" PLCID="" Repeater="0"/>
+	</OnlineConnectionInfo>
+	<HeaderFiles>
+		<File Path=".\Include\unit.h"/>
+		<File Path=".\Include\global.h"/>
+		<File Path=".\Include\UserDef.h"/>
+		<File Path=".\Include\types.h"/>
+		<File Path=".\Include\channels.h"/>
+		<File Path=".\Include\C_global.h"/>
+		<File Path=".\Include\C_types.h"/>
+		<File Path=".\Include\C_channels.h"/>
+		<File Path=".\Include\lslpublictypes.h"/>
+		<File Path=".\lsl_st_varan.h" Global="true"/>
+		<File Path=".\lsl_st_pci.h"/>
+		<File Path=".\Class\VaranManager_Base\VaranManager_Base.h" Global="true"/>
+		<File Path=".\lsl_st_hardwaretree.h"/>
+		<File Path=".\lsl_st_mt.h"/>
+		<File Path=".\Class\HwControl\HwControl.h"/>
+		<File Path=".\lsl_st_systrace.h"/>
+		<File Path=".\SystemTypes.h" Global="true"/>
+		<File Path=".\Source\code\OsiBaseNew.h"/>
+		<File Path=".\File_IOTypes.h" Global="true"/>
+		<File Path=".\MultiTaskTypes.h" Global="true"/>
+		<File Path=".\Class\StringInternal\StringDefs.h" Global="true"/>
+		<File Path=".\Source\code\Global_Functions\H_Get_ptr_on_Obj.h" Global="true"/>
+		<File Path=".\LinkerTypes.h" Global="true"/>
+		<File Path=".\St_grconst.h" Global="true"/>
+		<File Path=".\St_graph.h" Global="true"/>
+		<File Path=".\Class\Ram\Ram.h" Global="true"/>
+		<File Path=".\SysMsgTypes.h" Global="true"/>
+		<File Path=".\Class\SigCLib\SigCLib.h"/>
+		<File Path=".\Class\SigCLib\SigCLibNew.h"/>
+		<File Path=".\Class\SigCLib\CStrLib.h"/>
+		<File Path=".\Class\SigCLib\CTimeLib.h"/>
+		<File Path=".\Class\SigCLib\CSortLib.h"/>
+		<File Path=".\Class\SigCLib\CFileLib.h"/>
+		<File Path=".\Class\SigCLib\CMemLib.h"/>
+		<File Path=".\Class\SigCLib\CNetworkLib.h"/>
+		<File Path=".\Class\SigCLib\DefineCompiler.h"/>
+		<File Path=".\Class\SigCLib\CMathLib.h"/>
+		<File Path=".\Class\SigCLib\CCrcLib.h"/>
+		<File Path=".\Class\SigCLib\CStrLib16.h"/>
+		<File Path=".\Class\SigCLib\CStrLibIntern.h"/>
+		<File Path=".\Class\SCBase\SCBaseGl.h" Global="true"/>
+		<File Path=".\Class\SigCLib\CStdLib.h"/>
+		<File Path=".\Class\SigCLib\CPlcOnline.h"/>
+		<File Path=".\Class\SigCLib\CSysLib.h"/>
+		<File Path=".\Class\_LMCAxisBase\C_MathAxis.h"/>
+		<File Path=".\Class\_LMCAxisBase\_LMCTraceView.h"/>
+		<File Path=".\Class\_LMCMathFunctions\C_MathFunct.h"/>
+		<File Path=".\Class\MyEasy_Filter\FilterSetting.h"/>
+		<File Path=".\Class\_DriveMngBase\SDDDefinitions.h"/>
+		<File Path=".\Class\_DriveMngBase\DriveComL2.h" Global="true"/>
+		<File Path=".\class\_drivemngbase\drivemngbase.h"/>
+		<File Path=".\Class\_AlarmXBuffer\AlarmXBuffer.h"/>
+		<File Path=".\Class\_AlarmX0Para\_AlarmX0Para.h"/>
+		<File Path=".\Class\SigCLib\CAtomic.h"/>
+		<File Path=".\Class\StringBase\AsciiChar.h" Global="true"/>
+		<File Path=".\lsl_st_tcp_user.h" Global="true"/>
+		<File Path=".\Class\_TCPIP_CLIENT\_TCPIP_CLIENT.h" Global="true"/>
+		<File Path=".\Class\DiasMasterC\MasterSettings.h" Global="true"/>
+		<File Path=".\Class\DiasMaster\DIASMaster.h" Global="true"/>
+		<File Path=".\lsl_st_cdias.h" Global="true"/>
+		<File Path=".\LSL_STITask.h" Global="true"/>
+		<File Path=".\Class\DiasMasterMain\DiasMasterMain.h"/>
+		<File Path=".\Class\I2CCDIAS\EEFuncDef.h" Global="true"/>
+		<File Path=".\Class\VaranManager\VaranManager.h"/>
+		<File Path=".\lsl_st_kernel.h"/>
+		<File Path=".\Class\SafetyCDIAS_Base\SafetyCDIAS_Base.h"/>
+		<File Path=".\lsl_st_safety.h"/>
+		<File Path=".\Class\SafetyManager\SafetyManager.h"/>
+		<File Path=".\lsl_st_safetydll.h"/>
+		<File Path=".\Class\HwControl\watchdog.h"/>
+		<File Path=".\Source\BusInterface.h"/>
+		<File Path=".\Class\SdiasManager\SdiasManager.h"/>
+		<File Path=".\lsl_st_sdias.h" Global="true"/>
+		<File Path=".\Class\SdiasBase\SdiasBase.h"/>
+		<File Path=".\Class\_16Alarms\Defines.h"/>
+		<File Path=".\Class\SdiasSafetyManager\SdiasSafetyManager.h"/>
+		<File Path=".\Class\SafetyBaseFSoE\SafetyBaseFSoE.h"/>
+		<File Path=".\Class\SafetyBase\SafetyBase.h"/>
+		<File Path=".\Class\SigCLib\CFiFo.h"/>
+		<File Path=".\Class\SigCLib\CRingBuffer.h"/>
+		<File Path=".\Class\SigCLib\CPipe.h"/>
+		<File Path=".\Class\_TCPIP_CLIENT\SalamanderDelay.h"/>
+		<File Path=".\Class\_TCPIP_CLIENT\lsl_st_ssl_user.h"/>
+	</HeaderFiles>
+	<ClassFiles>
+		<File Path=".\Source\code\OsiBaseNew.st"/>
+		<File Path=".\Source\code\Global_Functions\Get_ptr_on_Obj.st"/>
+		<File Path=".\Class\SigCLib\CStrLib.cpp"/>
+		<File Path=".\Class\SigCLib\CTimeLib.cpp"/>
+		<File Path=".\Class\SigCLib\CSortLib.cpp"/>
+		<File Path=".\Class\SigCLib\CFileLib.cpp"/>
+		<File Path=".\Class\SigCLib\CMemLib.cpp"/>
+		<File Path=".\Class\SigCLib\CNetworkLib.cpp"/>
+		<File Path=".\Class\SigCLib\CMathLib.cpp"/>
+		<File Path=".\Class\SigCLib\CCrcLib.cpp"/>
+		<File Path=".\Class\SigCLib\CStrLib16.cpp"/>
+		<File Path=".\Class\SigCLib\CStdLib.cpp"/>
+		<File Path=".\Class\SigCLib\CPlcOnline.cpp"/>
+		<File Path=".\Class\_LMCAxisBase\C_MathAxis.cpp"/>
+		<File Path=".\Class\_LMCMathFunctions\C_MathFunct.cpp"/>
+		<File Path=".\Class\_AlarmX0Para\_AlarmX0Para.st"/>
+		<File Path=".\Class\_AlarmXBuffer\_AlarmXBuffer.st"/>
+		<File Path=".\Class\_AxisBase\_AxisBase.st"/>
+		<File Path=".\Class\_DriveASyncPara\_DriveASyncPara.st"/>
+		<File Path=".\Class\_DriveAxis\_DriveAxis.st"/>
+		<File Path=".\Class\_DriveAxisBase\_DriveAxisBase.st"/>
+		<File Path=".\Class\_DriveAxisSet\_DriveAxisSet.st"/>
+		<File Path=".\Class\_DriveMngBase\_DriveMngBase.st"/>
+		<File Path=".\Class\_DriveParaBase\_DriveParaBase.st"/>
+		<File Path=".\Class\_FileSys\_FileSys.st"/>
+		<File Path=".\Class\_Grafix\_Grafix.st"/>
+		<File Path=".\Class\_Linker\_Linker.st"/>
+		<File Path=".\Class\_LMCABSEncoder\_LMCABSEncoder.st"/>
+		<File Path=".\Class\_LMCAxis\_LMCAxis.st"/>
+		<File Path=".\Class\_LMCAxisBase\_LMCAxisBase.st"/>
+		<File Path=".\Class\_LMCAxisRef\_LMCAxisRef.st"/>
+		<File Path=".\Class\_LMCAxisVis\_LMCAxisVis.st"/>
+		<File Path=".\Class\_LMCAxisVisInt\_LMCAxisVisInt.st"/>
+		<File Path=".\Class\_LMCAxisVisLogHandle\_LMCAxisVisLogHandle.st"/>
+		<File Path=".\Class\_LMCAxisVisLogViewer\_LMCAxisVisLogViewer.st"/>
+		<File Path=".\Class\_LMCAxisVisPara\_LMCAxisVisPara.st"/>
+		<File Path=".\Class\_LMCMathFunctions\_LMCMathFunctions.st"/>
+		<File Path=".\Class\_LMCPublisher\_LMCPublisher.st"/>
+		<File Path=".\Class\_LMCRefBase\_LMCRefBase.st"/>
+		<File Path=".\Class\_LMCSafety\_LMCSafety.st"/>
+		<File Path=".\Class\_MultiTask\_MultiTask.st"/>
+		<File Path=".\Class\_OSKernel\_OSKernel.st"/>
+		<File Path=".\Class\_StdLib\_StdLib.st"/>
+		<File Path=".\Class\_SysMsg\_SysMsg.st"/>
+		<File Path=".\Class\_TaskObjectControl\_TaskObjectControl.st"/>
+		<File Path=".\Class\_VaranDriveBase\_VaranDriveBase.st"/>
+		<File Path=".\Class\Banner_EZlight\Banner_EZlight.st"/>
+		<File Path=".\Class\Claxon\Claxon.st"/>
+		<File Path=".\Class\Client_Splitter_4\Client_Splitter_4.st"/>
+		<File Path=".\Class\Client_Splitter_Base\Client_Splitter_Base.st"/>
+		<File Path=".\Class\Controller\Controller.st"/>
+		<File Path=".\Class\CurrentWatcher\CurrentWatcher.st"/>
+		<File Path=".\Class\Easy_Filter\Easy_Filter.st"/>
+		<File Path=".\Class\Hub_Base\Hub_Base.st"/>
+		<File Path=".\Class\Hub_Base_Root\Hub_Base_Root.st"/>
+		<File Path=".\Class\InfeedBelt\InfeedBelt.st"/>
+		<File Path=".\Class\Logic_Or_2\Logic_Or_2.st"/>
+		<File Path=".\Class\Logic_Or_Base\Logic_Or_Base.st"/>
+		<File Path=".\Class\MachineBase\MachineBase.st"/>
+		<File Path=".\Class\Merker\Merker.st"/>
+		<File Path=".\Class\MerkerEx\MerkerEx.st"/>
+		<File Path=".\Class\MyEasy_Filter\MyEasy_Filter.st"/>
+		<File Path=".\Class\PositionFilterIFC\PositionFilterIFC.st"/>
+		<File Path=".\Class\ProductTriggerCamera\ProductTriggerCamera.st"/>
+		<File Path=".\Class\Ram\Ram.st"/>
+		<File Path=".\Class\RAMex\RAMex.st"/>
+		<File Path=".\Class\RamFile\RamFile.st"/>
+		<File Path=".\Class\ReleaseBrake\ReleaseBrake.st"/>
+		<File Path=".\Class\SCBase\SCBase.st"/>
+		<File Path=".\Class\SigCLib\SigCLib.st"/>
+		<File Path=".\Class\SpeedInput\SpeedInput.st"/>
+		<File Path=".\Class\Standard\Standard.st"/>
+		<File Path=".\Class\StartStopPiezo\StartStopPiezo.st"/>
+		<File Path=".\Class\String\String.st"/>
+		<File Path=".\Class\StringInternal\StringInternal.st"/>
+		<File Path=".\Class\TestPositionTrigger\TestPositionTrigger.st"/>
+		<File Path=".\Class\Varan_Base\Varan_Base.st"/>
+		<File Path=".\Class\VaranManager_Base\VaranManager_Base.st"/>
+		<File Path=".\Class\Vi54_Control\Vi54_Control.st"/>
+		<File Path=".\Class\VirtualBaseInit\VirtualBaseInit.st"/>
+		<File Path=".\Class\Camera_Master\Camera_Master.st"/>
+		<File Path=".\Class\Main\Main.st"/>
+		<File Path=".\Class\X_Axle_Correction\X_Axle_Correction.st"/>
+		<File Path=".\Class\_TCPIP_CLIENT\_TCPIP_CLIENT.st"/>
+		<File Path=".\Class\StringBase\StringBase.st"/>
+		<File Path=".\Class\StringRAM\StringRAM.st"/>
+		<File Path=".\Class\Wecube_Communication\Wecube_Communication.st"/>
+		<File Path=".\Class\FilterIFCsignal\FilterIFCsignal.st"/>
+		<File Path=".\Class\_DriveActValues\_DriveActValues.st"/>
+		<File Path=".\Class\_LMC_MotorInfo\_LMC_MotorInfo.st"/>
+		<File Path=".\Class\DrivePosControl\DrivePosControl.st"/>
+		<File Path=".\Class\_DriveErrorHandling\_DriveErrorHandling.st"/>
+		<File Path=".\Class\_DriveMng_MDD100\_DriveMng_MDD100.st"/>
+		<File Path=".\Class\DiasDriveSplitter\DiasDriveSplitter.st"/>
+		<File Path=".\Class\DriveAxleErr\DriveAxleErr.st"/>
+		<File Path=".\Class\Y_Axle_Correction\Y_Axle_Correction.st"/>
+		<File Path=".\Class\Recipe_Y_Axle\Recipe_Y_Axle.st"/>
+		<File Path=".\Class\MainRecipe\MainRecipe.st"/>
+		<File Path=".\Class\RecipeBase\RecipeBase.st"/>
+		<File Path=".\Class\Recipe_X_Axle\Recipe_X_Axle.st"/>
+		<File Path=".\Class\Recipe_Machine\Recipe_Machine.st"/>
+		<File Path=".\Class\Logic_And_2\Logic_And_2.st"/>
+		<File Path=".\Class\Logic_And_Base\Logic_And_Base.st"/>
+		<File Path=".\Class\Client_Splitter_10\Client_Splitter_10.st"/>
+		<File Path=".\Class\FcTeach\FcTeach.st"/>
+		<File Path=".\Class\TestTrigger\TestTrigger.st"/>
+		<File Path=".\Class\DiasMaster\DiasMaster.st"/>
+		<File Path=".\Class\DiasMasterC\DiasMasterC.st"/>
+		<File Path=".\Class\DiasMasterMain\DiasMasterMain.st"/>
+		<File Path=".\Class\DiasMasterPostScan\DiasMasterPostScan.st"/>
+		<File Path=".\Class\EEPROM\EEPROM.st"/>
+		<File Path=".\Class\HwBase\HwBase.st"/>
+		<File Path=".\Class\HwBaseCDIAS\HwBaseCDIAS.st"/>
+		<File Path=".\Class\HwControl\HwControl.st"/>
+		<File Path=".\Class\HwControlBase\HwControlBase.st"/>
+		<File Path=".\Class\HWRtPostScan\HWRtPostScan.st"/>
+		<File Path=".\Class\I2CCDIAS\I2CCDIAS.st"/>
+		<File Path=".\Class\SafetyCDIAS_Base\SafetyCDIAS_Base.st"/>
+		<File Path=".\Class\SafetyManager\SafetyManager.st"/>
+		<File Path=".\Class\SafetyUDP\SafetyUDP.st"/>
+		<File Path=".\Class\SyncCall\SyncCall.st"/>
+		<File Path=".\Class\VaranManager\VaranManager.st"/>
+		<File Path=".\Class\VaranManagerPostScan\VaranManagerPostScan.st"/>
+		<File Path=".\Class\WatchdogDias\WatchdogDias.st"/>
+		<File Path=".\Class\CriticalSection\CriticalSection.st"/>
+		<File Path=".\Class\BusInterfaceSDIASInternal\BusInterfaceSDIASInternal.st"/>
+		<File Path=".\Class\SdiasBase\SdiasBase.st"/>
+		<File Path=".\Class\SdiasHubBase\SdiasHubBase.st"/>
+		<File Path=".\Class\SdiasManager\SdiasManager.st"/>
+		<File Path=".\Class\SdiasPLC\SdiasPLC.st"/>
+		<File Path=".\Class\VaranManager_1\VaranManager_1.st"/>
+		<File Path=".\Class\DI203\DI203.st"/>
+		<File Path=".\Class\TO161\TO161.st"/>
+		<File Path=".\Class\PauseClass\PauseClass.st"/>
+		<File Path=".\Class\ProductTriggerPositions\ProductTriggerPositions.st"/>
+		<File Path=".\Class\_AlarmX1Para\_AlarmX1Para.st"/>
+		<File Path=".\Class\AlarmSleegersPara\AlarmSleegersPara.st"/>
+		<File Path=".\Class\AlarmSleegersParameter\AlarmSleegersParameter.st"/>
+		<File Path=".\Class\Logic_Not\Logic_Not.st"/>
+		<File Path=".\Class\SafetyClass\SafetyClass.st"/>
+		<File Path=".\Class\Sleegers_16Alarms\Sleegers_16Alarms.st"/>
+		<File Path=".\Class\Sleegers_16AlarmsDrives\Sleegers_16AlarmsDrives.st"/>
+		<File Path=".\Class\BusInterfaceSdias\BusInterfaceSdias.st"/>
+		<File Path=".\Class\SafetyBaseFSoE\SafetyBaseFSoE.st"/>
+		<File Path=".\Class\SCP111\SCP111.st"/>
+		<File Path=".\Class\SdiasSafetyManagerFSoE\SdiasSafetyManagerFSoE.st"/>
+		<File Path=".\Class\ResetErrSafety\ResetErrSafety.st"/>
+		<File Path=".\Class\SdiasSafetyBase\SdiasSafetyBase.st"/>
+		<File Path=".\Class\SDM081\SDM081.st"/>
+		<File Path=".\Class\CheckData\CheckData.st"/>
+		<File Path=".\Class\ST011\ST011.st"/>
+		<File Path=".\Class\ProductTrigger\ProductTrigger.st"/>
+		<File Path=".\Class\Recipe_Camera\Recipe_Camera.st"/>
+		<File Path=".\Class\SigCLib\CSysLib.cpp"/>
+		<File Path=".\Class\SigCLib\CFiFo.cpp"/>
+		<File Path=".\Class\SigCLib\CRingBuffer.cpp"/>
+		<File Path=".\Class\SigCLib\CAtomic.cpp"/>
+		<File Path=".\Class\SigCLib\CPipe.cpp"/>
+		<File Path=".\Class\_CheckSum\_CheckSum.st"/>
+	</ClassFiles>
+	<NetworkFiles>
+		<File Path=".\Network\MachineVI54\MachineVI54.lcn"/>
+		<File Path=".\Network\X_Axles_Nw\X_Axles_Nw.lcn"/>
+		<File Path=".\Network\Trigger_Offset_Nw\Trigger_Offset_Nw.lcn"/>
+		<File Path=".\Network\DrivesValues2\DrivesValues2.lcn"/>
+		<File Path=".\Network\Motion2\Motion2.lcn"/>
+		<File Path=".\Network\Drives2\Drives2.lcn"/>
+		<File Path=".\Network\Conveyors\Conveyors.lcn"/>
+		<File Path=".\Network\Y_Axle_Nw\Y_Axle_Nw.lcn"/>
+		<File Path=".\Network\invRecept\invRecept.lcn"/>
+		<File Path=".\Network\Drives1\Drives1.lcn"/>
+		<File Path=".\Network\DrivesValues1\DrivesValues1.lcn"/>
+		<File Path=".\Network\Motion1\Motion1.lcn"/>
+		<File Path=".\Network\Hardware_Nw\Hardware_Nw.lcn"/>
+		<File Path=".\Network\Waste\Waste.lcn"/>
+		<File Path=".\Network\AlarmMachine\AlarmMachine.lcn"/>
+		<File Path=".\Network\Camera\Camera.lcn"/>
+	</NetworkFiles>
+	<ObjectFiles>
+		<File Path=".\Loader\Source\Loader.lob" Downloadable="false"/>
+	</ObjectFiles>
+	<DriveFiles>
+		<File Path=".\Drive\AKM22C-400V_InfeedConv.lda" ObjectName="_DriveAxis_InfeedConv" Idx="0"/>
+		<File Path=".\Drive\AKM22C-400V_OutfeedConv.lda" ObjectName="_DriveAxis_OutfeedConv" Idx="0"/>
+		<File Path=".\Drive\AKM22C-400V_X_Axle1.lda" ObjectName="_DriveAxis_X_Axle1" Idx="0"/>
+		<File Path=".\Drive\AKM22C-400V_X_Axle2.lda" ObjectName="_DriveAxis_X_Axle2" Idx="0"/>
+		<File Path=".\Drive\AKM22C-400V_X_Axle3.lda" ObjectName="_DriveAxis_X_Axle3" Idx="0"/>
+		<File Path=".\Drive\AKM22C-400V_X_Axle4.lda" ObjectName="_DriveAxis_X_Axle4" Idx="0"/>
+		<File Path=".\Drive\AKM22C-400V_Y_Axle1.lda" ObjectName="_DriveAxis_Y_Axle1" Idx="0"/>
+		<File Path=".\Drive\AKM22C-400V_Y_Axle2.lda" ObjectName="_DriveAxis_Y_Axle2" Idx="0"/>
+		<File Path=".\Drive\AKM22C-400V_Y_Axle3.lda" ObjectName="_DriveAxis_Y_Axle3" Idx="0"/>
+		<File Path=".\Drive\AKM22C-400V_Y_Axle4.lda" ObjectName="_DriveAxis_Y_Axle4" Idx="0"/>
+		<File Path=".\Drive\AKM22C-400V_RejectorConv.lda" ObjectName="_DriveAxis_RejectorConv" Idx="0"/>
+		<File Path=".\Drive\AKM22C-400V_Y_Conveyor.lda" ObjectName="_DriveAxis_Y_Conveyor" Idx="0"/>
+		<File Path=".\Drive\AKM42G-400V Rejector.xml" ObjectName="_DriveAxis_Rejector" Idx="0"/>
+	</DriveFiles>
+	<DocuFiles>
+		<File Path=".\Class\Standard\Standard.doc"/>
+		<File Path=".\Class\SCBase\SCBase.doc"/>
+		<File Path=".\Class\StartStopPiezo\VOV.vov"/>
+		<File Path=".\Class\_LMCAxis\_LMCAxis.vov"/>
+		<File Path=".\Class\_AlarmXBuffer\_AlarmXBuffer.pdf"/>
+		<File Path=".\Class\_AlarmXBuffer\_AlarmXBuffer_en.pdf"/>
+		<File Path=".\Class\_LMC_MotorInfo\_LMC_MotorInfo.vov"/>
+	</DocuFiles>
+	<Options>
+		<Target UseFPU="true">
+		</Target>
+		<Compiler
+			CompilerVersion         = "41"
+			VariableNeverUsed       = "true"
+			ValueNeverUsed          = "true"
+			LabelNeverUsed          = "true"
+			ParameterNeverUsed      = "true"
+			VariableUnitialized     = "true"
+			RetValueUnitialized     = "true"
+			PrivateDataAccess       = "true"
+			SemicolonMissing        = "true"
+			ConditionConstant       = "true"
+			ExactTypeChecking       = "true"
+			CheckConnectionTypes    = "true"
+			CompileCFiles           = "true"
+			Alignment               = "4 Byte"
+			ReducedClientDependency = "true"
+			MaxModuleErrorCount     = "100">
+		</Compiler>
+		<Directories
+			Class       = ".\Class\"
+			Network     = ".\Network\"
+			Source      = ".\Source\"
+			Include     = ".\Include\"
+			Loader      = ".\Loader\"
+			PrjInternal = ".\ProjectInternal\">
+		</Directories>
+	</Options>
+	<SigmatekFolders>
+		<Folder Name="Hardware">
+			<Folder Name="Axis">
+				<Class Name="ST011"/>
+			</Folder>
+			<Folder Name="Digital">
+				<Class Name="DI203"/>
+				<Class Name="TO161"/>
+			</Folder>
+			<Folder Name="Drives">
+				<Folder Name="DiasDrive">
+					<Class Name="_DriveAxis"/>
+					<Class Name="_DriveMng_MDD100"/>
+					<Folder Name="Internal">
+						<Class Name="_DriveAxisBase"/>
+						<Class Name="_DriveAxisSet"/>
+						<Class Name="_DriveMngBase"/>
+						<Class Name="_DriveParaBase"/>
+						<Class Name="_VaranDriveBase"/>
+					</Folder>
+					<Folder Name="ParameterClasses">
+						<Class Name="_DriveActValues"/>
+						<Class Name="_DriveASyncPara"/>
+						<Class Name="_DriveErrorHandling"/>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="Internal">
+				<Class Name="BusInterfaceSdias"/>
+				<Class Name="BusInterfaceSDIASInternal"/>
+				<Class Name="DiasMaster"/>
+				<Class Name="DiasMasterMain"/>
+				<Class Name="DiasMasterPostScan"/>
+				<Class Name="EEPROM"/>
+				<Class Name="Hub_Base"/>
+				<Class Name="Hub_Base_Root"/>
+				<Class Name="HwBase"/>
+				<Class Name="HwBaseCDIAS"/>
+				<Class Name="HwControlBase"/>
+				<Class Name="HWRtPostScan"/>
+				<Class Name="I2CCDIAS"/>
+				<Class Name="SafetyBaseFSoE"/>
+				<Class Name="SafetyCDIAS_Base"/>
+				<Class Name="SafetyManager"/>
+				<Class Name="SafetyUDP"/>
+				<Class Name="SdiasBase"/>
+				<Class Name="SdiasHubBase"/>
+				<Class Name="SdiasManager"/>
+				<Class Name="SdiasSafetyBase"/>
+				<Class Name="SdiasSafetyManagerFSoE"/>
+				<Class Name="SyncCall"/>
+				<Class Name="Varan_Base"/>
+				<Class Name="VaranManager"/>
+				<Class Name="VaranManager_Base"/>
+				<Class Name="VaranManagerPostScan"/>
+				<Class Name="WatchdogDias"/>
+			</Folder>
+			<Folder Name="Manager">
+				<Class Name="DiasMasterC"/>
+				<Class Name="HwControl"/>
+				<Class Name="SdiasPLC"/>
+				<Class Name="VaranManager_1"/>
+			</Folder>
+			<Folder Name="Safety">
+				<Class Name="SCP111"/>
+				<Class Name="SDM081"/>
+			</Folder>
+		</Folder>
+		<Folder Name="System">
+			<Folder Name="Memory">
+				<Class Name="Merker"/>
+				<Class Name="MerkerEx"/>
+				<Class Name="Ram"/>
+				<Class Name="RAMex"/>
+				<Class Name="String"/>
+				<Class Name="StringInternal"/>
+				<Class Name="StringRAM"/>
+				<Class Name="VirtualBaseInit"/>
+			</Folder>
+			<Folder Name="Visualisation">
+				<Folder Name="LseRtk">
+					<Folder Name="Alarm">
+						<Folder Name="PLC">
+							<Class Name="_AlarmX0Para"/>
+							<Class Name="_AlarmX1Para"/>
+							<Class Name="_AlarmXBuffer"/>
+						</Folder>
+					</Folder>
+				</Folder>
+			</Folder>
+		</Folder>
+		<Folder Name="Tools">
+			<Folder Name="_old">
+				<Folder Name="Memory">
+					<Class Name="RamFile"/>
+				</Folder>
+			</Folder>
+			<Folder Name="Communication">
+				<Folder Name="TCPIP">
+					<Class Name="_TCPIP_CLIENT"/>
+				</Folder>
+			</Folder>
+			<Folder Name="Divers">
+				<Class Name="_CheckSum"/>
+				<Class Name="CriticalSection"/>
+			</Folder>
+			<Folder Name="Filter">
+				<Class Name="Easy_Filter"/>
+			</Folder>
+			<Folder Name="Logic">
+				<Folder Name="ClientSplitter">
+					<Class Name="Client_Splitter_10"/>
+					<Class Name="Client_Splitter_4"/>
+					<Folder Name="BaseClass">
+						<Class Name="Client_Splitter_Base"/>
+					</Folder>
+				</Folder>
+				<Folder Name="Logic">
+					<Class Name="Logic_Not"/>
+					<Folder Name="AND">
+						<Class Name="Logic_And_2"/>
+					</Folder>
+					<Folder Name="BaseClass">
+						<Class Name="Logic_And_Base"/>
+						<Class Name="Logic_Or_Base"/>
+					</Folder>
+					<Folder Name="OR">
+						<Class Name="Logic_Or_2"/>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="Memory">
+			</Folder>
+			<Folder Name="Motion">
+				<Class Name="_LMCAxis"/>
+				<Folder Name="_Internal">
+					<Class Name="_LMCMathFunctions"/>
+					<Class Name="_LMCPublisher"/>
+					<Class Name="Controller"/>
+					<Folder Name="_LMCAxisInternal">
+						<Class Name="_AxisBase"/>
+						<Class Name="_LMCABSEncoder"/>
+						<Class Name="_LMCAxisBase"/>
+						<Class Name="_LMCAxisRef"/>
+						<Class Name="_LMCAxisVis"/>
+						<Class Name="_LMCAxisVisInt"/>
+						<Class Name="_LMCAxisVisLogHandle"/>
+						<Class Name="_LMCAxisVisLogViewer"/>
+						<Class Name="_LMCAxisVisPara"/>
+						<Class Name="_LMCRefBase"/>
+						<Class Name="_LMCSafety"/>
+					</Folder>
+				</Folder>
+				<Folder Name="Controller">
+					<Class Name="DrivePosControl"/>
+				</Folder>
+			</Folder>
+		</Folder>
+	</SigmatekFolders>
+	<ClassFolders>
+		<Folder Name="Alarms">
+			<Class Name="SafetyClass"/>
+		</Folder>
+		<Folder Name="LibrarySC">
+			<Class Name="Standard"/>
+			<Folder Name="Base">
+				<Class Name="SCBase"/>
+			</Folder>
+		</Folder>
+		<Folder Name="LSE">
+			<Folder Name="Alarms">
+				<Class Name="Sleegers_16Alarms"/>
+				<Class Name="Sleegers_16AlarmsDrives"/>
+			</Folder>
+		</Folder>
+		<Folder Name="Machine">
+			<Class Name="Banner_EZlight"/>
+			<Class Name="Claxon"/>
+			<Class Name="InfeedBelt"/>
+			<Class Name="ProductTriggerCamera"/>
+			<Class Name="ProductTriggerPositions"/>
+			<Class Name="SpeedInput"/>
+			<Class Name="StartStopPiezo"/>
+			<Class Name="Vi54_Control"/>
+		</Folder>
+		<Folder Name="Motion">
+			<Class Name="_LMC_MotorInfo"/>
+			<Class Name="DiasDriveSplitter"/>
+			<Class Name="DriveAxleErr"/>
+			<Class Name="ReleaseBrake"/>
+		</Folder>
+		<Folder Name="MyBase">
+			<Class Name="CurrentWatcher"/>
+			<Class Name="MachineBase"/>
+			<Class Name="StringBase"/>
+		</Folder>
+	</ClassFolders>
+	<NetworkFolders>
+		<Folder Name="Alarms">
+			<Network Name="AlarmMachine"/>
+		</Folder>
+		<Folder Name="DataBase">
+			<Network Name="invRecept"/>
+		</Folder>
+		<Folder Name="Hardware">
+			<Network Name="Hardware_Nw"/>
+		</Folder>
+		<Folder Name="Machine">
+			<Network Name="Camera"/>
+			<Network Name="Conveyors"/>
+			<Network Name="MachineVI54"/>
+			<Network Name="Trigger_Offset_Nw"/>
+			<Network Name="Waste"/>
+			<Network Name="X_Axles_Nw"/>
+			<Network Name="Y_Axle_Nw"/>
+		</Folder>
+		<Folder Name="Motion">
+			<Folder Name="BackPlate1">
+				<Network Name="Drives1"/>
+				<Network Name="DrivesValues1"/>
+				<Network Name="Motion1"/>
+			</Folder>
+			<Folder Name="BackPlate2">
+				<Network Name="Drives2"/>
+				<Network Name="DrivesValues2"/>
+				<Network Name="Motion2"/>
+			</Folder>
+		</Folder>
+	</NetworkFolders>
+	<TypeFolders>
+		<Folder Name="_LMC">
+			<Type Name="_LMC_DYN_SWLIMITS"/>
+			<Type Name="_LMCCONTROLLERTYPE"/>
+			<Type Name="_POSFLAGS"/>
+			<Type Name="CNCInternalStruct"/>
+			<Type Name="CurveTable"/>
+			<Type Name="MasterStruct"/>
+			<Folder Name="_LMCAxis">
+				<Type Name="_LMCAXIS_CMDERROR"/>
+				<Type Name="_LMCAXIS_CONTROLBITS"/>
+				<Type Name="_LMCAXIS_COUPLE_GEAR_MODE"/>
+				<Type Name="_LMCAXIS_COUPLEERROR"/>
+				<Type Name="_LMCAXIS_CURVE"/>
+				<Type Name="_LMCAXIS_CURVETABMODE"/>
+				<Type Name="_LMCAXIS_ERROR"/>
+				<Type Name="_LMCAXIS_ERROR_CONFIG"/>
+				<Type Name="_LMCAXIS_FOLLOW_MODE"/>
+				<Type Name="_LMCAXIS_MOVE_RELATIVE_MODE"/>
+				<Type Name="_LMCAXIS_MOVEDIRECTION"/>
+				<Type Name="_LMCAXIS_MOVEPROFILE"/>
+				<Type Name="_LMCAXIS_MOVINGTIMEERROR"/>
+				<Type Name="_LMCAXIS_OPMODE"/>
+				<Type Name="_LMCAXIS_POSMODE"/>
+				<Type Name="_LMCAXIS_POWER_OFF_MODE"/>
+				<Type Name="_LMCAXIS_QUERY_POSITION_MODE"/>
+				<Type Name="_LMCAXIS_READPARAMETER"/>
+				<Type Name="_LMCAXIS_READPOS"/>
+				<Type Name="_LMCAXIS_READSWENDPOS"/>
+				<Type Name="_LMCAXIS_READVELOCITY"/>
+				<Type Name="_LMCAXIS_REFDATA"/>
+				<Type Name="_LMCAXIS_REFMODE"/>
+				<Type Name="_LMCAXIS_SETPARAMETER"/>
+				<Type Name="_LMCAXIS_SETPOSITION"/>
+				<Type Name="_LMCAXIS_SETSERVER"/>
+				<Type Name="_LMCAXIS_SETSWENDPOS"/>
+				<Type Name="_LMCAXIS_STATUS"/>
+				<Type Name="_LMCAXIS_TUNE_MODE"/>
+			</Folder>
+			<Folder Name="_LMCProfile">
+				<Type Name="ProfileCommandStatus"/>
+			</Folder>
+			<Folder Name="old">
+				<Type Name="CncFlags"/>
+				<Type Name="CntrFlgs"/>
+			</Folder>
+		</Folder>
+		<Folder Name="SCLibrary">
+			<Type Name="EventModeTxt"/>
+			<Type Name="ImpClkStr"/>
+			<Type Name="LogRecStr"/>
+			<Type Name="StepLogStr"/>
+			<Type Name="StepperDataStr"/>
+		</Folder>
+	</TypeFolders>
+	<DriveFileFolders>
+		<Folder Name="Drive_1">
+			<File Name=".\Drive\AKM22C-400V_InfeedConv.lda"/>
+			<File Name=".\Drive\AKM22C-400V_OutfeedConv.lda"/>
+			<File Name=".\Drive\AKM22C-400V_RejectorConv.lda"/>
+			<File Name=".\Drive\AKM22C-400V_Y_Conveyor.lda"/>
+			<File Name=".\Drive\AKM42G-400V Rejector.xml"/>
+		</Folder>
+		<Folder Name="Drive_2">
+			<File Name=".\Drive\AKM22C-400V_X_Axle1.lda"/>
+			<File Name=".\Drive\AKM22C-400V_X_Axle2.lda"/>
+			<File Name=".\Drive\AKM22C-400V_X_Axle3.lda"/>
+			<File Name=".\Drive\AKM22C-400V_X_Axle4.lda"/>
+			<File Name=".\Drive\AKM22C-400V_Y_Axle1.lda"/>
+			<File Name=".\Drive\AKM22C-400V_Y_Axle2.lda"/>
+			<File Name=".\Drive\AKM22C-400V_Y_Axle3.lda"/>
+			<File Name=".\Drive\AKM22C-400V_Y_Axle4.lda"/>
+		</Folder>
+	</DriveFileFolders>
+	<Units>
+		<UnitGrp Name="Acceleration">
+			<Unit Name="mmPsec2" Factor="1" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Angle">
+			<Unit Name="deg" Factor="10000" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Area">
+			<Unit Name="mm2" Factor="10" Ref="S" Comment="x.x sqare millimeter"/>
+		</UnitGrp>
+		<UnitGrp Name="Force">
+			<Unit Name="kN" Factor="1000 N" Ref="S"/>
+			<Unit Name="N" Factor="1" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Length">
+			<Unit Name="m" Factor="1000 mm" Ref="S"/>
+			<Unit Name="mm" Factor="10000" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Memory">
+			<Unit Name="GB" Factor="1024 MB" Ref="S"/>
+			<Unit Name="kB" Factor="1024" Ref="S"/>
+			<Unit Name="MB" Factor="1024 kB" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Pressure">
+			<Unit Name="bar" Factor="1000" Ref="S" Comment="x.xxx Bar ( MilliBar)"/>
+		</UnitGrp>
+		<UnitGrp Name="Revolution">
+			<Unit Name="RPM" Factor="1000" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Speed">
+			<Unit Name="mlpmin" Factor="1" Ref="S"/>
+			<Unit Name="mmpsec" Factor="10000" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Time">
+			<Unit Name="hours" Factor="60 min" Ref="S"/>
+			<Unit Name="min" Factor="60 secs" Ref="S"/>
+			<Unit Name="ms" Factor="1" Ref="S"/>
+			<Unit Name="sec" Factor="1000" Ref="S"/>
+			<Unit Name="secs" Factor="1000 ms" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Volume">
+			<Unit Name="ccm" Factor="1" Ref="S" Comment="cubic centimeter"/>
+		</UnitGrp>
+	</Units>
+</Project>

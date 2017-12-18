@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="ProductPos_NW" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "PlacingRaster1"
+			GUID       = "{A21386B2-54FB-41A0-A9DB-BA5E581769B8}"
+			Class      = "PlacingRaster"
+			Position   = "(1350,300)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="BetweenButtons" Value="10"/>
+				<Server Name="Refresh">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Server Name="Server0">
+					<OPCSettings WriteProtected="false"/>
+				</Server>
+				<Client Name="ActLayer"/>
+				<Client Name="Lse"/>
+				<Client Name="NbrOfLayers" Value="1"/>
+				<Client Name="NbrOfPositions" Value="1"/>
+				<Client Name="ResetPositions"/>
+				<Client Name="ShootMovement"/>
+				<Client Name="ShuttleTrigger"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{B28D6E6D-E2AB-45C0-96F8-EB001BFB3426}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+						<Object
+							Name           = "Standard2"
+							GUID           = "{BEFACF57-AD76-49A9-B4DA-5D1B56E99FD7}"
+							Class          = "Standard"
+							BackgroundTime = "1000 ms">
+							<Channels>
+								<Server Name="ClassSvr"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{5E7DE831-554D-4C5D-8ADC-29B04EBA9AEE}" Class="SCBase">
+											<Channels>
+												<Server Name="ClassSvr"/>
+												<Server Name="LogID"/>
+												<Client Name="ToGrafix"/>
+												<Client Name="ToLinker"/>
+												<Client Name="ToSigCLib"/>
+												<Client Name="ToSysMsg"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="WindowEnd1" GUID="{43E2BE78-943A-4606-927A-B139991BBC6C}" Class="WindowEnd">
+							<Channels>
+								<Server Name="Server0">
+									<OPCSettings WriteProtected="false"/>
+								</Server>
+								<Client Name="Lse"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{A8CE6F98-68DC-4E1F-9230-E41E373A2A56}" Class="_Global">
+											<Channels>
+												<Server Name="Server0">
+													<OPCSettings WriteProtected="false"/>
+												</Server>
+												<Client Name="Lse"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<!-- List of multimaster components in this network -->
+	<RemoteComponents>
+		<RemoteObject Name="PLC.DI2031.Input12" Position="(870,660)" Station="PLC" Server="DI2031.Input12" Objectsize="390"/>
+		<RemoteObject Name="PLC.inpShootBelt1.NbrOfLayers" Position="(870,480)" Station="PLC" Server="inpShootBelt1.NbrOfLayers" Objectsize="390"/>
+		<RemoteObject Name="PLC.inpShootBelt1.NbrOfShootMovements" Position="(870,420)" Station="PLC" Server="inpShootBelt1.NbrOfShootMovements" Objectsize="390"/>
+		<RemoteObject Name="PLC.PackagingInterface1.ActLayer" Position="(870,600)" Station="PLC" Server="PackagingInterface1.ActLayer" Objectsize="390"/>
+		<RemoteObject Name="PLC.ProductTriggerShuttle1.ActProdNumber" Position="(870,540)" Station="PLC" Server="ProductTriggerShuttle1.ActProdNumber" Objectsize="390"/>
+		<RemoteObject Name="PLC.ProductTriggerShuttle1.OutputTrigger" Position="(870,720)" Station="PLC" Server="ProductTriggerShuttle1.OutputTrigger" Objectsize="390"/>
+	</RemoteComponents>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="PlacingRaster1.Lse" Destination="Lse.Lse"/>
+		<Connection Station="PLC" RemoteServer="ProductTriggerShuttle1.ActProdNumber" Source="PlacingRaster1.ShootMovement" Destination="PLC%ProductTriggerShuttle1%ActProdNumber" Vertices="(1350,570),(1276,570),"/>
+		<Connection Station="PLC" RemoteServer="inpShootBelt1.NbrOfShootMovements" Source="PlacingRaster1.NbrOfPositions" Destination="PLC%inpShootBelt1%NbrOfShootMovements" Vertices="(1350,450),(1276,450),"/>
+		<Connection Station="PLC" RemoteServer="inpShootBelt1.NbrOfLayers" Source="PlacingRaster1.NbrOfLayers" Destination="PLC%inpShootBelt1%NbrOfLayers" Vertices="(1350,510),(1276,510),"/>
+		<Connection Station="PLC" RemoteServer="PackagingInterface1.ActLayer" Source="PlacingRaster1.ActLayer" Destination="PLC%PackagingInterface1%ActLayer" Vertices="(1350,630),(1276,630),"/>
+		<Connection Station="PLC" RemoteServer="DI2031.Input12" Source="PlacingRaster1.ResetPositions" Destination="PLC%DI2031%Input12" Vertices="(1350,690),(1276,690),"/>
+		<Connection Station="PLC" RemoteServer="ProductTriggerShuttle1.OutputTrigger" Source="PlacingRaster1.ShuttleTrigger" Destination="PLC%ProductTriggerShuttle1%OutputTrigger" Vertices="(1350,750),(1276,750),"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>
