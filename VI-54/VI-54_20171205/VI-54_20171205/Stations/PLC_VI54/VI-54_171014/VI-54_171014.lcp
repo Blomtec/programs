@@ -254,6 +254,7 @@
 		<File Path=".\Class\SigCLib\CAtomic.cpp"/>
 		<File Path=".\Class\SigCLib\CPipe.cpp"/>
 		<File Path=".\Class\_CheckSum\_CheckSum.st"/>
+		<File Path=".\Class\Waste_\Waste_.st"/>
 	</ClassFiles>
 	<NetworkFiles>
 		<File Path=".\Network\MachineVI54\MachineVI54.lcn"/>

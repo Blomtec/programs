@@ -2,6 +2,16 @@
 <Network Name="Waste" Revision="0.0">
 	<!-- List of Components in this network -->
 	<Components>
+		<Object
+			Name       = "Waste_1"
+			GUID       = "{3E3BEFE2-606A-42B3-942D-83930DC915A7}"
+			Class      = "Waste_"
+			Position   = "(2040,330)"
+			Visualized = "false">
+			<Channels>
+				<Server Name="ClassSvr"/>
+			</Channels>
+		</Object>
 	</Components>
 	<Comments>
 	</Comments>
